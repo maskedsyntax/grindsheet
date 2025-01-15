@@ -1,2 +1,2 @@
-# dsa-trackerrr
-A web app to track, manage, and optimize your DSA progress for acing coding interviews.
+# PrepStack
+A web app to track, manage, and optimize your DSA and System Design progress for acing coding interviews.
