@@ -24,3 +24,55 @@ hs_err_pid*
 replay_pid*
 
 grindsheet-dev.json
+
+# Dart & Flutter related
+.dart_tool/
+.packages
+pubspec.lock
+.flutter-plugins
+.flutter-plugins-dependencies
+.melos_tool/
+
+# Build outputs
+build/
+web/build/
+
+# Flutter ephemeral directories for desktop targets
+linux/flutter/ephemeral/
+windows/flutter/ephemeral/
+macos/Flutter/ephemeral/
+
+# macOS-specific
+macos/Pods/
+macos/Podfile.lock
+
+# Python related
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+pip-wheel-metadata/
+.pytest_cache/
+.tox/
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.ipynb_checkpoints/
+
+# IDEs
+.idea/
+.vscode/
+*.iml
+
+# System files
+.DS_Store
+*.log
