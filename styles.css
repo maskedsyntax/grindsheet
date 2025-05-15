@@ -171,3 +171,15 @@ a:hover {
     padding: 8px;
   }
 }
+
+.platform-icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  display: inline-block;
+  filter: brightness(0) saturate(100%);
+}
+
+td:last-child {
+  text-align: center;
+}
