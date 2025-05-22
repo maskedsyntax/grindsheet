@@ -183,3 +183,16 @@ a:hover {
 td:last-child {
   text-align: center;
 }
+
+.release-tag {
+  font-family: "Cascadia Code";
+  display: inline-block;
+  background-color: #e0e0e0;
+  color: #333;
+  font-size: 0.75rem;
+  padding: 0.3em 0.6em;
+  border-radius: 6px;
+  margin-top: 0.75rem;
+  font-weight: 500;
+}
+
