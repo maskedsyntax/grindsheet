@@ -28,7 +28,7 @@ function renderProblems(data) {
 
     // Topic heading
     const topicHeader = document.createElement("h2");
-    topicHeader.textContent = topic;
+    topicHeader.textContent =`${topic} (${grouped[topic].length})`;;
     section.appendChild(topicHeader);
 
     // Table body
