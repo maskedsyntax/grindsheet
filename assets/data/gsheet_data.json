@@ -2964,7 +2964,7 @@
         "Notes": ""
     },
     {
-        "Problem Name": "Segrregate odd and even nodes in LL",
+        "Problem Name": "Odd Even Linked List",
         "Topic": "Linked List",
         "Difficulty": "Medium",
         "Platform": "LeetCode",
