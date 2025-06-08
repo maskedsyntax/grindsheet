@@ -506,7 +506,7 @@
         "Notes": ""
     },
     {
-        "Problem Name": "Kadane's Algorithm, maximum subarray sum",
+        "Problem Name": "Maximum Subarray",
         "Topic": "Arrays",
         "Difficulty": "Easy",
         "Platform": "LeetCode",
@@ -585,7 +585,7 @@
         "Topic": "Arrays",
         "Difficulty": "Medium",
         "Platform": "LeetCode",
-        "Link": "https://leetcode.com/problems/longest-consecutive-sequence/solution/",
+        "Link": "https://leetcode.com/problems/longest-consecutive-sequence/",
         "Tags": [
             "Array",
             "Hash Table",
@@ -601,7 +601,7 @@
         "Notes": ""
     },
     {
-        "Problem Name": "Set Matrix Zeros",
+        "Problem Name": "Set Matrix Zeroes",
         "Topic": "Arrays",
         "Difficulty": "Medium",
         "Platform": "LeetCode",
@@ -621,7 +621,7 @@
         "Notes": ""
     },
     {
-        "Problem Name": "Rotate Matrix by 90 degrees",
+        "Problem Name": "Rotate Image",
         "Topic": "Arrays",
         "Difficulty": "Medium",
         "Platform": "LeetCode",
@@ -669,7 +669,7 @@
         "Notes": ""
     },
     {
-        "Problem Name": "Print the matrix in spiral manner",
+        "Problem Name": "Spiral Matrix",
         "Topic": "Arrays",
         "Difficulty": "Medium",
         "Platform": "LeetCode",
@@ -717,7 +717,7 @@
         "Notes": ""
     },
     {
-        "Problem Name": "Count subarrays with given sum",
+        "Problem Name": "Subarray Sum Equals K",
         "Topic": "Arrays",
         "Difficulty": "Medium",
         "Platform": "LeetCode",
@@ -1520,7 +1520,7 @@
         "Notes": ""
     },
     {
-        "Problem Name": "Split array - Largest Sum",
+        "Problem Name": "Split Array Largest Sum",
         "Topic": "Binary Search",
         "Difficulty": "Hard",
         "Platform": "LeetCode",
@@ -2721,7 +2721,7 @@
         "Notes": ""
     },
     {
-        "Problem Name": "Reverse a LinkedList [Iterative]",
+        "Problem Name": "Reverse Linked List",
         "Topic": "Linked List",
         "Difficulty": "Easy",
         "Platform": "LeetCode",
@@ -2769,7 +2769,7 @@
         "Notes": ""
     },
     {
-        "Problem Name": "Detect a loop in LL",
+        "Problem Name": "Linked List Cycle",
         "Topic": "Linked List",
         "Difficulty": "Medium",
         "Platform": "LeetCode",
@@ -3557,7 +3557,7 @@
         "Notes": ""
     },
     {
-        "Problem Name": "Clone a Linked List with random and next pointer",
+        "Problem Name": "Copy List with Random Pointer",
         "Topic": "Linked List",
         "Difficulty": "Hard",
         "Platform": "LeetCode",
@@ -3605,7 +3605,7 @@
         "Notes": ""
     },
     {
-        "Problem Name": "Generate Paranthesis",
+        "Problem Name": "Generate Parenthesis",
         "Topic": "Recursion",
         "Difficulty": "Medium",
         "Platform": "LeetCode",
@@ -4916,7 +4916,7 @@
         "Notes": ""
     },
     {
-        "Problem Name": "Check for balanced paranthesis",
+        "Problem Name": "Valid Parentheses",
         "Topic": "Stacks and Queues",
         "Difficulty": "Medium",
         "Platform": "LeetCode",
@@ -6887,7 +6887,7 @@
         "Notes": ""
     },
     {
-        "Problem Name": "Valid Paranthesis Checker",
+        "Problem Name": "Valid Parenthesis String",
         "Topic": "Greedy",
         "Difficulty": "Medium",
         "Platform": "LeetCode",
@@ -7606,7 +7606,7 @@
         "Notes": ""
     },
     {
-        "Problem Name": "Height of a Binary Tree",
+        "Problem Name": "Maximum Depth of Binary Tree",
         "Topic": "Binary Tree",
         "Difficulty": "Medium",
         "Platform": "LeetCode",
@@ -7788,7 +7788,7 @@
         "Notes": ""
     },
     {
-        "Problem Name": "Check if two trees are identical or not",
+        "Problem Name": "Same Tree",
         "Topic": "Binary Tree",
         "Difficulty": "Medium",
         "Platform": "LeetCode",
@@ -9021,7 +9021,7 @@
         "Notes": ""
     },
     {
-        "Problem Name": "Find K-th smallest/largest element in BST",
+        "Problem Name": "Kth smallest Element in a BST",
         "Topic": "Binary Search Tree",
         "Difficulty": "Medium",
         "Platform": "LeetCode",
@@ -9068,7 +9068,7 @@
         "Notes": ""
     },
     {
-        "Problem Name": "Check if a tree is a BST or BT",
+        "Problem Name": "Validate Binary Search Tree",
         "Topic": "Binary Search Tree",
         "Difficulty": "Medium",
         "Platform": "LeetCode",
@@ -9646,7 +9646,7 @@
         "Notes": ""
     },
     {
-        "Problem Name": "Rotten Oranges",
+        "Problem Name": "Rotting Oranges",
         "Topic": "Graphs",
         "Difficulty": "Medium",
         "Platform": "LeetCode",
@@ -11668,7 +11668,7 @@
         "Notes": ""
     },
     {
-        "Problem Name": "Climbing Stars",
+        "Problem Name": "Climbing Stairs",
         "Topic": "Dynamic Programming",
         "Difficulty": "Medium",
         "Platform": "LeetCode",
