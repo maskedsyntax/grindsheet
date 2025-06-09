@@ -196,3 +196,50 @@ td:last-child {
   font-weight: 500;
 }
 
+/*
+.update-notification {
+  text-align: center;
+  margin: 20px 0;
+  background-color: #e0f7fa; 
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.update-tag {
+  font-family: "Cascadia Mono";
+  font-size: 18px;
+  font-weight: bold;
+  color: #00796b; 
+}
+
+.update-notification p {
+  font-family: "JetBrains Mono", "Ubuntu Mono", sans-serif;
+  font-size: 14px;
+  color: #333;
+}
+*/
+
+#update-notification {
+  text-align: center;
+  margin: 20px auto;
+  background-color: #ffffdd; /* Light yellow background */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.update-tag {
+  font-family: "Cascadia Mono", monospace; /* Use a modern monospace font */
+  font-size: 20px; /* Slightly larger font size */
+  font-weight: bold;
+  color: #856404; /* Darker shade of yellow for contrast */
+  margin-bottom: 10px; /* Space below the title */
+}
+
+#update-notification p {
+  font-family: "JetBrains Mono", "Ubuntu Mono", sans-serif;
+  font-size: 16px; /* Slightly larger font size */
+  color: #333; /* Dark text for readability */
+  margin: 0; /* Remove default margin */
+}
+
