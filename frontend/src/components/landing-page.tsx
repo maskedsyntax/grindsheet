@@ -146,7 +146,25 @@ export function LandingPage() {
   return (
     <div className="min-h-screen flex flex-col">
       {/* Header */}
-      <header className="border-b bg-white dark:bg-gray-950">
+      {/* <header className="border-b bg-white dark:bg-gray-950">
+        <div className="container mx-auto px-4 py-3 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <div className="bg-black text-white dark:bg-white dark:text-black h-10 w-10 flex items-center justify-center rounded-lg font-bold text-xl">
+              G
+            </div>
+            <div>
+              <h1 className="text-xl font-bold">GrindSheet</h1>
+              <p className="text-xs text-gray-500 dark:text-gray-400">
+                Track. Solve. Improve.
+              </p>
+            </div>
+          </div>
+          <Button onClick={() => setIsDialogOpen(true)}>Get Started</Button>
+        </div>
+      </header> */}
+
+      {/* Header */}
+      <header className="sticky top-0 z-10 bg-white/80 dark:bg-gray-950/80 backdrop-blur-md border-b border-gray-200/50 dark:border-gray-800/50">
         <div className="container mx-auto px-4 py-3 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="bg-black text-white dark:bg-white dark:text-black h-10 w-10 flex items-center justify-center rounded-lg font-bold text-xl">
