@@ -2,14 +2,14 @@ from fastapi import APIRouter, Depends, HTTPException
 from fastapi.security import OAuth2PasswordRequestForm
 from sqlalchemy.orm import Session
 from app.models import User
-from app.schemas import UserCreate, UserResponse
+from app.schemas import UserCreate, Token
 from app.utils.security import generate_access_token, hash_password, verify_password
 from app.database import get_db
 
 router = APIRouter(tags=["Authentication"])
 
 
-@router.post("/signup", response_model=UserResponse)
+@router.post("/signup", response_model=Token)
 async def signup(user: UserCreate, db: Session = Depends(get_db)):
     db_user = db.query(User).filter(User.username == user.username).first()
     if db_user:
@@ -26,7 +26,11 @@ async def signup(user: UserCreate, db: Session = Depends(get_db)):
     db.add(db_user)
     db.commit()
     db.refresh(db_user)
-    return db_user
+
+    # Generate JWT token
+    access_token = generate_access_token(data={"sub": user.username})
+
+    return {"access_token": access_token, "token_type": "bearer"}
 
 
 @router.post("/login")
