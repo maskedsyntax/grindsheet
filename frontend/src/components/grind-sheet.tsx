@@ -294,8 +294,12 @@ export function GrindSheet({ onLogout }: GrindSheetProps) {
         <header className="sticky top-0 z-10 bg-white/60 dark:bg-gray-950/60 backdrop-blur-md border-b border-gray-200/50 dark:border-gray-800/50">
           <div className="container mx-auto px-4 py-3 flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="bg-black text-white dark:bg-white dark:text-black h-10 w-10 flex items-center justify-center rounded-lg font-bold text-xl">
-                G
+              <div className=" text-white dark:bg-white dark:text-black h-10 w-10 flex items-center justify-center rounded-lg font-bold text-xl">
+                <img
+                  src="/assets/images/grindsheet-logo-transparent.png"
+                  alt="GrindSheet Logo"
+                  className="w-full h-full object-contain"
+                />
               </div>
               <div>
                 <h1 className="text-xl font-bold">GrindSheet</h1>
@@ -1125,16 +1129,21 @@ export function GrindSheet({ onLogout }: GrindSheetProps) {
                                               }}
                                             >
                                               <div className="flex flex-wrap gap-1 max-w-[300px]">
-                                                {problem.Companies.map(
-                                                  (company, companyIndex) => (
-                                                    <Badge
-                                                      key={companyIndex}
-                                                      variant="outline"
-                                                      className="font-normal text-xs text-black-500 border-black-500"
-                                                    >
-                                                      {company}
-                                                    </Badge>
+                                                {problem.Companies.length >
+                                                0 ? (
+                                                  problem.Companies.map(
+                                                    (company, companyIndex) => (
+                                                      <Badge
+                                                        key={companyIndex}
+                                                        variant="outline"
+                                                        className="font-normal text-xs text-black-500 border-black-500"
+                                                      >
+                                                        {company}
+                                                      </Badge>
+                                                    )
                                                   )
+                                                ) : (
+                                                  <span className="text-xs text-grey-500"></span>
                                                 )}
                                               </div>
                                             </TooltipContent>
@@ -1418,6 +1427,26 @@ export function GrindSheet({ onLogout }: GrindSheetProps) {
             </div>
           </div>
         </main>
+
+        {/* Footer */}
+        <footer className={`py-4 md:py-6 bg-gray-100 dark:bg-gray-900`}>
+          <div className="container mx-auto px-2 md:px-4">
+            <div className="flex flex-col items-center justify-center space-y-2 md:space-y-3">
+              <p className="text-gray-600 dark:text-gray-400 text-xs md:text-sm">
+                © {new Date().getFullYear()} GrindSheet. All rights reserved.
+              </p>
+
+              <p className="text-gray-600 dark:text-gray-400 text-xs md:text-sm flex flex-col md:flex-row items-center justify-center space-y-1 md:space-y-0 md:space-x-2">
+                <span>
+                  Made with <span className="text-red-500 mx-1">♥</span> by
+                  Aftaab Siddiqui
+                </span>
+                <span className="hidden md:inline mx-2">•</span>
+                <span>Designed by Shifa Siddiqui</span>
+              </p>
+            </div>
+          </div>
+        </footer>
 
         <Dialog open={isNotesDialogOpen} onOpenChange={setIsNotesDialogOpen}>
           <DialogContent className="sm:max-w-[425px] w-[95%] max-w-[95%] sm:w-auto">

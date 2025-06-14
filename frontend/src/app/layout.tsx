@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { Analytics } from '@vercel/analytics/next';
-import { Geist, Geist_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import { Geist, Geist_Mono, Fira_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -13,10 +13,29 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const firaSans = Fira_Sans({
+  subsets: ["latin"],
+  weight: ["400", "600"],
+  variable: "--font-firasans",
+});
+
+const jetBrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500", "700", "800"],
+  variable: "--font-montserrat",
+});
+
 export const metadata: Metadata = {
   title: "Grindsheet - DSA Problem Tracker",
-  description: "Track your Data Structures and Algorithms practice progress efficiently",
-  keywords: ["DSA", "algorithms", "data structures", "coding practice", "interview prep"],
+  description:
+    "Track your Data Structures and Algorithms practice progress efficiently",
+  keywords: [
+    "DSA",
+    "algorithms",
+    "data structures",
+    "coding practice",
+    "interview prep",
+  ],
   authors: [{ name: "Grindsheet Team" }],
   creator: "Grindsheet",
   publisher: "Grindsheet",
@@ -36,7 +55,8 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://grindsheet.xyz/",
     title: "Grindsheet - DSA Problem Tracker",
-    description: "Track your Data Structures and Algorithms practice progress efficiently",
+    description:
+      "Track your Data Structures and Algorithms practice progress efficiently",
     siteName: "Grindsheet",
     images: [
       {
@@ -50,7 +70,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Grindsheet - DSA Problem Tracker",
-    description: "Track your Data Structures and Algorithms practice progress efficiently",
+    description:
+      "Track your Data Structures and Algorithms practice progress efficiently",
     images: ["/grindsheet-logo.png"],
   },
   viewport: {
@@ -68,7 +89,7 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-}
+};
 
 export default function RootLayout({
   children,
@@ -82,7 +103,7 @@ export default function RootLayout({
         className={`
         min-h-screen bg-background font-sans antialiased
         // These often fix v0 alignment differences:
-        leading-normal tracking-normal text-base
+        leading-normal tracking-normal text-base ${jetBrainsMono.className}
       `}
       >
         {children}
