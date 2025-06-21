@@ -74,9 +74,6 @@ export function GrindSheet({ onLogout }: GrindSheetProps) {
   ]);
   const [selectedPlatforms, setSelectedPlatforms] = useState<string[]>([
     "LeetCode",
-    "HackerRank",
-    "CodeChef",
-    "Codeforces",
     "GeeksForGeeks",
     "Coding Ninjas",
   ]);
@@ -249,14 +246,7 @@ export function GrindSheet({ onLogout }: GrindSheetProps) {
   const resetFilters = () => {
     setSelectedTopics([]);
     setSelectedDifficulties(["Easy", "Medium", "Hard"]);
-    setSelectedPlatforms([
-      "LeetCode",
-      "HackerRank",
-      "CodeChef",
-      "Codeforces",
-      "GeeksForGeeks",
-      "Coding Ninjas",
-    ]);
+    setSelectedPlatforms(["LeetCode", "GeeksForGeeks", "Coding Ninjas"]);
     setSearchQuery("");
     setHideSolved(false);
     setMobileFiltersOpen(false);
@@ -394,7 +384,7 @@ export function GrindSheet({ onLogout }: GrindSheetProps) {
                   Filters
                   {(selectedTopics.length > 0 ||
                     selectedDifficulties.length < 3 ||
-                    selectedPlatforms.length < 6) && (
+                    selectedPlatforms.length < 3) && (
                     <Badge variant="secondary" className="ml-1">
                       {selectedTopics.length +
                         (3 - selectedDifficulties.length) +
@@ -551,7 +541,7 @@ export function GrindSheet({ onLogout }: GrindSheetProps) {
                             <SlidersHorizontal className="h-4 w-4" />
                             Platform
                           </div>
-                          {selectedPlatforms.length < 6 && (
+                          {selectedPlatforms.length < 3 && (
                             <Badge
                               variant="secondary"
                               className="ml-1 h-5 px-1.5 text-xs"
@@ -577,55 +567,6 @@ export function GrindSheet({ onLogout }: GrindSheetProps) {
                               className="text-sm font-normal cursor-pointer"
                             >
                               LeetCode
-                            </Label>
-                          </div>
-                          <div className="flex items-center space-x-2">
-                            <input
-                              type="checkbox"
-                              id="hackerrank-mobile"
-                              className="rounded"
-                              checked={selectedPlatforms.includes("HackerRank")}
-                              onChange={() =>
-                                handlePlatformToggle("HackerRank")
-                              }
-                            />
-                            <Label
-                              htmlFor="hackerrank-mobile"
-                              className="text-sm font-normal cursor-pointer"
-                            >
-                              HackerRank
-                            </Label>
-                          </div>
-                          <div className="flex items-center space-x-2">
-                            <input
-                              type="checkbox"
-                              id="codechef-mobile"
-                              className="rounded"
-                              checked={selectedPlatforms.includes("CodeChef")}
-                              onChange={() => handlePlatformToggle("CodeChef")}
-                            />
-                            <Label
-                              htmlFor="codechef-mobile"
-                              className="text-sm font-normal cursor-pointer"
-                            >
-                              CodeChef
-                            </Label>
-                          </div>
-                          <div className="flex items-center space-x-2">
-                            <input
-                              type="checkbox"
-                              id="codeforces-mobile"
-                              className="rounded"
-                              checked={selectedPlatforms.includes("Codeforces")}
-                              onChange={() =>
-                                handlePlatformToggle("Codeforces")
-                              }
-                            />
-                            <Label
-                              htmlFor="codeforces-mobile"
-                              className="text-sm font-normal cursor-pointer"
-                            >
-                              Codeforces
                             </Label>
                           </div>
                           <div className="flex items-center space-x-2">
@@ -840,7 +781,7 @@ export function GrindSheet({ onLogout }: GrindSheetProps) {
                         >
                           <SlidersHorizontal className="h-4 w-4" />
                           Platform
-                          {selectedPlatforms.length < 6 && (
+                          {selectedPlatforms.length < 3 && (
                             <Badge
                               variant="secondary"
                               className="ml-1 h-5 px-1.5 text-xs"
@@ -866,55 +807,6 @@ export function GrindSheet({ onLogout }: GrindSheetProps) {
                               className="text-sm font-normal cursor-pointer"
                             >
                               LeetCode
-                            </Label>
-                          </div>
-                          <div className="flex items-center space-x-2">
-                            <input
-                              type="checkbox"
-                              id="hackerrank"
-                              className="rounded"
-                              checked={selectedPlatforms.includes("HackerRank")}
-                              onChange={() =>
-                                handlePlatformToggle("HackerRank")
-                              }
-                            />
-                            <Label
-                              htmlFor="hackerrank"
-                              className="text-sm font-normal cursor-pointer"
-                            >
-                              HackerRank
-                            </Label>
-                          </div>
-                          <div className="flex items-center space-x-2">
-                            <input
-                              type="checkbox"
-                              id="codechef"
-                              className="rounded"
-                              checked={selectedPlatforms.includes("CodeChef")}
-                              onChange={() => handlePlatformToggle("CodeChef")}
-                            />
-                            <Label
-                              htmlFor="codechef"
-                              className="text-sm font-normal cursor-pointer"
-                            >
-                              CodeChef
-                            </Label>
-                          </div>
-                          <div className="flex items-center space-x-2">
-                            <input
-                              type="checkbox"
-                              id="codeforces"
-                              className="rounded"
-                              checked={selectedPlatforms.includes("Codeforces")}
-                              onChange={() =>
-                                handlePlatformToggle("Codeforces")
-                              }
-                            />
-                            <Label
-                              htmlFor="codeforces"
-                              className="text-sm font-normal cursor-pointer"
-                            >
-                              Codeforces
                             </Label>
                           </div>
                           <div className="flex items-center space-x-2">
