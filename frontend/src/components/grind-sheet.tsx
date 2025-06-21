@@ -1143,7 +1143,9 @@ export function GrindSheet({ onLogout }: GrindSheetProps) {
                                                     )
                                                   )
                                                 ) : (
-                                                  <span className="text-xs text-grey-500"></span>
+                                                  <span className="text-xs text-grey-500">
+                                                    No Data Available
+                                                  </span>
                                                 )}
                                               </div>
                                             </TooltipContent>
