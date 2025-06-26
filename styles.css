@@ -226,11 +226,13 @@ td:last-child {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  /* max-width: 600px;
+  width: 60%; */
 }
 
 .update-tag {
   font-family: "Cascadia Mono", monospace; /* Use a modern monospace font */
-  font-size: 20px; /* Slightly larger font size */
+  font-size: 16px; /* Slightly larger font size */
   font-weight: bold;
   color: #856404; /* Darker shade of yellow for contrast */
   margin-bottom: 10px; /* Space below the title */
@@ -242,4 +244,3 @@ td:last-child {
   color: #333; /* Dark text for readability */
   margin: 0; /* Remove default margin */
 }
-
