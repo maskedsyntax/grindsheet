@@ -1,3 +1,4 @@
+import re
 from datetime import timedelta
 from fastapi import APIRouter, Depends, HTTPException
 from fastapi.security import OAuth2PasswordRequestForm
@@ -16,11 +17,54 @@ router = APIRouter(tags=["Authentication"])
 RESET_TOKEN_EXPIRE_MINUTES = 30
 
 
+def validate_password(password: str, username: str, full_name: str) -> None:
+    """Validate password meets complexity requirements."""
+    if len(password) < 8:
+        raise HTTPException(
+            status_code=400, detail="Password must be at least 8 characters long."
+        )
+    if not re.search(r"[A-Z]", password):
+        raise HTTPException(
+            status_code=400,
+            detail="Password must contain at least one uppercase letter.",
+        )
+    if not re.search(r"[a-z]", password):
+        raise HTTPException(
+            status_code=400,
+            detail="Password must contain at least one lowercase letter.",
+        )
+    if not re.search(r"\d", password):
+        raise HTTPException(
+            status_code=400, detail="Password must contain at least one number."
+        )
+    if not re.search(r"[!@#$%^&*(),.?\":{}|<>]", password):
+        raise HTTPException(
+            status_code=400,
+            detail="Password must contain at least one special character.",
+        )
+    if (
+        username.lower() in password.lower()
+        or full_name.lower().replace(" ", "") in password.lower()
+    ):
+        raise HTTPException(
+            status_code=400, detail="Password must not contain username or full name."
+        )
+
+
 @router.post("/signup", response_model=Token)
 async def signup(user: UserCreate, db: Session = Depends(get_db)):
-    db_user = db.query(User).filter(User.username == user.username).first()
-    if db_user:
+    # Check if username or email already exists
+    db_user_by_username = db.query(User).filter(User.username == user.username).first()
+    if db_user_by_username:
         raise HTTPException(status_code=400, detail="Username already exists")
+    db_user_by_email = db.query(User).filter(User.email == user.email).first()
+    if db_user_by_email:
+        raise HTTPException(status_code=400, detail="Email already exists")
+
+    # Validate password
+    validate_password(user.password, user.username, user.full_name)
+
+    # Hash password and create user
     hashed_password = hash_password(user.password)
     db_user = User(
         full_name=user.full_name,
