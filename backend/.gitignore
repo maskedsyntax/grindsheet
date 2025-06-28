@@ -1,4 +1,80 @@
-.env
-app.db
+# Python environment files
 __pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment (Conda or venv)
+env/
+venv/
+.grindsheet-backend/  # If using a Conda env folder locally
+*.egg-info/
+
+# SQLite database file
+app.db
+*.db
+*.db.bak
+
+# Alembic migration database (if separate)
+alembic/alembic.db  # Only if you use a separate Alembic DB
+
+# Byte-compiled / optimized files
 *.pyc
+*.pyo
+*.pyd
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg
+MANIFEST
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# macOS files
+.DS_Store
+
+# Windows files
+Thumbs.db
+
+# Editor/IDE files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Environment variables
+.env
+*.env
+
+# Logs and runtime files
+*.log
+*.lock
+
+# Test artifacts
+.coverage
+htmlcov/
+.tox/
+.nox/
+.pytest_cache/
+
+# MyPy
+.mypy_cache/
+
+# Documentation
+docs/_build/
+
+# Custom (project-specific)
+data/  # If you store raw data files
+uploads/  # If you handle file uploads
