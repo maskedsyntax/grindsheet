@@ -1,3 +1,4 @@
+import os
 import re
 from datetime import datetime, timedelta
 from fastapi import APIRouter, Depends, HTTPException
@@ -172,8 +173,9 @@ async def forgot_password(
         expires_delta=timedelta(minutes=RESET_TOKEN_EXPIRE_MINUTES),
     )
 
-    # Mock sending an email (replace with actual email sending logic)
-    reset_link = f"http://localhost:3000/reset-password?token={reset_token}"
+    # Use environment variable for frontend URL
+    frontend_url = os.getenv("FRONTEND_URL", "http://localhost:3000")
+    reset_link = f"{frontend_url}/reset-password?token={reset_token}"
     print(f"Password reset link for {email}: {reset_link}")
 
     # Log the attempt (even if email isn't sent, to track limit)
