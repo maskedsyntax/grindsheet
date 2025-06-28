@@ -132,7 +132,7 @@ export function LandingPage() {
         const formData = new URLSearchParams();
         formData.append("username", loginData.username);
         formData.append("password", loginData.password);
-        response = await fetch("http://localhost:8000/login", {
+        response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/login`, {
           method: "POST",
           headers: {
             "Content-Type": "application/x-www-form-urlencoded",
@@ -140,7 +140,7 @@ export function LandingPage() {
           body: formData.toString(),
         });
       } else if (activeTab === "register") {
-        response = await fetch("http://localhost:8000/signup", {
+        response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/signup`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -155,15 +155,18 @@ export function LandingPage() {
           }),
         });
       } else if (activeTab === "forgot-password") {
-        response = await fetch("http://localhost:8000/forgot-password", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            email: forgotPasswordData.email,
-          }),
-        });
+        response = await fetch(
+          `${process.env.NEXT_PUBLIC_API_URL}/forgot-password`,
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              email: forgotPasswordData.email,
+            }),
+          }
+        );
       }
 
       if (!response) {
