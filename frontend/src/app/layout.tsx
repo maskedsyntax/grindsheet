@@ -1,23 +1,7 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
-import { Geist, Geist_Mono, Fira_Sans, JetBrains_Mono } from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-const firaSans = Fira_Sans({
-  subsets: ["latin"],
-  weight: ["400", "600"],
-  variable: "--font-firasans",
-});
 
 const jetBrainsMono = JetBrains_Mono({
   subsets: ["latin"],

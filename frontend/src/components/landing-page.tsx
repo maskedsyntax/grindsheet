@@ -28,7 +28,6 @@ import {
   Users,
   ArrowDownCircle,
   ArrowRight,
-  GraduationCap,
 } from "lucide-react";
 import { Badge } from "./ui/badge";
 import {
@@ -37,35 +36,12 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "./ui/accordion";
-import {
-  JetBrains_Mono,
-  Pacifico,
-  Ubuntu_Sans,
-  Fira_Sans,
-} from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
 
 const jetBrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   weight: ["400", "500", "700", "800"],
   variable: "--font-montserrat",
-});
-
-const pacifico = Pacifico({
-  subsets: ["latin"],
-  weight: ["400"],
-  variable: "--font-pacifico",
-});
-
-const ubuntu = Ubuntu_Sans({
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  variable: "--font-pacifico",
-});
-
-const firasans = Fira_Sans({
-  subsets: ["latin"],
-  weight: ["400", "500", "700", "800"],
-  variable: "--font-firasans",
 });
 
 export function LandingPage() {
