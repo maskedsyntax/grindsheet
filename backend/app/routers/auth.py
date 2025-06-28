@@ -1,14 +1,26 @@
 import re
-from datetime import timedelta
+from datetime import datetime, timedelta
 from fastapi import APIRouter, Depends, HTTPException
 from fastapi.security import OAuth2PasswordRequestForm
 from jose import JWTError, jwt
 from sqlalchemy.orm import Session
 from app.core.config import settings
-from app.models import User
-from app.schemas import ForgotPasswordRequest, ResetPasswordRequest, UserCreate, Token
+from app.models import LoginAttempt, PasswordChangeAttempt, User
+from app.schemas import (
+    ForgotPasswordRequest,
+    ResetPasswordRequest,
+    TokenData,
+    UserCreate,
+    Token,
+    UserResponse,
+)
 from app.utils.email import send_email
-from app.utils.security import generate_access_token, hash_password, verify_password
+from app.utils.security import (
+    generate_access_token,
+    get_current_user,
+    hash_password,
+    verify_password,
+)
 from app.database import get_db
 
 router = APIRouter(tags=["Authentication"])
@@ -88,9 +100,34 @@ async def signup(user: UserCreate, db: Session = Depends(get_db)):
 async def login(
     form_data: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(get_db)
 ):
+
+    # Check login attempt rate limit
+    current_time = datetime.utcnow()
+    fifteen_minutes_ago = current_time - timedelta(minutes=15)
+    attempts = (
+        db.query(LoginAttempt)
+        .filter(LoginAttempt.username == form_data.username)
+        .filter(LoginAttempt.attempt_time >= fifteen_minutes_ago)
+        .filter(LoginAttempt.success == False)
+        .count()
+    )
+    if attempts >= 5:
+        raise HTTPException(
+            status_code=429,
+            detail="Too many failed login attempts. Try again after 15 minutes.",
+        )
+
     user = db.query(User).filter(User.username == form_data.username).first()
     if not user or not verify_password(form_data.password, user.hashed_password):
+        attempt = LoginAttempt(username=form_data.username, success=False)
+        db.add(attempt)
+        db.commit()
         raise HTTPException(status_code=400, detail="Invalid credentials")
+
+    # Successful login
+    attempt = LoginAttempt(username=form_data.username, success=True)
+    db.add(attempt)
+    db.commit()
 
     # Generate JWT Token
     access_token = generate_access_token(data={"sub": user.username})
@@ -106,7 +143,6 @@ async def forgot_password(
     request: ForgotPasswordRequest, db: Session = Depends(get_db)
 ):
     email = request.email.lower()
-    print(email)
 
     # Check if email exists in the database
     user = db.query(User).filter(User.email == email).first()
@@ -114,6 +150,20 @@ async def forgot_password(
         raise HTTPException(
             status_code=404,
             detail="Email not found. Please check your email address or register.",
+        )
+
+    # Check email send rate limit (max 2 per day)
+    current_day = datetime.utcnow().replace(hour=0, minute=0, second=0, microsecond=0)
+    attempts = (
+        db.query(PasswordChangeAttempt)
+        .filter(PasswordChangeAttempt.user_id == user.id)
+        .filter(PasswordChangeAttempt.attempt_time >= current_day)
+        .count()
+    )
+    if attempts >= 2:
+        raise HTTPException(
+            status_code=429,
+            detail="Password reset email limit exceeded (max 2 per day). Try again tomorrow.",
         )
 
     # Generate a reset token with a short expiration
@@ -125,30 +175,32 @@ async def forgot_password(
     # Mock sending an email (replace with actual email sending logic)
     reset_link = f"http://localhost:3000/reset-password?token={reset_token}"
     print(f"Password reset link for {email}: {reset_link}")
-    # In a real application, use a service like SendGrid to send the email
-    # Example:
-    # send_email(email, "Password Reset Request", f"Click here to reset your password: {reset_link}")
 
-    email_content = f"""
-    <html>
-    <body>
-        <p>Hi {user.full_name},</p>
-        <p>You requested to reset your password. Click the link below to reset it:</p>
-        <p><a href="{reset_link}">Reset Your Password</a></p>
-        <p>If you did not request this, please ignore this email.</p>
-        <p>Thanks,</p>
-        <p>The GrindSheet Team</p>
-    </body>
-    </html>
-    """
+    # Log the attempt (even if email isn't sent, to track limit)
+    attempt = PasswordChangeAttempt(user_id=user.id)
+    db.add(attempt)
+    db.commit()
 
-    # Send the email using SendGrid
-    print("Check1")
     try:
+        email_content = f"""
+        <html>
+        <body>
+            <p>Hi {user.full_name},</p>
+            <p>You requested to reset your password. Click the link below to reset it:</p>
+            <p><a href="{reset_link}">Reset Your Password</a></p>
+            <p>If you did not request this, please ignore this email.</p>
+            <p>Thanks,</p>
+            <p>The GrindSheet Team</p>
+        </body>
+        </html>
+        """
+
+        # Send the email using SendGrid
         send_email(
             to_emails=[email], subject="Password Reset Request", content=email_content
         )
     except Exception as e:
+        db.rollback()
         raise HTTPException(
             status_code=500,
             detail="Failed to send password reset email. Please try again later.",
@@ -224,9 +276,38 @@ async def reset_password(request: ResetPasswordRequest, db: Session = Depends(ge
     if not user:
         raise HTTPException(status_code=404, detail="User not found")
 
+    validate_password(new_password, user.username, user.full_name)
+
+    current_day = datetime.utcnow().replace(hour=0, minute=0, second=0, microsecond=0)
+    attempts = (
+        db.query(PasswordChangeAttempt)
+        .filter(PasswordChangeAttempt.user_id == user.id)
+        .filter(PasswordChangeAttempt.attempt_time >= current_day)
+        .count()
+    )
+    if attempts >= 2:
+        raise HTTPException(
+            status_code=429,
+            detail="Password change limit exceeded (max 3 per day). Try again tomorrow.",
+        )
+
     # Update the user's password
     user.hashed_password = hash_password(new_password)
+    attempt = PasswordChangeAttempt(user_id=user.id)
+    db.add(attempt)
     db.commit()
     db.refresh(user)
 
     return {"message": "Password updated successfully"}
+
+
+@router.get("/me", response_model=UserResponse)
+async def get_current_user_details(
+    token_data: TokenData = Depends(get_current_user),
+    db: Session = Depends(get_db),
+):
+    """Fetch the current logged-in user's details."""
+    user = db.query(User).filter(User.username == token_data.username).first()
+    if not user:
+        raise HTTPException(status_code=404, detail="User not found")
+    return user

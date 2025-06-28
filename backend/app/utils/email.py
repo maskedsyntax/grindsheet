@@ -17,16 +17,11 @@ def send_email(to_emails: list, subject: str, content: str) -> None:
     Raises:
         SendGridException: If email sending fails
     """
-    print("check2!")
     message = Mail(
         from_email=Email("info@grindsheet.xyz", "GrindSheet"),
         subject=subject,
         html_content=content,
     )
-
-    personalization = Personalization()
-
-    print("check2.5!")
 
     personalization = Personalization()
     for email in to_emails:
@@ -41,11 +36,6 @@ def send_email(to_emails: list, subject: str, content: str) -> None:
             raise
 
     message.add_personalization(personalization)
-
-    print("check3!")
-
-    # if unsubscribe_url:
-    #     message.add_header("List-Unsubscribe", f"<{unsubscribe_url}>")
 
     try:
         sg = SendGridAPIClient(settings.SENDGRID_API_KEY)

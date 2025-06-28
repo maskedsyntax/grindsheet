@@ -29,3 +29,19 @@ class UserProblem(Base):
     notes = Column(Text, nullable=True)
     updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
     user = relationship("User", back_populates="user_problems")
+
+
+class PasswordChangeAttempt(Base):
+    __tablename__ = "password_change_attempts"
+    id = Column(Integer, primary_key=True, index=True)
+    user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
+    attempt_time = Column(DateTime, default=datetime.utcnow)
+    user = relationship("User")
+
+
+class LoginAttempt(Base):
+    __tablename__ = "login_attempts"
+    id = Column(Integer, primary_key=True, index=True)
+    username = Column(String, nullable=False)
+    attempt_time = Column(DateTime, default=datetime.utcnow)
+    success = Column(Boolean, default=False)

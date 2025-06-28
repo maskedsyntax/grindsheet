@@ -1,14 +1,10 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.routers import auth, user_problems, pod
-from app.models import Base
-from app.database import engine
 from dotenv import load_dotenv
 import os
 
 load_dotenv()
-
-Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 
