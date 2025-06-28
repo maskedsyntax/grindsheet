@@ -13,6 +13,8 @@ allowed_origins = os.getenv("ALLOWED_ORIGINS", "https://grindsheet.vercel.app").
     ","
 )
 
+print(allowed_origins)
+
 # Add CORS middleware
 app.add_middleware(
     CORSMiddleware,
