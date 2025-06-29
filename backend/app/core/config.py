@@ -6,7 +6,7 @@ load_dotenv()
 
 
 class Settings(BaseSettings):
-    DATABASE_URL: str = "sqlite:///./app.db"
+    DATABASE_URL: str = os.getenv("DATABASE_URL", "sqlite:///./app.db")
     SECRET_KEY: str = os.getenv("SECRET_KEY", "fallback-secret-key")  # JWT secret key
     ALGORITHM: str = "HS256"  # Default value
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 20  # Default value
