@@ -8,17 +8,11 @@ load_dotenv()
 
 app = FastAPI()
 
-# # Load allowed origins from environment variable or default to local development
-# allowed_origins = os.getenv("ALLOWED_ORIGINS", "https://grindsheet.vercel.app").split(
-#     ","
-# )
-
-# print(allowed_origins)
 
 # Add CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://grindsheet.vercel.app"],
+    allow_origins=["https://grindsheet.onrender.com"],
     allow_credentials=True,
     allow_methods=["*"],  # Allow all methods (GET, POST, PATCH, etc.)
     allow_headers=["*"],  # Allow all headers (Authorization, Content-Type, etc.)
