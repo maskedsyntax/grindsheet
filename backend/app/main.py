@@ -21,7 +21,7 @@ app.add_middleware(
 
 @app.get("/", include_in_schema=False)
 async def read_root():
-    return {"message": "GrindSheet Backend is running"}
+    return {"message": "GrindSheet Backend is running!"}
 
 
 app.include_router(auth.router)
