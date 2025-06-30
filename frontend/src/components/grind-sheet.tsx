@@ -1419,8 +1419,10 @@ import {
   User,
   Menu,
   ExternalLink,
+  TrendingUp,
 } from "lucide-react";
 import { useState, useEffect } from "react";
+import { Progress } from "./ui/progress";
 
 interface Problem {
   id: number;
@@ -1472,6 +1474,7 @@ export function GrindSheet({ onLogout }: GrindSheetProps) {
     new Set()
   );
   const [hideSolved, setHideSolved] = useState(false);
+  const [showBookmarkedOnly, setShowBookmarkedOnly] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
 
@@ -1672,6 +1675,32 @@ export function GrindSheet({ onLogout }: GrindSheetProps) {
     setIsNotesDialogOpen(false);
   };
 
+  const getProgressStats = () => {
+    const totalProblems = problems.length;
+    const totalSolved = solvedProblems.size;
+
+    const easyProblems = problems.filter((p) => p.Difficulty === "Easy");
+    const mediumProblems = problems.filter((p) => p.Difficulty === "Medium");
+    const hardProblems = problems.filter((p) => p.Difficulty === "Hard");
+
+    const easySolved = easyProblems.filter((p) =>
+      solvedProblems.has(p["Problem Name"])
+    ).length;
+    const mediumSolved = mediumProblems.filter((p) =>
+      solvedProblems.has(p["Problem Name"])
+    ).length;
+    const hardSolved = hardProblems.filter((p) =>
+      solvedProblems.has(p["Problem Name"])
+    ).length;
+
+    return {
+      total: { solved: totalSolved, total: totalProblems },
+      easy: { solved: easySolved, total: easyProblems.length },
+      medium: { solved: mediumSolved, total: mediumProblems.length },
+      hard: { solved: hardSolved, total: hardProblems.length },
+    };
+  };
+
   const filteredProblems = problems.filter((problem) => {
     const topicMatch =
       selectedTopics.length === 0 || selectedTopics.includes(problem.Topic);
@@ -1682,12 +1711,15 @@ export function GrindSheet({ onLogout }: GrindSheetProps) {
       problem["Problem Name"].toLowerCase().includes(searchQuery.toLowerCase());
     const solvedMatch =
       !hideSolved || !solvedProblems.has(problem["Problem Name"]);
+    const bookmarkMatch =
+      !showBookmarkedOnly || bookmarkedProblems.has(problem["Problem Name"]);
     return (
       topicMatch &&
       difficultyMatch &&
       platformMatch &&
       searchMatch &&
-      solvedMatch
+      solvedMatch &&
+      bookmarkMatch
     );
   });
 
@@ -1778,6 +1810,7 @@ export function GrindSheet({ onLogout }: GrindSheetProps) {
     setSelectedPlatforms(["LeetCode", "GeeksForGeeks", "Coding Ninjas"]);
     setSearchQuery("");
     setHideSolved(false);
+    setShowBookmarkedOnly(false);
     setMobileFiltersOpen(false);
   };
 
@@ -1806,6 +1839,8 @@ export function GrindSheet({ onLogout }: GrindSheetProps) {
       </div>
     );
   }
+
+  const progressStats = getProgressStats();
 
   return (
     <TooltipProvider>
@@ -1894,6 +1929,198 @@ export function GrindSheet({ onLogout }: GrindSheetProps) {
 
         <main className="container mx-auto px-4 py-6 flex-grow">
           <div className="grid gap-6">
+            {/* 🆕 NEW: Modern Progress Section */}
+            <Card className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-blue-950 dark:to-indigo-950 border-0 shadow-xl shadow-blue-100/50 dark:shadow-blue-950/50">
+              {/* Background decoration */}
+              <div className="absolute inset-0 bg-gradient-to-br from-white/60 to-transparent dark:from-white/5 dark:to-transparent" />
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-blue-200/30 to-transparent dark:from-blue-400/10 rounded-full -translate-y-16 translate-x-16" />
+              <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-indigo-200/30 to-transparent dark:from-indigo-400/10 rounded-full translate-y-12 -translate-x-12" />
+
+              <CardHeader className="relative pb-6">
+                <CardTitle className="flex items-center gap-3 text-slate-800 dark:text-slate-100">
+                  <div className="p-2 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl shadow-lg">
+                    <TrendingUp className="h-5 w-5 text-white" />
+                  </div>
+                  <div>
+                    <h2 className="text-xl font-bold bg-gradient-to-r from-slate-800 to-slate-600 dark:from-slate-100 dark:to-slate-300 bg-clip-text text-transparent">
+                      Progress Overview
+                    </h2>
+                    <p className="text-sm text-slate-500 dark:text-slate-400 font-normal">
+                      Track your coding journey
+                    </p>
+                  </div>
+                </CardTitle>
+              </CardHeader>
+
+              <CardContent className="relative space-y-6">
+                {/* Overall Progress */}
+                <div className="space-y-3">
+                  <div className="flex justify-between items-center">
+                    <span className="text-sm font-semibold text-slate-700 dark:text-slate-300">
+                      Overall Progress
+                    </span>
+                    <div className="flex items-center gap-2">
+                      <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400 bg-clip-text text-transparent">
+                        {progressStats.total.solved}
+                      </span>
+                      <span className="text-slate-500 dark:text-slate-400">
+                        / {progressStats.total.total}
+                      </span>
+                      <Badge
+                        variant="secondary"
+                        className="ml-2 bg-blue-100 text-blue-700 dark:bg-blue-900/50 dark:text-blue-300 font-semibold"
+                      >
+                        {Math.round(
+                          (progressStats.total.solved /
+                            progressStats.total.total) *
+                            100
+                        )}
+                        %
+                      </Badge>
+                    </div>
+                  </div>
+                  <div className="relative">
+                    <Progress
+                      value={
+                        (progressStats.total.solved /
+                          progressStats.total.total) *
+                        100
+                      }
+                      className="h-4 bg-slate-200 dark:bg-slate-700 shadow-inner"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-indigo-500/20 rounded-full" />
+                  </div>
+                </div>
+
+                {/* Difficulty Breakdown */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2">
+                  {/* Easy */}
+                  <div className="group space-y-3 p-4 rounded-2xl bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm border border-green-200/50 dark:border-green-800/50 hover:shadow-lg hover:shadow-green-100/50 dark:hover:shadow-green-900/20 transition-all duration-300">
+                    <div className="flex justify-between items-center">
+                      <Badge
+                        variant="outline"
+                        className="bg-gradient-to-r from-green-50 to-emerald-50 text-green-700 border-green-200 dark:from-green-950 dark:to-emerald-950 dark:text-green-300 dark:border-green-800 font-semibold px-3 py-1"
+                      >
+                        Easy
+                      </Badge>
+                      <span className="text-sm font-bold text-green-700 dark:text-green-300">
+                        {progressStats.easy.solved}/{progressStats.easy.total}
+                      </span>
+                    </div>
+                    <div className="relative">
+                      <Progress
+                        value={
+                          progressStats.easy.total > 0
+                            ? (progressStats.easy.solved /
+                                progressStats.easy.total) *
+                              100
+                            : 0
+                        }
+                        className="h-3 bg-green-100 dark:bg-green-900/50"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-r from-green-400/30 to-emerald-400/30 rounded-full" />
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs font-medium text-green-600 dark:text-green-400">
+                        {progressStats.easy.total > 0
+                          ? Math.round(
+                              (progressStats.easy.solved /
+                                progressStats.easy.total) *
+                                100
+                            )
+                          : 0}
+                        % Complete
+                      </span>
+                      <div className="w-2 h-2 bg-green-400 rounded-full group-hover:scale-125 transition-transform duration-300" />
+                    </div>
+                  </div>
+
+                  {/* Medium */}
+                  <div className="group space-y-3 p-4 rounded-2xl bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm border border-yellow-200/50 dark:border-yellow-800/50 hover:shadow-lg hover:shadow-yellow-100/50 dark:hover:shadow-yellow-900/20 transition-all duration-300">
+                    <div className="flex justify-between items-center">
+                      <Badge
+                        variant="outline"
+                        className="bg-gradient-to-r from-yellow-50 to-amber-50 text-yellow-700 border-yellow-200 dark:from-yellow-950 dark:to-amber-950 dark:text-yellow-300 dark:border-yellow-800 font-semibold px-3 py-1"
+                      >
+                        Medium
+                      </Badge>
+                      <span className="text-sm font-bold text-yellow-700 dark:text-yellow-300">
+                        {progressStats.medium.solved}/
+                        {progressStats.medium.total}
+                      </span>
+                    </div>
+                    <div className="relative">
+                      <Progress
+                        value={
+                          progressStats.medium.total > 0
+                            ? (progressStats.medium.solved /
+                                progressStats.medium.total) *
+                              100
+                            : 0
+                        }
+                        className="h-3 bg-yellow-100 dark:bg-yellow-900/50"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/30 to-amber-400/30 rounded-full" />
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs font-medium text-yellow-600 dark:text-yellow-400">
+                        {progressStats.medium.total > 0
+                          ? Math.round(
+                              (progressStats.medium.solved /
+                                progressStats.medium.total) *
+                                100
+                            )
+                          : 0}
+                        % Complete
+                      </span>
+                      <div className="w-2 h-2 bg-yellow-400 rounded-full group-hover:scale-125 transition-transform duration-300" />
+                    </div>
+                  </div>
+
+                  {/* Hard */}
+                  <div className="group space-y-3 p-4 rounded-2xl bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm border border-red-200/50 dark:border-red-800/50 hover:shadow-lg hover:shadow-red-100/50 dark:hover:shadow-red-900/20 transition-all duration-300">
+                    <div className="flex justify-between items-center">
+                      <Badge
+                        variant="outline"
+                        className="bg-gradient-to-r from-red-50 to-rose-50 text-red-700 border-red-200 dark:from-red-950 dark:to-rose-950 dark:text-red-300 dark:border-red-800 font-semibold px-3 py-1"
+                      >
+                        Hard
+                      </Badge>
+                      <span className="text-sm font-bold text-red-700 dark:text-red-300">
+                        {progressStats.hard.solved}/{progressStats.hard.total}
+                      </span>
+                    </div>
+                    <div className="relative">
+                      <Progress
+                        value={
+                          progressStats.hard.total > 0
+                            ? (progressStats.hard.solved /
+                                progressStats.hard.total) *
+                              100
+                            : 0
+                        }
+                        className="h-3 bg-red-100 dark:bg-red-900/50"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-r from-red-400/30 to-rose-400/30 rounded-full" />
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs font-medium text-red-600 dark:text-red-400">
+                        {progressStats.hard.total > 0
+                          ? Math.round(
+                              (progressStats.hard.solved /
+                                progressStats.hard.total) *
+                                100
+                            )
+                          : 0}
+                        % Complete
+                      </span>
+                      <div className="w-2 h-2 bg-red-400 rounded-full group-hover:scale-125 transition-transform duration-300" />
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
             {/* Search and Filter Controls */}
             <div className="flex flex-col gap-4">
               {/* Search */}
@@ -1918,11 +2145,15 @@ export function GrindSheet({ onLogout }: GrindSheetProps) {
                   Filters
                   {(selectedTopics.length > 0 ||
                     selectedDifficulties.length < 3 ||
-                    selectedPlatforms.length < 3) && (
+                    selectedPlatforms.length < 3 ||
+                    hideSolved ||
+                    showBookmarkedOnly) && (
                     <Badge variant="secondary" className="ml-1">
                       {selectedTopics.length +
                         (3 - selectedDifficulties.length) +
-                        (6 - selectedPlatforms.length)}
+                        (3 - selectedPlatforms.length) +
+                        (hideSolved ? 1 : 0) +
+                        (showBookmarkedOnly ? 1 : 0)}
                     </Badge>
                   )}
                 </Button>
@@ -2147,7 +2378,7 @@ export function GrindSheet({ onLogout }: GrindSheetProps) {
                   </div>
 
                   {/* Toggle Controls Row */}
-                  <div className="grid grid-cols-2 gap-4 mb-4">
+                  {/* <div className="grid grid-cols-2 gap-4 mb-4">
                     <div className="flex items-center gap-2">
                       <Switch
                         id="show-tags-mobile"
@@ -2167,6 +2398,43 @@ export function GrindSheet({ onLogout }: GrindSheetProps) {
                       <Label htmlFor="solved-filter-mobile" className="text-sm">
                         Hide Solved
                       </Label>
+                    </div>
+                  </div> */}
+
+                  <div className="grid grid-cols-1 gap-3 mb-4">
+                    <div className="flex items-center justify-between">
+                      <Label htmlFor="show-tags-mobile" className="text-sm">
+                        Show Tags
+                      </Label>
+                      <Switch
+                        id="show-tags-mobile"
+                        checked={showTags}
+                        onCheckedChange={setShowTags}
+                      />
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <Label htmlFor="solved-filter-mobile" className="text-sm">
+                        Hide Solved
+                      </Label>
+                      <Switch
+                        id="solved-filter-mobile"
+                        checked={hideSolved}
+                        onCheckedChange={setHideSolved}
+                      />
+                    </div>
+                    {/* 🆕 NEW: Added bookmark filter toggle for mobile */}
+                    <div className="flex items-center justify-between">
+                      <Label
+                        htmlFor="bookmarked-filter-mobile"
+                        className="text-sm"
+                      >
+                        Show Bookmarked Only
+                      </Label>
+                      <Switch
+                        id="bookmarked-filter-mobile"
+                        checked={showBookmarkedOnly}
+                        onCheckedChange={setShowBookmarkedOnly}
+                      />
                     </div>
                   </div>
 
@@ -2387,7 +2655,7 @@ export function GrindSheet({ onLogout }: GrindSheetProps) {
                   </div>
 
                   {/* Toggle Controls */}
-                  <div className="flex flex-wrap items-center gap-4 w-full md:w-auto">
+                  {/* <div className="flex flex-wrap items-center gap-4 w-full md:w-auto">
                     <div className="flex items-center gap-2">
                       <Switch
                         id="show-tags"
@@ -2412,6 +2680,51 @@ export function GrindSheet({ onLogout }: GrindSheetProps) {
                       variant="outline"
                       size="sm"
                       className="gap-1 h-10"
+                      onClick={resetFilters}
+                    >
+                      <RotateCcw className="h-4 w-4" />
+                      Reset
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </div> */}
+                  <div className="flex flex-wrap items-center gap-4 w-full md:w-auto">
+                    <div className="flex items-center gap-2">
+                      <Switch
+                        id="show-tags"
+                        checked={showTags}
+                        onCheckedChange={setShowTags}
+                      />
+                      <Label htmlFor="show-tags" className="text-sm">
+                        Show Tags
+                      </Label>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Switch
+                        id="solved-filter"
+                        checked={hideSolved}
+                        onCheckedChange={setHideSolved}
+                      />
+                      <Label htmlFor="solved-filter" className="text-sm">
+                        Hide Solved
+                      </Label>
+                    </div>
+                    {/* 🆕 NEW: Added bookmark filter toggle for desktop */}
+                    <div className="flex items-center gap-2">
+                      <Switch
+                        id="bookmarked-filter"
+                        checked={showBookmarkedOnly}
+                        onCheckedChange={setShowBookmarkedOnly}
+                      />
+                      <Label htmlFor="bookmarked-filter" className="text-sm">
+                        Bookmarked Only
+                      </Label>
+                    </div>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="gap-1 h-10 bg-transparent"
                       onClick={resetFilters}
                     >
                       <RotateCcw className="h-4 w-4" />
