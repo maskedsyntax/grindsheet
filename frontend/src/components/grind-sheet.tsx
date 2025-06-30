@@ -1420,6 +1420,11 @@ import {
   Menu,
   ExternalLink,
   TrendingUp,
+  EyeOff,
+  Bookmark,
+  Eye,
+  Settings2,
+  X,
 } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Progress } from "./ui/progress";
@@ -1814,6 +1819,16 @@ export function GrindSheet({ onLogout }: GrindSheetProps) {
     setMobileFiltersOpen(false);
   };
 
+  const getActiveFiltersCount = () => {
+    return (
+      selectedTopics.length +
+      (3 - selectedDifficulties.length) +
+      (3 - selectedPlatforms.length) +
+      (hideSolved ? 1 : 0) +
+      (showBookmarkedOnly ? 1 : 0)
+    );
+  };
+
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -2122,8 +2137,590 @@ export function GrindSheet({ onLogout }: GrindSheetProps) {
             </Card>
 
             {/* Search and Filter Controls */}
-            <div className="flex flex-col gap-4">
-              {/* Search */}
+
+            <div className="space-y-4">
+              {/* Mobile Filter Toggle */}
+              <div className="lg:hidden order-1">
+                <Button
+                  variant="outline"
+                  className="w-full h-12 flex items-center justify-between bg-white/80 backdrop-blur-sm border-gray-200/60 shadow-sm hover:shadow-md transition-all duration-200"
+                  onClick={() => setMobileFiltersOpen(!mobileFiltersOpen)}
+                >
+                  <div className="flex items-center gap-2">
+                    <Settings2 className="h-5 w-5" />
+                    <span className="font-medium">Filters & Options</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    {getActiveFiltersCount() > 0 && (
+                      <Badge
+                        variant="secondary"
+                        className="bg-blue-100 text-blue-700 font-semibold"
+                      >
+                        {getActiveFiltersCount()}
+                      </Badge>
+                    )}
+                    <ChevronDown
+                      className={`h-4 w-4 transition-transform duration-200 ${
+                        mobileFiltersOpen ? "rotate-180" : ""
+                      }`}
+                    />
+                  </div>
+                </Button>
+              </div>
+
+              {/* Filters Panel */}
+              <div
+                // className="order-2"
+                className={`order-2 transition-all duration-300 ease-in-out ${
+                  mobileFiltersOpen ? "block" : "hidden lg:block"
+                }`}
+              >
+                <Card className="bg-white/80 backdrop-blur-sm border-gray-200/60 shadow-lg dark:bg-gray-900/80 dark:border-gray-700/60">
+                  <CardContent className="px-6">
+                    {/* Mobile Layout */}
+                    <div className="lg:hidden space-y-6">
+                      {/* Filter Categories */}
+                      <div className="space-y-4">
+                        <div className="flex items-center gap-2 pb-2 border-b border-gray-200 dark:border-gray-700">
+                          <FilterIcon className="h-4 w-4 text-gray-600 dark:text-gray-400" />
+                          <h3 className="font-semibold text-gray-900 dark:text-gray-100">
+                            Filter Categories
+                          </h3>
+                        </div>
+
+                        <div className="grid gap-3">
+                          {/* Topics */}
+                          <DropdownMenu>
+                            <DropdownMenuTrigger asChild>
+                              <Button
+                                variant="outline"
+                                className="w-full justify-between h-11 bg-gray-50/80 hover:bg-gray-100/80 border-gray-200 dark:bg-gray-800/80 dark:hover:bg-gray-700/80 dark:border-gray-700"
+                              >
+                                <div className="flex items-center gap-2">
+                                  <Tag className="h-4 w-4 text-blue-600" />
+                                  <span className="font-medium">Topics</span>
+                                </div>
+                                <div className="flex items-center gap-2">
+                                  {selectedTopics.length > 0 && (
+                                    <Badge
+                                      variant="secondary"
+                                      className="bg-blue-100 text-blue-700 text-xs"
+                                    >
+                                      {selectedTopics.length}
+                                    </Badge>
+                                  )}
+                                  <ChevronDown className="h-4 w-4" />
+                                </div>
+                              </Button>
+                            </DropdownMenuTrigger>
+                            <DropdownMenuContent
+                              align="start"
+                              className="w-80 max-h-80 overflow-y-auto"
+                            >
+                              <div className="p-4">
+                                <div className="flex flex-wrap gap-2">
+                                  {topics.map((topic) => (
+                                    <Badge
+                                      key={topic}
+                                      variant={
+                                        selectedTopics.includes(topic)
+                                          ? "default"
+                                          : "outline"
+                                      }
+                                      className={`cursor-pointer py-2 px-3 transition-all duration-200 ${
+                                        selectedTopics.includes(topic)
+                                          ? "bg-blue-600 text-white hover:bg-blue-700"
+                                          : "bg-white hover:bg-gray-50 text-gray-700 border-gray-300 hover:border-gray-400"
+                                      }`}
+                                      onClick={() => handleTopicToggle(topic)}
+                                    >
+                                      {topic}
+                                    </Badge>
+                                  ))}
+                                </div>
+                              </div>
+                            </DropdownMenuContent>
+                          </DropdownMenu>
+
+                          {/* Difficulty */}
+                          <DropdownMenu>
+                            <DropdownMenuTrigger asChild>
+                              <Button
+                                variant="outline"
+                                className="w-full justify-between h-11 bg-gray-50/80 hover:bg-gray-100/80 border-gray-200 dark:bg-gray-800/80 dark:hover:bg-gray-700/80 dark:border-gray-700"
+                              >
+                                <div className="flex items-center gap-2">
+                                  <SlidersHorizontal className="h-4 w-4 text-green-600" />
+                                  <span className="font-medium">
+                                    Difficulty
+                                  </span>
+                                </div>
+                                <div className="flex items-center gap-2">
+                                  {selectedDifficulties.length < 3 && (
+                                    <Badge
+                                      variant="secondary"
+                                      className="bg-green-100 text-green-700 text-xs"
+                                    >
+                                      {selectedDifficulties.length}
+                                    </Badge>
+                                  )}
+                                  <ChevronDown className="h-4 w-4" />
+                                </div>
+                              </Button>
+                            </DropdownMenuTrigger>
+                            <DropdownMenuContent align="start" className="w-64">
+                              <div className="p-4 space-y-3">
+                                {["Easy", "Medium", "Hard"].map(
+                                  (difficulty) => (
+                                    <div
+                                      key={difficulty}
+                                      className="flex items-center space-x-3"
+                                    >
+                                      <input
+                                        type="checkbox"
+                                        id={`${difficulty}-mobile`}
+                                        className="w-4 h-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                                        checked={selectedDifficulties.includes(
+                                          difficulty
+                                        )}
+                                        onChange={() =>
+                                          handleDifficultyToggle(difficulty)
+                                        }
+                                      />
+                                      <Label
+                                        htmlFor={`${difficulty}-mobile`}
+                                        className="text-sm font-medium cursor-pointer flex-1"
+                                      >
+                                        {difficulty}
+                                      </Label>
+                                      <Badge
+                                        variant="outline"
+                                        className={`text-xs ${getDifficultyBadge(
+                                          difficulty
+                                        )}`}
+                                      >
+                                        {
+                                          problems.filter(
+                                            (p) => p.Difficulty === difficulty
+                                          ).length
+                                        }
+                                      </Badge>
+                                    </div>
+                                  )
+                                )}
+                              </div>
+                            </DropdownMenuContent>
+                          </DropdownMenu>
+
+                          {/* Platform */}
+                          <DropdownMenu>
+                            <DropdownMenuTrigger asChild>
+                              <Button
+                                variant="outline"
+                                className="w-full justify-between h-11 bg-gray-50/80 hover:bg-gray-100/80 border-gray-200 dark:bg-gray-800/80 dark:hover:bg-gray-700/80 dark:border-gray-700"
+                              >
+                                <div className="flex items-center gap-2">
+                                  <Building2 className="h-4 w-4 text-purple-600" />
+                                  <span className="font-medium">Platform</span>
+                                </div>
+                                <div className="flex items-center gap-2">
+                                  {selectedPlatforms.length < 3 && (
+                                    <Badge
+                                      variant="secondary"
+                                      className="bg-purple-100 text-purple-700 text-xs"
+                                    >
+                                      {selectedPlatforms.length}
+                                    </Badge>
+                                  )}
+                                  <ChevronDown className="h-4 w-4" />
+                                </div>
+                              </Button>
+                            </DropdownMenuTrigger>
+                            <DropdownMenuContent align="start" className="w-64">
+                              <div className="p-4 space-y-3">
+                                {[
+                                  "LeetCode",
+                                  "GeeksForGeeks",
+                                  "Coding Ninjas",
+                                ].map((platform) => (
+                                  <div
+                                    key={platform}
+                                    className="flex items-center space-x-3"
+                                  >
+                                    <input
+                                      type="checkbox"
+                                      id={`${platform}-mobile`}
+                                      className="w-4 h-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                                      checked={selectedPlatforms.includes(
+                                        platform
+                                      )}
+                                      onChange={() =>
+                                        handlePlatformToggle(platform)
+                                      }
+                                    />
+                                    <Label
+                                      htmlFor={`${platform}-mobile`}
+                                      className="text-sm font-medium cursor-pointer flex-1"
+                                    >
+                                      {platform}
+                                    </Label>
+                                    <Badge
+                                      variant="outline"
+                                      className="text-xs"
+                                    >
+                                      {
+                                        problems.filter(
+                                          (p) => p.Platform === platform
+                                        ).length
+                                      }
+                                    </Badge>
+                                  </div>
+                                ))}
+                              </div>
+                            </DropdownMenuContent>
+                          </DropdownMenu>
+                        </div>
+                      </div>
+
+                      {/* View Options */}
+                      <div className="space-y-4">
+                        <div className="flex items-center gap-2 pb-2 border-b border-gray-200 dark:border-gray-700">
+                          <Eye className="h-4 w-4 text-gray-600 dark:text-gray-400" />
+                          <h3 className="font-semibold text-gray-900 dark:text-gray-100">
+                            View Options
+                          </h3>
+                        </div>
+
+                        <div className="space-y-4">
+                          <div className="flex items-center justify-between p-3 rounded-lg bg-gray-50/80 dark:bg-gray-800/80">
+                            <div className="flex items-center gap-3">
+                              <Tag className="h-4 w-4 text-blue-600" />
+                              <Label
+                                htmlFor="show-tags-mobile"
+                                className="font-medium"
+                              >
+                                Show Tags
+                              </Label>
+                            </div>
+                            <Switch
+                              id="show-tags-mobile"
+                              checked={showTags}
+                              onCheckedChange={setShowTags}
+                            />
+                          </div>
+
+                          <div className="flex items-center justify-between p-3 rounded-lg bg-gray-50/80 dark:bg-gray-800/80">
+                            <div className="flex items-center gap-3">
+                              <EyeOff className="h-4 w-4 text-orange-600" />
+                              <Label
+                                htmlFor="hide-solved-mobile"
+                                className="font-medium"
+                              >
+                                Hide Solved
+                              </Label>
+                            </div>
+                            <Switch
+                              id="hide-solved-mobile"
+                              checked={hideSolved}
+                              onCheckedChange={setHideSolved}
+                            />
+                          </div>
+
+                          <div className="flex items-center justify-between p-3 rounded-lg bg-gray-50/80 dark:bg-gray-800/80">
+                            <div className="flex items-center gap-3">
+                              <Bookmark className="h-4 w-4 text-yellow-600" />
+                              <Label
+                                htmlFor="bookmarked-only-mobile"
+                                className="font-medium"
+                              >
+                                Bookmarked Only
+                              </Label>
+                            </div>
+                            <Switch
+                              id="bookmarked-only-mobile"
+                              checked={showBookmarkedOnly}
+                              onCheckedChange={setShowBookmarkedOnly}
+                            />
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Reset Button */}
+                      <Button
+                        variant="outline"
+                        className="w-full h-11 gap-2 bg-red-50 hover:bg-red-100 text-red-700 border-red-200 hover:border-red-300 dark:bg-red-950/50 dark:hover:bg-red-950/80 dark:text-red-400 dark:border-red-800"
+                        onClick={resetFilters}
+                      >
+                        <RotateCcw className="h-4 w-4" />
+                        Reset All Filters
+                      </Button>
+                    </div>
+
+                    {/* Desktop Layout */}
+                    <div className="hidden lg:block">
+                      <div className="flex items-center justify-between gap-6">
+                        {/* Filter Controls */}
+                        <div className="flex items-center gap-3 flex-1">
+                          {/* Topics */}
+                          <DropdownMenu>
+                            <DropdownMenuTrigger asChild>
+                              <Button
+                                variant="outline"
+                                className="h-10 px-4 gap-2 bg-white hover:bg-gray-50 border-gray-200 shadow-sm hover:shadow-md transition-all duration-200 dark:bg-gray-800 dark:hover:bg-gray-700 dark:border-gray-700"
+                              >
+                                <Tag className="h-4 w-4 text-blue-600" />
+                                <span className="font-medium">Topics</span>
+                                {selectedTopics.length > 0 && (
+                                  <Badge
+                                    variant="secondary"
+                                    className="bg-blue-100 text-blue-700 text-xs ml-1"
+                                  >
+                                    {selectedTopics.length}
+                                  </Badge>
+                                )}
+                                <ChevronDown className="h-3 w-3 opacity-50" />
+                              </Button>
+                            </DropdownMenuTrigger>
+                            <DropdownMenuContent
+                              align="start"
+                              className="w-96 max-h-80 overflow-y-auto"
+                            >
+                              <div className="p-4">
+                                <div className="flex flex-wrap gap-2">
+                                  {topics.map((topic) => (
+                                    <Badge
+                                      key={topic}
+                                      variant={
+                                        selectedTopics.includes(topic)
+                                          ? "default"
+                                          : "outline"
+                                      }
+                                      className={`cursor-pointer py-2 px-3 transition-all duration-200 ${
+                                        selectedTopics.includes(topic)
+                                          ? "bg-blue-600 text-white hover:bg-blue-700"
+                                          : "bg-white hover:bg-gray-50 text-gray-700 border-gray-300 hover:border-gray-400"
+                                      }`}
+                                      onClick={() => handleTopicToggle(topic)}
+                                    >
+                                      {topic}
+                                    </Badge>
+                                  ))}
+                                </div>
+                              </div>
+                            </DropdownMenuContent>
+                          </DropdownMenu>
+
+                          {/* Difficulty */}
+                          <DropdownMenu>
+                            <DropdownMenuTrigger asChild>
+                              <Button
+                                variant="outline"
+                                className="h-10 px-4 gap-2 bg-white hover:bg-gray-50 border-gray-200 shadow-sm hover:shadow-md transition-all duration-200 dark:bg-gray-800 dark:hover:bg-gray-700 dark:border-gray-700"
+                              >
+                                <SlidersHorizontal className="h-4 w-4 text-green-600" />
+                                <span className="font-medium">Difficulty</span>
+                                {selectedDifficulties.length < 3 && (
+                                  <Badge
+                                    variant="secondary"
+                                    className="bg-green-100 text-green-700 text-xs ml-1"
+                                  >
+                                    {selectedDifficulties.length}
+                                  </Badge>
+                                )}
+                                <ChevronDown className="h-3 w-3 opacity-50" />
+                              </Button>
+                            </DropdownMenuTrigger>
+                            <DropdownMenuContent align="start" className="w-64">
+                              <div className="p-4 space-y-3">
+                                {["Easy", "Medium", "Hard"].map(
+                                  (difficulty) => (
+                                    <div
+                                      key={difficulty}
+                                      className="flex items-center space-x-3"
+                                    >
+                                      <input
+                                        type="checkbox"
+                                        id={difficulty}
+                                        className="w-4 h-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                                        checked={selectedDifficulties.includes(
+                                          difficulty
+                                        )}
+                                        onChange={() =>
+                                          handleDifficultyToggle(difficulty)
+                                        }
+                                      />
+                                      <Label
+                                        htmlFor={difficulty}
+                                        className="text-sm font-medium cursor-pointer flex-1"
+                                      >
+                                        {difficulty}
+                                      </Label>
+                                      <Badge
+                                        variant="outline"
+                                        className={`text-xs ${getDifficultyBadge(
+                                          difficulty
+                                        )}`}
+                                      >
+                                        {
+                                          problems.filter(
+                                            (p) => p.Difficulty === difficulty
+                                          ).length
+                                        }
+                                      </Badge>
+                                    </div>
+                                  )
+                                )}
+                              </div>
+                            </DropdownMenuContent>
+                          </DropdownMenu>
+
+                          {/* Platform */}
+                          <DropdownMenu>
+                            <DropdownMenuTrigger asChild>
+                              <Button
+                                variant="outline"
+                                className="h-10 px-4 gap-2 bg-white hover:bg-gray-50 border-gray-200 shadow-sm hover:shadow-md transition-all duration-200 dark:bg-gray-800 dark:hover:bg-gray-700 dark:border-gray-700"
+                              >
+                                <Building2 className="h-4 w-4 text-purple-600" />
+                                <span className="font-medium">Platform</span>
+                                {selectedPlatforms.length < 3 && (
+                                  <Badge
+                                    variant="secondary"
+                                    className="bg-purple-100 text-purple-700 text-xs ml-1"
+                                  >
+                                    {selectedPlatforms.length}
+                                  </Badge>
+                                )}
+                                <ChevronDown className="h-3 w-3 opacity-50" />
+                              </Button>
+                            </DropdownMenuTrigger>
+                            <DropdownMenuContent align="start" className="w-64">
+                              <div className="p-4 space-y-3">
+                                {[
+                                  "LeetCode",
+                                  "GeeksForGeeks",
+                                  "Coding Ninjas",
+                                ].map((platform) => (
+                                  <div
+                                    key={platform}
+                                    className="flex items-center space-x-3"
+                                  >
+                                    <input
+                                      type="checkbox"
+                                      id={platform}
+                                      className="w-4 h-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                                      checked={selectedPlatforms.includes(
+                                        platform
+                                      )}
+                                      onChange={() =>
+                                        handlePlatformToggle(platform)
+                                      }
+                                    />
+                                    <Label
+                                      htmlFor={platform}
+                                      className="text-sm font-medium cursor-pointer flex-1"
+                                    >
+                                      {platform}
+                                    </Label>
+                                    <Badge
+                                      variant="outline"
+                                      className="text-xs"
+                                    >
+                                      {
+                                        problems.filter(
+                                          (p) => p.Platform === platform
+                                        ).length
+                                      }
+                                    </Badge>
+                                  </div>
+                                ))}
+                              </div>
+                            </DropdownMenuContent>
+                          </DropdownMenu>
+                        </div>
+
+                        {/* View Options */}
+                        <div className="flex items-center gap-4">
+                          <div className="flex items-center gap-2">
+                            <Switch
+                              id="show-tags"
+                              checked={showTags}
+                              onCheckedChange={setShowTags}
+                            />
+                            <Label
+                              htmlFor="show-tags"
+                              className="text-sm font-medium"
+                            >
+                              Show Tags
+                            </Label>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <Switch
+                              id="hide-solved"
+                              checked={hideSolved}
+                              onCheckedChange={setHideSolved}
+                            />
+                            <Label
+                              htmlFor="hide-solved"
+                              className="text-sm font-medium"
+                            >
+                              Hide Solved
+                            </Label>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <Switch
+                              id="bookmarked-only"
+                              checked={showBookmarkedOnly}
+                              onCheckedChange={setShowBookmarkedOnly}
+                            />
+                            <Label
+                              htmlFor="bookmarked-only"
+                              className="text-sm font-medium"
+                            >
+                              Bookmarked Only
+                            </Label>
+                          </div>
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            className="gap-2 h-10 bg-red-50 hover:bg-red-100 border-gray-200 shadow-sm hover:shadow-md transition-all duration-200 dark:bg-gray-800 dark:hover:bg-gray-700 dark:border-gray-700"
+                            onClick={resetFilters}
+                          >
+                            <RotateCcw className="h-4 w-4" />
+                            Reset
+                          </Button>
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+              {/* Search Bar */}
+              <div className="relative order-3">
+                <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none z-10">
+                  <Search className="h-5 w-5 text-gray-400" />
+                </div>
+                {/* <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" /> */}
+                <Input
+                  className="pl-12 h-12 text-base bg-white/80 backdrop-blur-sm border-gray-200/60 shadow-sm hover:shadow-md transition-all duration-200 focus:shadow-lg focus:border-blue-300 dark:bg-gray-900/80 dark:border-gray-700/60"
+                  placeholder="Search problems by name"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                />
+                {searchQuery && (
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    className="absolute right-2 top-1/2 -translate-y-1/2 h-8 w-8 p-0 hover:bg-gray-100 dark:hover:bg-gray-800"
+                    onClick={() => setSearchQuery("")}
+                  >
+                    <X className="h-4 w-4" />
+                  </Button>
+                )}
+              </div>
+            </div>
+
+            {/* <div className="flex flex-col gap-4">
               <div className="relative w-full">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
                 <Input
@@ -2133,607 +2730,7 @@ export function GrindSheet({ onLogout }: GrindSheetProps) {
                   onChange={(e) => setSearchQuery(e.target.value)}
                 />
               </div>
-
-              {/* Mobile Filter Toggle */}
-              <div className="md:hidden">
-                <Button
-                  variant="outline"
-                  className="w-full flex items-center justify-center gap-2"
-                  onClick={() => setMobileFiltersOpen(!mobileFiltersOpen)}
-                >
-                  <FilterIcon className="h-4 w-4" />
-                  Filters
-                  {(selectedTopics.length > 0 ||
-                    selectedDifficulties.length < 3 ||
-                    selectedPlatforms.length < 3 ||
-                    hideSolved ||
-                    showBookmarkedOnly) && (
-                    <Badge variant="secondary" className="ml-1">
-                      {selectedTopics.length +
-                        (3 - selectedDifficulties.length) +
-                        (3 - selectedPlatforms.length) +
-                        (hideSolved ? 1 : 0) +
-                        (showBookmarkedOnly ? 1 : 0)}
-                    </Badge>
-                  )}
-                </Button>
-              </div>
-
-              {/* Desktop Filters */}
-              <div
-                className={`bg-white dark:bg-gray-950 rounded-lg border border-gray-200 dark:border-gray-800 p-4 shadow-sm ${
-                  mobileFiltersOpen ? "block" : "hidden md:block"
-                }`}
-              >
-                {/* Mobile Filters Layout */}
-                <div className="md:hidden">
-                  {/* Filter Buttons Row */}
-                  <div className="grid grid-cols-2 gap-2 mb-4">
-                    <DropdownMenu>
-                      <DropdownMenuTrigger asChild>
-                        <Button
-                          variant="outline"
-                          size="sm"
-                          className="w-full justify-between"
-                        >
-                          <div className="flex items-center gap-1">
-                            <Tag className="h-4 w-4" />
-                            Topics
-                          </div>
-                          {selectedTopics.length > 0 && (
-                            <Badge
-                              variant="secondary"
-                              className="ml-1 h-5 px-1.5 text-xs"
-                            >
-                              {selectedTopics.length}
-                            </Badge>
-                          )}
-                          <ChevronDown className="h-3 w-3 opacity-50" />
-                        </Button>
-                      </DropdownMenuTrigger>
-                      <DropdownMenuContent
-                        align="start"
-                        className="w-[280px] max-h-80 overflow-y-auto"
-                      >
-                        <div className="p-3">
-                          <div className="flex flex-wrap gap-2">
-                            {topics.map((topic) => (
-                              <Badge
-                                key={topic}
-                                variant={
-                                  selectedTopics.includes(topic)
-                                    ? "secondary"
-                                    : "outline"
-                                }
-                                className={`cursor-pointer py-1.5 px-3 ${
-                                  selectedTopics.includes(topic)
-                                    ? "bg-blue-100 text-blue-800 border-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:border-blue-800"
-                                    : "bg-gray-100 hover:bg-gray-200 text-gray-800 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-gray-200"
-                                }`}
-                                onClick={() => handleTopicToggle(topic)}
-                              >
-                                {topic}
-                              </Badge>
-                            ))}
-                          </div>
-                        </div>
-                      </DropdownMenuContent>
-                    </DropdownMenu>
-
-                    <DropdownMenu>
-                      <DropdownMenuTrigger asChild>
-                        <Button
-                          variant="outline"
-                          size="sm"
-                          className="w-full justify-between"
-                        >
-                          <div className="flex items-center gap-1">
-                            <FilterIcon className="h-4 w-4" />
-                            Difficulty
-                          </div>
-                          {selectedDifficulties.length < 3 && (
-                            <Badge
-                              variant="secondary"
-                              className="ml-1 h-5 px-1.5 text-xs"
-                            >
-                              {selectedDifficulties.length}
-                            </Badge>
-                          )}
-                          <ChevronDown className="h-3 w-3 opacity-50" />
-                        </Button>
-                      </DropdownMenuTrigger>
-                      <DropdownMenuContent align="start" className="w-56">
-                        <div className="p-2 space-y-2">
-                          <div className="flex items-center space-x-2">
-                            <input
-                              type="checkbox"
-                              id="easy-mobile"
-                              className="rounded"
-                              checked={selectedDifficulties.includes("Easy")}
-                              onChange={() => handleDifficultyToggle("Easy")}
-                            />
-                            <Label
-                              htmlFor="easy-mobile"
-                              className="text-sm font-normal cursor-pointer"
-                            >
-                              Easy
-                            </Label>
-                          </div>
-                          <div className="flex items-center space-x-2">
-                            <input
-                              type="checkbox"
-                              id="medium-mobile"
-                              className="rounded"
-                              checked={selectedDifficulties.includes("Medium")}
-                              onChange={() => handleDifficultyToggle("Medium")}
-                            />
-                            <Label
-                              htmlFor="medium-mobile"
-                              className="text-sm font-normal cursor-pointer"
-                            >
-                              Medium
-                            </Label>
-                          </div>
-                          <div className="flex items-center space-x-2">
-                            <input
-                              type="checkbox"
-                              id="hard-mobile"
-                              className="rounded"
-                              checked={selectedDifficulties.includes("Hard")}
-                              onChange={() => handleDifficultyToggle("Hard")}
-                            />
-                            <Label
-                              htmlFor="hard-mobile"
-                              className="text-sm font-normal cursor-pointer"
-                            >
-                              Hard
-                            </Label>
-                          </div>
-                        </div>
-                      </DropdownMenuContent>
-                    </DropdownMenu>
-                  </div>
-
-                  <div className="grid grid-cols-1 gap-2 mb-4">
-                    <DropdownMenu>
-                      <DropdownMenuTrigger asChild>
-                        <Button
-                          variant="outline"
-                          size="sm"
-                          className="w-full justify-between"
-                        >
-                          <div className="flex items-center gap-1">
-                            <SlidersHorizontal className="h-4 w-4" />
-                            Platform
-                          </div>
-                          {selectedPlatforms.length < 3 && (
-                            <Badge
-                              variant="secondary"
-                              className="ml-1 h-5 px-1.5 text-xs"
-                            >
-                              {selectedPlatforms.length}
-                            </Badge>
-                          )}
-                          <ChevronDown className="h-3 w-3 opacity-50" />
-                        </Button>
-                      </DropdownMenuTrigger>
-                      <DropdownMenuContent align="start" className="w-56">
-                        <div className="p-2 space-y-2">
-                          <div className="flex items-center space-x-2">
-                            <input
-                              type="checkbox"
-                              id="leetcode-mobile"
-                              className="rounded"
-                              checked={selectedPlatforms.includes("LeetCode")}
-                              onChange={() => handlePlatformToggle("LeetCode")}
-                            />
-                            <Label
-                              htmlFor="leetcode-mobile"
-                              className="text-sm font-normal cursor-pointer"
-                            >
-                              LeetCode
-                            </Label>
-                          </div>
-                          <div className="flex items-center space-x-2">
-                            <input
-                              type="checkbox"
-                              id="geeksforgeeks-mobile"
-                              className="rounded"
-                              checked={selectedPlatforms.includes(
-                                "GeeksForGeeks"
-                              )}
-                              onChange={() =>
-                                handlePlatformToggle("GeeksForGeeks")
-                              }
-                            />
-                            <Label
-                              htmlFor="geeksforgeeks-mobile"
-                              className="text-sm font-normal cursor-pointer"
-                            >
-                              GeeksForGeeks
-                            </Label>
-                          </div>
-                          <div className="flex items-center space-x-2">
-                            <input
-                              type="checkbox"
-                              id="coding-ninjas-mobile"
-                              className="rounded"
-                              checked={selectedPlatforms.includes(
-                                "Coding Ninjas"
-                              )}
-                              onChange={() =>
-                                handlePlatformToggle("Coding Ninjas")
-                              }
-                            />
-                            <Label
-                              htmlFor="coding-ninjas-mobile"
-                              className="text-sm font-normal cursor-pointer"
-                            >
-                              Coding Ninjas
-                            </Label>
-                          </div>
-                        </div>
-                      </DropdownMenuContent>
-                    </DropdownMenu>
-                  </div>
-
-                  {/* Toggle Controls Row */}
-                  {/* <div className="grid grid-cols-2 gap-4 mb-4">
-                    <div className="flex items-center gap-2">
-                      <Switch
-                        id="show-tags-mobile"
-                        checked={showTags}
-                        onCheckedChange={setShowTags}
-                      />
-                      <Label htmlFor="show-tags-mobile" className="text-sm">
-                        Show Tags
-                      </Label>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Switch
-                        id="solved-filter-mobile"
-                        checked={hideSolved}
-                        onCheckedChange={setHideSolved}
-                      />
-                      <Label htmlFor="solved-filter-mobile" className="text-sm">
-                        Hide Solved
-                      </Label>
-                    </div>
-                  </div> */}
-
-                  <div className="grid grid-cols-1 gap-3 mb-4">
-                    <div className="flex items-center justify-between">
-                      <Label htmlFor="show-tags-mobile" className="text-sm">
-                        Show Tags
-                      </Label>
-                      <Switch
-                        id="show-tags-mobile"
-                        checked={showTags}
-                        onCheckedChange={setShowTags}
-                      />
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <Label htmlFor="solved-filter-mobile" className="text-sm">
-                        Hide Solved
-                      </Label>
-                      <Switch
-                        id="solved-filter-mobile"
-                        checked={hideSolved}
-                        onCheckedChange={setHideSolved}
-                      />
-                    </div>
-                    {/* 🆕 NEW: Added bookmark filter toggle for mobile */}
-                    <div className="flex items-center justify-between">
-                      <Label
-                        htmlFor="bookmarked-filter-mobile"
-                        className="text-sm"
-                      >
-                        Show Bookmarked Only
-                      </Label>
-                      <Switch
-                        id="bookmarked-filter-mobile"
-                        checked={showBookmarkedOnly}
-                        onCheckedChange={setShowBookmarkedOnly}
-                      />
-                    </div>
-                  </div>
-
-                  {/* Reset Button */}
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="w-full gap-1 justify-center"
-                    onClick={resetFilters}
-                  >
-                    <RotateCcw className="h-4 w-4" />
-                    Reset
-                  </Button>
-                </div>
-
-                {/* Desktop Filters Layout */}
-                <div className="hidden md:flex md:flex-row justify-between items-start md:items-center gap-4">
-                  {/* Filter Controls */}
-                  <div className="flex flex-wrap gap-2 w-full md:w-auto">
-                    <DropdownMenu>
-                      <DropdownMenuTrigger asChild>
-                        <Button
-                          variant="outline"
-                          size="sm"
-                          className="gap-1 h-10 px-4"
-                        >
-                          <Tag className="h-4 w-4" />
-                          Topics
-                          {selectedTopics.length > 0 && (
-                            <Badge
-                              variant="secondary"
-                              className="ml-1 h-5 px-1.5 text-xs"
-                            >
-                              {selectedTopics.length}
-                            </Badge>
-                          )}
-                          <ChevronDown className="h-3 w-3 opacity-50" />
-                        </Button>
-                      </DropdownMenuTrigger>
-                      <DropdownMenuContent
-                        align="start"
-                        className="w-[280px] md:w-96 max-h-80 overflow-y-auto"
-                      >
-                        <div className="p-3">
-                          <div className="flex flex-wrap gap-2">
-                            {topics.map((topic) => (
-                              <Badge
-                                key={topic}
-                                variant={
-                                  selectedTopics.includes(topic)
-                                    ? "secondary"
-                                    : "outline"
-                                }
-                                className={`cursor-pointer py-1.5 px-3 ${
-                                  selectedTopics.includes(topic)
-                                    ? "bg-blue-100 text-blue-800 border-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:border-blue-800"
-                                    : "bg-gray-100 hover:bg-gray-200 text-gray-800 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-gray-200"
-                                }`}
-                                onClick={() => handleTopicToggle(topic)}
-                              >
-                                {topic}
-                              </Badge>
-                            ))}
-                          </div>
-                        </div>
-                      </DropdownMenuContent>
-                    </DropdownMenu>
-
-                    <DropdownMenu>
-                      <DropdownMenuTrigger asChild>
-                        <Button
-                          variant="outline"
-                          size="sm"
-                          className="gap-1 h-10 px-4"
-                        >
-                          <FilterIcon className="h-4 w-4" />
-                          Difficulty
-                          {selectedDifficulties.length < 3 && (
-                            <Badge
-                              variant="secondary"
-                              className="ml-1 h-5 px-1.5 text-xs"
-                            >
-                              {selectedDifficulties.length}
-                            </Badge>
-                          )}
-                          <ChevronDown className="h-3 w-3 opacity-50" />
-                        </Button>
-                      </DropdownMenuTrigger>
-                      <DropdownMenuContent align="start" className="w-56">
-                        <div className="p-2 space-y-2">
-                          <div className="flex items-center space-x-2">
-                            <input
-                              type="checkbox"
-                              id="easy"
-                              className="rounded"
-                              checked={selectedDifficulties.includes("Easy")}
-                              onChange={() => handleDifficultyToggle("Easy")}
-                            />
-                            <Label
-                              htmlFor="easy"
-                              className="text-sm font-normal cursor-pointer"
-                            >
-                              Easy
-                            </Label>
-                          </div>
-                          <div className="flex items-center space-x-2">
-                            <input
-                              type="checkbox"
-                              id="medium"
-                              className="rounded"
-                              checked={selectedDifficulties.includes("Medium")}
-                              onChange={() => handleDifficultyToggle("Medium")}
-                            />
-                            <Label
-                              htmlFor="medium"
-                              className="text-sm font-normal cursor-pointer"
-                            >
-                              Medium
-                            </Label>
-                          </div>
-                          <div className="flex items-center space-x-2">
-                            <input
-                              type="checkbox"
-                              id="hard"
-                              className="rounded"
-                              checked={selectedDifficulties.includes("Hard")}
-                              onChange={() => handleDifficultyToggle("Hard")}
-                            />
-                            <Label
-                              htmlFor="hard"
-                              className="text-sm font-normal cursor-pointer"
-                            >
-                              Hard
-                            </Label>
-                          </div>
-                        </div>
-                      </DropdownMenuContent>
-                    </DropdownMenu>
-
-                    <DropdownMenu>
-                      <DropdownMenuTrigger asChild>
-                        <Button
-                          variant="outline"
-                          size="sm"
-                          className="gap-1 h-10 px-4"
-                        >
-                          <SlidersHorizontal className="h-4 w-4" />
-                          Platform
-                          {selectedPlatforms.length < 3 && (
-                            <Badge
-                              variant="secondary"
-                              className="ml-1 h-5 px-1.5 text-xs"
-                            >
-                              {selectedPlatforms.length}
-                            </Badge>
-                          )}
-                          <ChevronDown className="h-3 w-3 opacity-50" />
-                        </Button>
-                      </DropdownMenuTrigger>
-                      <DropdownMenuContent align="start" className="w-56">
-                        <div className="p-2 space-y-2">
-                          <div className="flex items-center space-x-2">
-                            <input
-                              type="checkbox"
-                              id="leetcode"
-                              className="rounded"
-                              checked={selectedPlatforms.includes("LeetCode")}
-                              onChange={() => handlePlatformToggle("LeetCode")}
-                            />
-                            <Label
-                              htmlFor="leetcode"
-                              className="text-sm font-normal cursor-pointer"
-                            >
-                              LeetCode
-                            </Label>
-                          </div>
-                          <div className="flex items-center space-x-2">
-                            <input
-                              type="checkbox"
-                              id="geeksforgeeks"
-                              className="rounded"
-                              checked={selectedPlatforms.includes(
-                                "GeeksForGeeks"
-                              )}
-                              onChange={() =>
-                                handlePlatformToggle("GeeksForGeeks")
-                              }
-                            />
-                            <Label
-                              htmlFor="geeksforgeeks"
-                              className="text-sm font-normal cursor-pointer"
-                            >
-                              GeeksForGeeks
-                            </Label>
-                          </div>
-                          <div className="flex items-center space-x-2">
-                            <input
-                              type="checkbox"
-                              id="coding-ninjas"
-                              className="rounded"
-                              checked={selectedPlatforms.includes(
-                                "Coding Ninjas"
-                              )}
-                              onChange={() =>
-                                handlePlatformToggle("Coding Ninjas")
-                              }
-                            />
-                            <Label
-                              htmlFor="coding-ninjas"
-                              className="text-sm font-normal cursor-pointer"
-                            >
-                              Coding Ninjas
-                            </Label>
-                          </div>
-                        </div>
-                      </DropdownMenuContent>
-                    </DropdownMenu>
-                  </div>
-
-                  {/* Toggle Controls */}
-                  {/* <div className="flex flex-wrap items-center gap-4 w-full md:w-auto">
-                    <div className="flex items-center gap-2">
-                      <Switch
-                        id="show-tags"
-                        checked={showTags}
-                        onCheckedChange={setShowTags}
-                      />
-                      <Label htmlFor="show-tags" className="text-sm">
-                        Show Tags
-                      </Label>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Switch
-                        id="solved-filter"
-                        checked={hideSolved}
-                        onCheckedChange={setHideSolved}
-                      />
-                      <Label htmlFor="solved-filter" className="text-sm">
-                        Hide Solved
-                      </Label>
-                    </div>
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="gap-1 h-10"
-                      onClick={resetFilters}
-                    >
-                      <RotateCcw className="h-4 w-4" />
-                      Reset
-                    </Button>
-                  </div>
-                </div>
-              </div>
             </div> */}
-                  <div className="flex flex-wrap items-center gap-4 w-full md:w-auto">
-                    <div className="flex items-center gap-2">
-                      <Switch
-                        id="show-tags"
-                        checked={showTags}
-                        onCheckedChange={setShowTags}
-                      />
-                      <Label htmlFor="show-tags" className="text-sm">
-                        Show Tags
-                      </Label>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Switch
-                        id="solved-filter"
-                        checked={hideSolved}
-                        onCheckedChange={setHideSolved}
-                      />
-                      <Label htmlFor="solved-filter" className="text-sm">
-                        Hide Solved
-                      </Label>
-                    </div>
-                    {/* 🆕 NEW: Added bookmark filter toggle for desktop */}
-                    <div className="flex items-center gap-2">
-                      <Switch
-                        id="bookmarked-filter"
-                        checked={showBookmarkedOnly}
-                        onCheckedChange={setShowBookmarkedOnly}
-                      />
-                      <Label htmlFor="bookmarked-filter" className="text-sm">
-                        Bookmarked Only
-                      </Label>
-                    </div>
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="gap-1 h-10 bg-transparent"
-                      onClick={resetFilters}
-                    >
-                      <RotateCcw className="h-4 w-4" />
-                      Reset
-                    </Button>
-                  </div>
-                </div>
-              </div>
-            </div>
 
             {/* Problem Cards */}
             <div className="grid gap-6">
@@ -2812,7 +2809,7 @@ export function GrindSheet({ onLogout }: GrindSheetProps) {
                                           </a>
                                           <Badge
                                             variant="outline"
-                                            className="font-normal text-xs text-gray-500 border-gray-300"
+                                            className="font-normal text-xs text-gray-500 border-gray-300 rounded-md"
                                           >
                                             {problem.Platform}
                                           </Badge>
@@ -2900,8 +2897,8 @@ export function GrindSheet({ onLogout }: GrindSheetProps) {
                                           solvedProblems.has(
                                             problem["Problem Name"]
                                           )
-                                            ? "text-green-600 hover:text-green-700"
-                                            : "text-gray-400 hover:text-gray-600"
+                                            ? "text-green-600 hover:text-green-700 hover:bg-green-50"
+                                            : "text-gray-400 hover:text-green-600 hover:bg-green-50"
                                         }`}
                                         onClick={() =>
                                           toggleSolvedStatus(
@@ -2920,7 +2917,13 @@ export function GrindSheet({ onLogout }: GrindSheetProps) {
                                               <Button
                                                 variant="ghost"
                                                 size="icon"
-                                                className="h-8 w-8 hover:bg-blue-50 dark:hover:bg-blue-950"
+                                                className={`h-8 w-8 ${
+                                                  bookmarkedProblems.has(
+                                                    problem["Problem Name"]
+                                                  )
+                                                    ? "text-blue-600 hover:text-blue-700 hover:bg-blue-50"
+                                                    : "text-gray-400 hover:text-blue-600 hover:bg-blue-50"
+                                                }`}
                                                 onClick={() =>
                                                   toggleBookmark(
                                                     problem["Problem Name"]
@@ -2932,8 +2935,8 @@ export function GrindSheet({ onLogout }: GrindSheetProps) {
                                                     bookmarkedProblems.has(
                                                       problem["Problem Name"]
                                                     )
-                                                      ? "text-blue-500 fill-blue-500"
-                                                      : "text-gray-600 hover:text-blue-500"
+                                                      ? "fill-blue-600"
+                                                      : ""
                                                   }`}
                                                 />
                                               </Button>
@@ -2957,8 +2960,8 @@ export function GrindSheet({ onLogout }: GrindSheetProps) {
                                         size="sm"
                                         className={`h-8 w-8 p-0 ${
                                           notesMap.has(problem["Problem Name"])
-                                            ? "text-blue-600 hover:text-blue-700"
-                                            : "text-gray-400 hover:text-gray-600"
+                                            ? "text-blue-600 hover:text-purple-700 hover:bg-purple-50"
+                                            : "text-gray-400 hover:text-purple-600 hover:bg-purple-50"
                                         }`}
                                         onClick={() =>
                                           openNotesDialog(
@@ -3016,7 +3019,7 @@ export function GrindSheet({ onLogout }: GrindSheetProps) {
                                       <div className="flex items-center gap-2 flex-wrap">
                                         <Badge
                                           variant="outline"
-                                          className="font-normal text-xs text-gray-500 border-gray-300"
+                                          className="font-normal text-xs text-gray-500 border-gray-300 rounded-md"
                                         >
                                           {problem.Platform}
                                         </Badge>
@@ -3080,8 +3083,8 @@ export function GrindSheet({ onLogout }: GrindSheetProps) {
                                             solvedProblems.has(
                                               problem["Problem Name"]
                                             )
-                                              ? "text-green-600 hover:text-green-700"
-                                              : "text-gray-400 hover:text-gray-600"
+                                              ? "text-green-600 hover:text-green-700 hover:bg-green-50"
+                                              : "text-gray-400 hover:text-green-600 hover:bg-green-50"
                                           }`}
                                           onClick={() =>
                                             toggleSolvedStatus(
@@ -3126,8 +3129,8 @@ export function GrindSheet({ onLogout }: GrindSheetProps) {
                                             notesMap.has(
                                               problem["Problem Name"]
                                             )
-                                              ? "text-blue-600 hover:text-blue-700"
-                                              : "text-gray-400 hover:text-gray-600"
+                                              ? "text-purple-600 hover:text-purple-700 hover:bg-purple-50"
+                                              : "text-gray-400 hover:text-purple-600 hover:bg-purple-50"
                                           }`}
                                           onClick={() =>
                                             openNotesDialog(
