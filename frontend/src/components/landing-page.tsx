@@ -882,7 +882,6 @@ export function LandingPage() {
 
             <TabsContent value="login" className="space-y-4">
               <form onSubmit={handleAuth} className="space-y-4">
-                Login form fields remain unchanged
                 <div className="space-y-2">
                   <Label htmlFor="login-username">Username</Label>
                   <Input
