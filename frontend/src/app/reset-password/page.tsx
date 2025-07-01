@@ -282,7 +282,7 @@ function ResetPasswordContent() {
           </div>
           <Button
             type="submit"
-            className="w-full bg-black text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200"
+            className="hover:cursor-pointer w-full bg-black text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200"
             disabled={isLoading}
           >
             {isLoading ? "Resetting Password..." : "Reset Password"}

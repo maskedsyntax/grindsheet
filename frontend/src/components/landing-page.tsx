@@ -24,10 +24,10 @@ import {
   CheckCircle,
   Code,
   Database,
-  LineChart,
   Users,
   ArrowDownCircle,
   ArrowRight,
+  FileEdit,
 } from "lucide-react";
 import { Badge } from "./ui/badge";
 import {
@@ -229,7 +229,12 @@ export function LandingPage() {
               </p>
             </div>
           </div>
-          <Button onClick={() => setIsDialogOpen(true)}>Get Started</Button>
+          <Button
+            className="hover:cursor-pointer"
+            onClick={() => setIsDialogOpen(true)}
+          >
+            Get Started
+          </Button>
         </div>
       </header>
 
@@ -270,7 +275,7 @@ export function LandingPage() {
               <Button
                 size="sm"
                 onClick={() => setIsDialogOpen(true)}
-                className={`bg-black hover:bg-gray-800 text-white dark:bg-white dark:text-black dark:hover:bg-gray-200 shadow-md transition-all duration-300 group ${jetBrainsMono.className}`}
+                className={`hover:cursor-pointer bg-black hover:bg-gray-800 text-white dark:bg-white dark:text-black dark:hover:bg-gray-200 shadow-md transition-all duration-300 group ${jetBrainsMono.className}`}
               >
                 Start Tracking Now
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -280,7 +285,7 @@ export function LandingPage() {
                 size="sm"
                 variant="outline"
                 onClick={scrollToFAQs}
-                className="border-gray-300 hover:border-gray-400 transition-all duration-300 group"
+                className="hover:cursor-pointer border-gray-300 hover:border-gray-400 transition-all duration-300 group"
               >
                 Learn More{" "}
                 <ArrowDownCircle className="ml-1 h-4 w-4 transition-transform group-hover:translate-y-1" />
@@ -397,12 +402,12 @@ export function LandingPage() {
 
               <Card>
                 <CardHeader>
-                  <LineChart className="h-8 w-8 mb-2 text-orange-500" />
-                  <CardTitle>Performance Analytics</CardTitle>
+                  <FileEdit className="h-8 w-8 mb-2 text-orange-500" />
+                  <CardTitle>Personalized Notes</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <CardDescription>
-                    Visualize your progress and identify areas for improvement.
+                    Add quick tips to master key concepts per problem.
                   </CardDescription>
                 </CardContent>
               </Card>
@@ -421,7 +426,11 @@ export function LandingPage() {
               problem tracker to help you stay organized and focused on your DSA
               preparation for technical interviews.
             </p>
-            <Button size="lg" onClick={() => setIsDialogOpen(true)}>
+            <Button
+              className="hover:cursor-pointer"
+              size="lg"
+              onClick={() => setIsDialogOpen(true)}
+            >
               Get Started Now
             </Button>
             <div className="mt-10">
@@ -447,7 +456,7 @@ export function LandingPage() {
           <div className="max-w-3xl mx-auto">
             <Accordion type="single" collapsible className="w-full">
               <AccordionItem value="item-1">
-                <AccordionTrigger className="text-left">
+                <AccordionTrigger className="hover:cursor-pointer text-left">
                   What is GrindSheet?
                 </AccordionTrigger>
                 <AccordionContent>
@@ -459,7 +468,7 @@ export function LandingPage() {
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-2">
-                <AccordionTrigger className="text-left">
+                <AccordionTrigger className="hover:cursor-pointer text-left">
                   Is GrindSheet free to use?
                 </AccordionTrigger>
                 <AccordionContent>
@@ -469,7 +478,7 @@ export function LandingPage() {
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-3">
-                <AccordionTrigger className="text-left">
+                <AccordionTrigger className="hover:cursor-pointer text-left">
                   How do I track my progress?
                 </AccordionTrigger>
                 <AccordionContent>
@@ -479,7 +488,7 @@ export function LandingPage() {
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-4">
-                <AccordionTrigger className="text-left">
+                <AccordionTrigger className="hover:cursor-pointer text-left">
                   Can I sync my LeetCode or GeeksForGeeks progress?
                 </AccordionTrigger>
                 <AccordionContent>
@@ -490,7 +499,7 @@ export function LandingPage() {
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-5">
-                <AccordionTrigger className="text-left">
+                <AccordionTrigger className="hover:cursor-pointer text-left">
                   How are the problems organized?
                 </AccordionTrigger>
                 <AccordionContent>
@@ -502,7 +511,7 @@ export function LandingPage() {
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-6">
-                <AccordionTrigger className="text-left">
+                <AccordionTrigger className="hover:cursor-pointer text-left">
                   Can I contribute to GrindSheet?
                 </AccordionTrigger>
                 <AccordionContent>
@@ -528,11 +537,30 @@ export function LandingPage() {
 
             <p className="text-gray-600 dark:text-gray-400 text-xs md:text-sm flex flex-col md:flex-row items-center justify-center space-y-1 md:space-y-0 md:space-x-2">
               <span>
-                Made with <span className="text-red-500 mx-1">♥</span> by Aftaab
-                Siddiqui
+                Made with <span className="text-red-500 mx-1">♥</span> by{" "}
+                <a
+                  href="https://x.com/MaskedSyntax"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline"
+                >
+                  {" "}
+                  Aftaab{" "}
+                </a>
               </span>
               <span className="hidden md:inline mx-2">•</span>
-              <span>Designed by Shifa Siddiqui</span>
+              <span>
+                Designed by{" "}
+                <a
+                  href="https://x.com/MaskedSyntax"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline"
+                >
+                  {" "}
+                  Shifa{" "}
+                </a>
+              </span>
             </p>
           </div>
         </div>
@@ -576,8 +604,12 @@ export function LandingPage() {
             value={activeTab}
           >
             <TabsList className="grid w-full grid-cols-2 mb-6">
-              <TabsTrigger value="login">Login</TabsTrigger>
-              <TabsTrigger value="register">Register</TabsTrigger>
+              <TabsTrigger className="hover:cursor-pointer" value="login">
+                Login
+              </TabsTrigger>
+              <TabsTrigger className="hover:cursor-pointer" value="register">
+                Register
+              </TabsTrigger>
             </TabsList>
 
             <TabsContent value="login" className="space-y-4">
@@ -611,7 +643,7 @@ export function LandingPage() {
                 <div className="text-right">
                   <button
                     type="button"
-                    className="text-sm text-blue-600 hover:underline dark:text-blue-400"
+                    className="hover:cursor-pointer text-sm text-blue-600 hover:underline dark:text-blue-400"
                     onClick={() => setActiveTab("forgot-password")}
                   >
                     Forgot Password?
@@ -619,7 +651,7 @@ export function LandingPage() {
                 </div>
                 <Button
                   type="submit"
-                  className="w-full bg-black text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200"
+                  className="hover:cursor-pointer w-full bg-black text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200"
                   disabled={isLoading}
                 >
                   {isLoading ? "Signing In..." : "Sign In"}
@@ -741,7 +773,7 @@ export function LandingPage() {
                 </div>
                 <Button
                   type="submit"
-                  className="w-full bg-black text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200"
+                  className="hover:cursor-pointer w-full bg-black text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200"
                   disabled={isLoading}
                 >
                   {isLoading ? "Creating Account..." : "Create Account"}
