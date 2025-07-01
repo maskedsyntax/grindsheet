@@ -11,7 +11,7 @@ class Settings(BaseSettings):
     )
     SECRET_KEY: str = os.getenv("SECRET_KEY", "fallback-secret-key")  # JWT secret key
     ALGORITHM: str = "HS256"  # Default value
-    ACCESS_TOKEN_EXPIRE_MINUTES: int = 20  # Default value
+    ACCESS_TOKEN_EXPIRE_MINUTES: int = 10080  # Default value
     SENDGRID_API_KEY: str = os.getenv("SENDGRID_API_KEY", "")
 
 

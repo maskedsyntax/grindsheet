@@ -10,7 +10,7 @@ router = APIRouter(tags=["Daily Problems"])
 
 
 @router.get("/leetcode-daily")
-async def get_leetcode_daily(token_data: TokenData = Depends(get_current_user)):
+async def get_leetcode_daily():
     """Endpoint to fetch the current LeetCode daily problem."""
     try:
         # Capture the output from fetch_leetcode_daily
