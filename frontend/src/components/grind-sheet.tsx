@@ -1428,6 +1428,7 @@ import {
 } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Progress } from "./ui/progress";
+import { ProblemOfTheDay } from "./problem-of-the-day";
 
 interface Problem {
   id: number;
@@ -1451,6 +1452,14 @@ interface UserProblem {
   is_bookmarked: boolean;
   notes: string;
   updated_at: string;
+}
+
+interface LeetCodeProblemOfTheDay {
+  date: string;
+  title: string;
+  difficulty: "Easy" | "Medium" | "Hard";
+  topics: string[];
+  url: string;
 }
 
 interface GrindSheetProps {
@@ -1941,6 +1950,10 @@ export function GrindSheet({ onLogout }: GrindSheetProps) {
             </div>
           )}
         </header>
+
+        <section className="container  w-full flex-grow mx-auto px-4 py-6">
+          <ProblemOfTheDay />
+        </section>
 
         <main className="container mx-auto px-4 py-6 flex-grow">
           <div className="grid gap-6">
