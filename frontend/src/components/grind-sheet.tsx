@@ -1904,14 +1904,18 @@ export function GrindSheet({ onLogout }: GrindSheetProps) {
             <div className="hidden md:flex items-center gap-3">
               <Badge
                 variant="outline"
-                className="font-normal bg-amber-50 text-amber-700 border-amber-200 dark:bg-amber-950 dark:text-amber-300 dark:border-amber-800"
+                className="font-normal bg-emerald-50 text-emerald-700 border-emerald-200 dark:bg-emerald-950 dark:text-emerald-300 dark:border-emerald-800 rounded-lg px-3 py-2"
               >
                 <GraduationCap className="h-3 w-3 mr-1" />
-                Closed Beta Release · v1.0.0-beta
+                Version · v1.0.0
               </Badge>
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <Button variant="outline" size="sm" className="gap-2">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="hover:cursor-pointer gap-2"
+                  >
                     <User className="h-4 w-4" />
                     Account
                     <ChevronDown className="h-3 w-3 opacity-50" />
@@ -1922,7 +1926,7 @@ export function GrindSheet({ onLogout }: GrindSheetProps) {
                     <Button
                       variant="ghost"
                       size="sm"
-                      className="w-full justify-start gap-2 text-red-600 hover:text-red-700 hover:bg-red-50"
+                      className="w-full justify-start gap-2 text-red-600 hover:text-red-700 hover:bg-red-50 hover:cursor-pointer"
                       onClick={onLogout}
                     >
                       <LogOut className="h-4 w-4" />
@@ -3195,11 +3199,30 @@ export function GrindSheet({ onLogout }: GrindSheetProps) {
 
               <p className="text-gray-600 dark:text-gray-400 text-xs md:text-sm flex flex-col md:flex-row items-center justify-center space-y-1 md:space-y-0 md:space-x-2">
                 <span>
-                  Made with <span className="text-red-500 mx-1">♥</span> by
-                  Aftaab Siddiqui
+                  Made with <span className="text-red-500 mx-1">♥</span> by{" "}
+                  <a
+                    href="https://aftaab.xyz"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline"
+                  >
+                    {" "}
+                    Aftaab{" "}
+                  </a>
                 </span>
                 <span className="hidden md:inline mx-2">•</span>
-                <span>Designed by Shifa Siddiqui</span>
+                <span>
+                  Designed by{" "}
+                  <a
+                    href="https://shifasiddiqui.xyz/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline"
+                  >
+                    {" "}
+                    Shifa{" "}
+                  </a>
+                </span>
               </p>
             </div>
           </div>

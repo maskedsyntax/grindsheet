@@ -28,6 +28,7 @@ import {
   ArrowDownCircle,
   ArrowRight,
   FileEdit,
+  GraduationCap,
 } from "lucide-react";
 import { Badge } from "./ui/badge";
 import {
@@ -539,7 +540,7 @@ export function LandingPage() {
               <span>
                 Made with <span className="text-red-500 mx-1">♥</span> by{" "}
                 <a
-                  href="https://x.com/MaskedSyntax"
+                  href="https://aftaab.xyz"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="underline"
@@ -552,7 +553,7 @@ export function LandingPage() {
               <span>
                 Designed by{" "}
                 <a
-                  href="https://x.com/MaskedSyntax"
+                  href="https://shifasiddiqui.xyz/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="underline"
@@ -562,12 +563,19 @@ export function LandingPage() {
                 </a>
               </span>
             </p>
+            <Badge
+              variant="outline"
+              className="mt-2 font-normal bg-blue-50 text-blue-700 border-blue-200 dark:bg-blue-950 dark:text-blue-300 dark:border-blue-800 rounded-lg px-3 py-1"
+            >
+              <GraduationCap className="h-3 w-3 mr-1" />
+              Version · v1.0.0
+            </Badge>
           </div>
         </div>
       </footer>
 
       {/* Auth Modal */}
-      <Dialog open={isDialogOpen} onOpenChange={handleDialogOpenChange}>
+      {/* <Dialog open={isDialogOpen} onOpenChange={handleDialogOpenChange}>
         <DialogContent className="sm:max-w-md">
           <DialogHeader>
             <DialogTitle className="text-center text-xl font-semibold mb-1">
@@ -614,6 +622,267 @@ export function LandingPage() {
 
             <TabsContent value="login" className="space-y-4">
               <form onSubmit={handleAuth} className="space-y-4">
+                <div className="space-y-2">
+                  <Label htmlFor="login-username">Username</Label>
+                  <Input
+                    id="login-username"
+                    type="text"
+                    placeholder="johndoe"
+                    value={loginData.username}
+                    onChange={(e) =>
+                      setLoginData({ ...loginData, username: e.target.value })
+                    }
+                    required
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="login-password">Password</Label>
+                  <Input
+                    id="login-password"
+                    type="password"
+                    placeholder="password"
+                    value={loginData.password}
+                    onChange={(e) =>
+                      setLoginData({ ...loginData, password: e.target.value })
+                    }
+                    required
+                  />
+                </div>
+                <div className="text-right">
+                  <button
+                    type="button"
+                    className="hover:cursor-pointer text-sm text-blue-600 hover:underline dark:text-blue-400"
+                    onClick={() => setActiveTab("forgot-password")}
+                  >
+                    Forgot Password?
+                  </button>
+                </div>
+                <Button
+                  type="submit"
+                  className="hover:cursor-pointer w-full bg-black text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200"
+                  disabled={isLoading}
+                >
+                  {isLoading ? "Signing In..." : "Sign In"}
+                </Button>
+              </form>
+            </TabsContent>
+
+            <TabsContent value="register" className="space-y-4">
+              <form onSubmit={handleAuth} className="space-y-4">
+                <div className="space-y-2">
+                  <Label htmlFor="signup-fullname">
+                    Full Name <span className="text-red-500">*</span>
+                  </Label>
+                  <Input
+                    id="signup-fullname"
+                    type="text"
+                    placeholder="John Doe"
+                    value={signupData.fullName}
+                    onChange={(e) =>
+                      setSignupData({ ...signupData, fullName: e.target.value })
+                    }
+                    required
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="signup-username">
+                    Username <span className="text-red-500">*</span>
+                  </Label>
+                  <Input
+                    id="signup-username"
+                    type="text"
+                    placeholder="johndoe"
+                    value={signupData.username}
+                    onChange={(e) =>
+                      setSignupData({ ...signupData, username: e.target.value })
+                    }
+                    required
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="signup-email">
+                    Email Address <span className="text-red-500">*</span>
+                  </Label>
+                  <Input
+                    id="signup-email"
+                    type="email"
+                    placeholder="johndoe@gmail.com"
+                    value={signupData.email}
+                    onChange={(e) =>
+                      setSignupData({ ...signupData, email: e.target.value })
+                    }
+                    required
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="signup-password">
+                    Password <span className="text-red-500">*</span>
+                  </Label>
+                  <Input
+                    id="signup-password"
+                    type="password"
+                    placeholder="Create a password"
+                    value={signupData.password}
+                    onChange={(e) =>
+                      setSignupData({ ...signupData, password: e.target.value })
+                    }
+                    required
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="signup-confirm-password">
+                    Confirm Password <span className="text-red-500">*</span>
+                  </Label>
+                  <Input
+                    id="signup-confirm-password"
+                    type="password"
+                    placeholder="Confirm your password"
+                    value={signupData.confirmPassword}
+                    onChange={(e) =>
+                      setSignupData({
+                        ...signupData,
+                        confirmPassword: e.target.value,
+                      })
+                    }
+                    required
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="signup-leetcode-username">
+                    LeetCode Username
+                  </Label>
+                  <Input
+                    id="signup-leetcode-username"
+                    type="text"
+                    placeholder="johndoe.leetcode"
+                    value={signupData.leetcodeUsername}
+                    onChange={(e) =>
+                      setSignupData({
+                        ...signupData,
+                        leetcodeUsername: e.target.value,
+                      })
+                    }
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="signup-gfg-username">GFG Username</Label>
+                  <Input
+                    id="signup-gfg-username"
+                    type="text"
+                    placeholder="johndoe.gfg"
+                    value={signupData.gfgUsername}
+                    onChange={(e) =>
+                      setSignupData({
+                        ...signupData,
+                        gfgUsername: e.target.value,
+                      })
+                    }
+                  />
+                </div>
+                <Button
+                  type="submit"
+                  className="hover:cursor-pointer w-full bg-black text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200"
+                  disabled={isLoading}
+                >
+                  {isLoading ? "Creating Account..." : "Create Account"}
+                </Button>
+                <p className="text-xs text-center text-gray-500">
+                  * Required fields
+                </p>
+              </form>
+            </TabsContent>
+
+            <TabsContent value="forgot-password" className="space-y-4">
+              <form onSubmit={handleAuth} className="space-y-4">
+                <div className="space-y-2">
+                  <Label htmlFor="forgot-password-email">
+                    Email Address <span className="text-red-500">*</span>
+                  </Label>
+                  <Input
+                    id="forgot-password-email"
+                    type="email"
+                    placeholder="johndoe@gmail.com"
+                    value={forgotPasswordData.email}
+                    onChange={(e) =>
+                      setForgotPasswordData({
+                        ...forgotPasswordData,
+                        email: e.target.value,
+                      })
+                    }
+                    required
+                  />
+                </div>
+                <Button
+                  type="submit"
+                  className="w-full bg-black text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200"
+                  disabled={isLoading}
+                >
+                  {isLoading ? "Sending Reset Link..." : "Send Reset Link"}
+                </Button>
+                <div className="text-center">
+                  <button
+                    type="button"
+                    className="text-sm text-blue-600 hover:underline dark:text-blue-400"
+                    onClick={() => setActiveTab("login")}
+                  >
+                    Back to Login
+                  </button>
+                </div>
+              </form>
+            </TabsContent>
+          </Tabs>
+        </DialogContent>
+      </Dialog> */}
+
+      {/* Auth Modal */}
+      <Dialog open={isDialogOpen} onOpenChange={handleDialogOpenChange}>
+        <DialogContent className="sm:max-w-md max-h-[90vh] overflow-y-auto bg-white dark:bg-gray-900 p-6 rounded-lg shadow-lg">
+          <DialogHeader>
+            <DialogTitle className="text-center text-xl font-semibold mb-1">
+              Welcome to GrindSheet
+            </DialogTitle>
+          </DialogHeader>
+
+          {error && (
+            <div className="flex justify-center mb-4">
+              <Badge
+                variant="destructive"
+                className="text-center bg-red-500 text-white px-4 py-2 text-sm rounded-md shadow-sm transition-transform hover:scale-105 whitespace-normal break-words"
+              >
+                {error}
+              </Badge>
+            </div>
+          )}
+
+          {successMessage && (
+            <div className="flex justify-center mb-4">
+              <Badge
+                variant="secondary"
+                className="text-center bg-green-500 text-white px-4 py-2 text-sm rounded-md shadow-sm transition-transform hover:scale-105 whitespace-normal break-words"
+              >
+                {successMessage}
+              </Badge>
+            </div>
+          )}
+
+          <Tabs
+            defaultValue="login"
+            className="w-full"
+            onValueChange={setActiveTab}
+            value={activeTab}
+          >
+            <TabsList className="grid w-full grid-cols-2 mb-6">
+              <TabsTrigger className="hover:cursor-pointer" value="login">
+                Login
+              </TabsTrigger>
+              <TabsTrigger className="hover:cursor-pointer" value="register">
+                Register
+              </TabsTrigger>
+            </TabsList>
+
+            <TabsContent value="login" className="space-y-4">
+              <form onSubmit={handleAuth} className="space-y-4">
+                Login form fields remain unchanged
                 <div className="space-y-2">
                   <Label htmlFor="login-username">Username</Label>
                   <Input
