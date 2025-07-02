@@ -27,7 +27,7 @@ from app.database import get_db
 router = APIRouter(tags=["Authentication"])
 
 # Configuration for reset token expiration
-RESET_TOKEN_EXPIRE_MINUTES = 30
+RESET_TOKEN_EXPIRE_MINUTES = 10080
 
 
 def validate_password(password: str, username: str, full_name: str) -> None:
