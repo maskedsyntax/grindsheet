@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import Script from "next/script";
 
 const jetBrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -82,6 +83,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <Script
+          src="https://cdn.seline.com/seline.js"
+          data-token="e9bc725355b30cb"
+          strategy="afterInteractive"
+        />
+      </head>
       <body
         // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         className={`
