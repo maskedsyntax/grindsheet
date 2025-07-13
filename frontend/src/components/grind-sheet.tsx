@@ -2483,7 +2483,7 @@ export function GrindSheet({ onLogout }: GrindSheetProps) {
                             <DropdownMenuTrigger asChild>
                               <Button
                                 variant="outline"
-                                className="h-10 px-4 gap-2 bg-white hover:bg-gray-50 border-gray-200 shadow-sm hover:shadow-md transition-all duration-200 dark:bg-gray-800 dark:hover:bg-gray-700 dark:border-gray-700"
+                                className="hover:cursor-pointer h-10 px-4 gap-2 bg-white hover:bg-gray-50 border-gray-200 shadow-sm hover:shadow-md transition-all duration-200 dark:bg-gray-800 dark:hover:bg-gray-700 dark:border-gray-700"
                               >
                                 <Tag className="h-4 w-4 text-blue-600" />
                                 <span className="font-medium">Topics</span>
@@ -2532,7 +2532,7 @@ export function GrindSheet({ onLogout }: GrindSheetProps) {
                             <DropdownMenuTrigger asChild>
                               <Button
                                 variant="outline"
-                                className="h-10 px-4 gap-2 bg-white hover:bg-gray-50 border-gray-200 shadow-sm hover:shadow-md transition-all duration-200 dark:bg-gray-800 dark:hover:bg-gray-700 dark:border-gray-700"
+                                className="hover:cursor-pointer h-10 px-4 gap-2 bg-white hover:bg-gray-50 border-gray-200 shadow-sm hover:shadow-md transition-all duration-200 dark:bg-gray-800 dark:hover:bg-gray-700 dark:border-gray-700"
                               >
                                 <SlidersHorizontal className="h-4 w-4 text-green-600" />
                                 <span className="font-medium">Difficulty</span>
@@ -2596,7 +2596,7 @@ export function GrindSheet({ onLogout }: GrindSheetProps) {
                             <DropdownMenuTrigger asChild>
                               <Button
                                 variant="outline"
-                                className="h-10 px-4 gap-2 bg-white hover:bg-gray-50 border-gray-200 shadow-sm hover:shadow-md transition-all duration-200 dark:bg-gray-800 dark:hover:bg-gray-700 dark:border-gray-700"
+                                className="hover:cursor-pointer h-10 px-4 gap-2 bg-white hover:bg-gray-50 border-gray-200 shadow-sm hover:shadow-md transition-all duration-200 dark:bg-gray-800 dark:hover:bg-gray-700 dark:border-gray-700"
                               >
                                 <Building2 className="h-4 w-4 text-purple-600" />
                                 <span className="font-medium">Platform</span>
@@ -2660,6 +2660,7 @@ export function GrindSheet({ onLogout }: GrindSheetProps) {
                         <div className="flex items-center gap-4">
                           <div className="flex items-center gap-2">
                             <Switch
+                              className="hover:cursor-pointer "
                               id="show-tags"
                               checked={showTags}
                               onCheckedChange={setShowTags}
@@ -2673,6 +2674,7 @@ export function GrindSheet({ onLogout }: GrindSheetProps) {
                           </div>
                           <div className="flex items-center gap-2">
                             <Switch
+                              className="hover:cursor-pointer "
                               id="hide-solved"
                               checked={hideSolved}
                               onCheckedChange={setHideSolved}
@@ -2686,6 +2688,7 @@ export function GrindSheet({ onLogout }: GrindSheetProps) {
                           </div>
                           <div className="flex items-center gap-2">
                             <Switch
+                              className="hover:cursor-pointer "
                               id="bookmarked-only"
                               checked={showBookmarkedOnly}
                               onCheckedChange={setShowBookmarkedOnly}
@@ -2700,7 +2703,7 @@ export function GrindSheet({ onLogout }: GrindSheetProps) {
                           <Button
                             variant="outline"
                             size="sm"
-                            className="gap-2 h-10 bg-red-50 hover:bg-red-100 border-gray-200 shadow-sm hover:shadow-md transition-all duration-200 dark:bg-gray-800 dark:hover:bg-gray-700 dark:border-gray-700"
+                            className="hover:cursor-pointer gap-2 h-10 bg-red-50 hover:bg-red-100 border-gray-200 shadow-sm hover:shadow-md transition-all duration-200 dark:bg-gray-800 dark:hover:bg-gray-700 dark:border-gray-700"
                             onClick={resetFilters}
                           >
                             <RotateCcw className="h-4 w-4" />
@@ -2736,18 +2739,6 @@ export function GrindSheet({ onLogout }: GrindSheetProps) {
                 )}
               </div>
             </div>
-
-            {/* <div className="flex flex-col gap-4">
-              <div className="relative w-full">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
-                <Input
-                  className="pl-10"
-                  placeholder="Search questions..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                />
-              </div>
-            </div> */}
 
             {/* Problem Cards */}
             <div className="grid gap-6">
