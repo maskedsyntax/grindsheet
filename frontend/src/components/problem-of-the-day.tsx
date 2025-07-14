@@ -994,8 +994,8 @@ export function ProblemOfTheDay() {
               Daily Tip:
             </p>
             <p className="text-sm text-slate-600 dark:text-slate-400">
-              "Consistency is key. Even 30 minutes of focused practice daily can
-              lead to significant improvement over time."
+              "Celebrate progress, not just outcomes. Every step forward
+              counts."
             </p>
           </div>
         )}
