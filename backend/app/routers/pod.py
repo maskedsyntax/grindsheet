@@ -3,8 +3,6 @@ from app.utils.leetcode_daily import fetch_leetcode_daily
 import json
 from io import StringIO
 import sys
-from app.utils.security import get_current_user
-from app.schemas import TokenData
 
 router = APIRouter(tags=["Daily Problems"])
 

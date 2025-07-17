@@ -1,6 +1,7 @@
 import requests
 import json
 from datetime import datetime
+from app.utils.daily_tips import daily_tips
 
 
 def fetch_leetcode_daily():
@@ -44,6 +45,16 @@ def fetch_leetcode_daily():
         # Build problem URL from title slug
         problem_url = f"https://leetcode.com/problems/{title_slug}/"
 
+        # Calculate day of the year (1 to 365)
+        current_date = datetime.now()
+        day_of_year = current_date.timetuple().tm_yday  # 1-based index (1 to 365)
+
+        # Get the corresponding tip (adjust for 0-based indexing in the array)
+        tip_index = (day_of_year - 1) % len(
+            daily_tips
+        )  # Use modulo to handle leap years or array bounds
+        daily_tip = daily_tips[tip_index]
+
         # JSON output
         output = {
             "date": date,
@@ -51,6 +62,7 @@ def fetch_leetcode_daily():
             "difficulty": difficulty,
             "topics": topics,
             "url": problem_url,
+            "dailyTip": daily_tip,
         }
 
         print(json.dumps(output, indent=2))
