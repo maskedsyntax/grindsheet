@@ -795,6 +795,7 @@ interface ProblemData {
   difficulty: "Easy" | "Medium" | "Hard";
   topics: string[];
   url: string;
+  dailyTip: string;
 }
 
 export function ProblemOfTheDay() {
@@ -994,8 +995,7 @@ export function ProblemOfTheDay() {
               Daily Tip:
             </p>
             <p className="text-sm text-slate-600 dark:text-slate-400">
-              "Celebrate progress, not just outcomes. Every step forward
-              counts."
+              {problem.dailyTip}
             </p>
           </div>
         )}
