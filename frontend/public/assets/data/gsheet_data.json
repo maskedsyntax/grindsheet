@@ -3562,7 +3562,7 @@
   {
     "Problem Name": "Combination Sum - III",
     "Topic": "Recursion",
-    "Difficulty": "Hard",
+    "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/combination-sum-iii/",
     "Tags": ["Array", "Backtracking"],
