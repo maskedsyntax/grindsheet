@@ -568,7 +568,7 @@ export function LandingPage() {
               className="mt-2 font-normal bg-blue-50 text-blue-700 border-blue-200 dark:bg-blue-950 dark:text-blue-300 dark:border-blue-800 rounded-lg px-3 py-1"
             >
               <GraduationCap className="h-3 w-3 mr-1" />
-              Version · v1.0.2
+              Version · v1.0.3
             </Badge>
           </div>
         </div>
