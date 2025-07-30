@@ -3830,16 +3830,17 @@
     "Notes": ""
   },
   {
-    "Problem Name": "Word Break",
+    "Problem Name": "Word Break II",
     "Topic": "Recursion",
-    "Difficulty": "Medium",
+    "Difficulty": "Hard",
     "Platform": "LeetCode",
-    "Link": "https://leetcode.com/problems/word-break/",
+    "Link": "https://leetcode.com/problems/word-break-ii/",
     "Tags": [
       "Array",
       "Hash Table",
       "String",
       "Dynamic Programming",
+      "Backtracking",
       "Trie",
       "Memoization"
     ],
