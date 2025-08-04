@@ -5714,18 +5714,6 @@
     "Notes": ""
   },
   {
-    "Problem Name": "Introduction to Priority Queues using Binary Heaps",
-    "Topic": "Heaps",
-    "Difficulty": "Medium",
-    "Platform": "GeeksForGeeks",
-    "Link": "https://bit.ly/3TSxAHd",
-    "Tags": ["Heap (Priority Queue)"],
-    "Companies": [],
-    "Solved Status": 0,
-    "Needs Revision": false,
-    "Notes": ""
-  },
-  {
     "Problem Name": "Min Heap and Max Heap Implementation",
     "Topic": "Heaps",
     "Difficulty": "Medium",
