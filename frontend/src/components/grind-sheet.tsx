@@ -1814,7 +1814,7 @@ export function GrindSheet({ onLogout }: GrindSheetProps) {
                 <span>
                   Made with <span className="text-red-500 mx-1">♥</span> by{" "}
                   <a
-                    href="https://aftaab.xyz"
+                    href="https://github.com/maskedsyntax"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="underline"
