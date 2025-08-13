@@ -217,9 +217,28 @@ async def forgot_password(
 
 @router.get("/total-users")
 async def get_total_users(db: Session = Depends(get_db)):
-    total_users = db.query(User).count()
+    # Query all users and their details
+    users = db.query(User).all()
+    total_users = len(users)
+
+    # Prepare user details for response
+    user_details = [
+        {
+            "id": user.id,
+            "full_name": user.full_name,
+            "username": user.username,
+            "email": user.email,
+            "leetcode_username": user.leetcode_username,
+            "gfg_username": user.gfg_username,
+            "created_at": user.created_at.isoformat()
+        } for user in users
+    ]
+
     logger.info(f"Total registered users: {total_users}")
-    return {"total_users": total_users}
+    return {
+        "total_users": total_users,
+        "users": user_details
+    }
 
 
 @router.post("/send-update")
