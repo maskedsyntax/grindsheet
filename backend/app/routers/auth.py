@@ -1,5 +1,6 @@
 import os
 import re
+import logging
 from datetime import datetime, timedelta
 from fastapi import APIRouter, Depends, HTTPException
 from fastapi.security import OAuth2PasswordRequestForm
@@ -23,6 +24,10 @@ from app.utils.security import (
     verify_password,
 )
 from app.database import get_db
+
+# Configure logging at the top of auth.py
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 router = APIRouter(tags=["Authentication"])
 
@@ -56,8 +61,8 @@ def validate_password(password: str, username: str, full_name: str) -> None:
             detail="Password must contain at least one special character.",
         )
     if (
-        username.lower() in password.lower()
-        or full_name.lower().replace(" ", "") in password.lower()
+            username.lower() in password.lower()
+            or full_name.lower().replace(" ", "") in password.lower()
     ):
         raise HTTPException(
             status_code=400, detail="Password must not contain username or full name."
@@ -99,9 +104,8 @@ async def signup(user: UserCreate, db: Session = Depends(get_db)):
 
 @router.post("/login")
 async def login(
-    form_data: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(get_db)
+        form_data: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(get_db)
 ):
-
     # Check login attempt rate limit
     current_time = datetime.utcnow()
     fifteen_minutes_ago = current_time - timedelta(minutes=15)
@@ -141,7 +145,7 @@ async def login(
 
 @router.post("/forgot-password")
 async def forgot_password(
-    request: ForgotPasswordRequest, db: Session = Depends(get_db)
+        request: ForgotPasswordRequest, db: Session = Depends(get_db)
 ):
     email = request.email.lower()
 
@@ -209,6 +213,13 @@ async def forgot_password(
         )
 
     return {"message": "A password reset link has been sent to your email."}
+
+
+@router.get("/total-users")
+async def get_total_users(db: Session = Depends(get_db)):
+    total_users = db.query(User).count()
+    logger.info(f"Total registered users: {total_users}")
+    return {"total_users": total_users}
 
 
 @router.post("/send-update")
@@ -305,8 +316,8 @@ async def reset_password(request: ResetPasswordRequest, db: Session = Depends(ge
 
 @router.get("/me", response_model=UserResponse)
 async def get_current_user_details(
-    token_data: TokenData = Depends(get_current_user),
-    db: Session = Depends(get_db),
+        token_data: TokenData = Depends(get_current_user),
+        db: Session = Depends(get_db),
 ):
     """Fetch the current logged-in user's details."""
     user = db.query(User).filter(User.username == token_data.username).first()
