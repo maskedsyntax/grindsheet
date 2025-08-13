@@ -76,13 +76,13 @@ interface UserProblem {
   updated_at: string;
 }
 
-interface LeetCodeProblemOfTheDay {
-  date: string;
-  title: string;
-  difficulty: "Easy" | "Medium" | "Hard";
-  topics: string[];
-  url: string;
-}
+// interface LeetCodeProblemOfTheDay {
+//   date: string;
+//   title: string;
+//   difficulty: "Easy" | "Medium" | "Hard";
+//   topics: string[];
+//   url: string;
+// }
 
 interface GrindSheetProps {
   onLogout: () => void;
@@ -415,6 +415,15 @@ export function GrindSheet({ onLogout }: GrindSheetProps) {
       }
       return newSet;
     });
+
+      // Update problems state to reflect the new Solved Status
+      setProblems((prevProblems) =>
+          prevProblems.map((problem) =>
+              problem["Problem Name"] === problemName
+                  ? { ...problem, "Solved Status": isCurrentlySolved ? 0 : 1 }
+                  : problem
+          )
+      );
   };
 
   const toggleBookmark = async (problemName: string) => {
@@ -1374,6 +1383,9 @@ export function GrindSheet({ onLogout }: GrindSheetProps) {
                   const topicProblems = filteredProblems.filter(
                     (problem) => problem.Topic === topic
                   );
+                const solved = filteredProblems.filter(
+                    (problem) => problem.Topic === topic && problem["Solved Status"] === 1
+                ).length;
                   return topicProblems.length > 0 ? (
                     <Card key={topic}>
                       <CardHeader className="py-0">
@@ -1383,7 +1395,7 @@ export function GrindSheet({ onLogout }: GrindSheetProps) {
                             variant="secondary"
                             className="ml-2 font-normal"
                           >
-                            {topicProblems.length}
+                              {solved} / {topicProblems.length}
                           </Badge>
                         </CardTitle>
                       </CardHeader>
