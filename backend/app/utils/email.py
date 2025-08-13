@@ -18,7 +18,7 @@ def send_email(to_emails: list, subject: str, content: str) -> None:
         SendGridException: If email sending fails
     """
     message = Mail(
-        from_email=Email("info@grindsheet.xyz", "GrindSheet"),
+        from_email=Email("aftaab@aftaab.xyz", "GrindSheet"),
         subject=subject,
         html_content=content,
     )
