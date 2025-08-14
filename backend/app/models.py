@@ -1,7 +1,9 @@
+from datetime import datetime
+
+import pytz
 from sqlalchemy import Column, Integer, String, Boolean, ForeignKey, Text
 from sqlalchemy.orm import relationship, declarative_base
 from sqlalchemy.sql.sqltypes import DateTime
-from datetime import datetime
 
 Base = declarative_base()
 
@@ -15,7 +17,7 @@ class User(Base):
     hashed_password = Column(String, nullable=False)
     leetcode_username = Column(String, nullable=True)
     gfg_username = Column(String, nullable=True)
-    created_at = Column(DateTime, default=datetime.utcnow)
+    created_at = Column(DateTime, default=datetime.now(pytz.UTC))
     user_problems = relationship("UserProblem", back_populates="user")
 
 
@@ -27,7 +29,7 @@ class UserProblem(Base):
     is_solved = Column(Boolean, default=False)
     is_bookmarked = Column(Boolean, default=False)
     notes = Column(Text, nullable=True)
-    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+    updated_at = Column(DateTime, default=datetime.now(pytz.UTC), onupdate=datetime.now(pytz.UTC))
     user = relationship("User", back_populates="user_problems")
 
 
@@ -35,7 +37,7 @@ class PasswordChangeAttempt(Base):
     __tablename__ = "password_change_attempts"
     id = Column(Integer, primary_key=True, index=True)
     user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
-    attempt_time = Column(DateTime, default=datetime.utcnow)
+    attempt_time = Column(DateTime, default=datetime.now(pytz.UTC))
     user = relationship("User")
 
 
@@ -43,5 +45,5 @@ class LoginAttempt(Base):
     __tablename__ = "login_attempts"
     id = Column(Integer, primary_key=True, index=True)
     username = Column(String, nullable=False)
-    attempt_time = Column(DateTime, default=datetime.utcnow)
+    attempt_time = Column(DateTime, default=datetime.now(pytz.UTC))
     success = Column(Boolean, default=False)
