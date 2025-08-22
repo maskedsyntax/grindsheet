@@ -9926,8 +9926,8 @@
         "Problem Name": "Word ladder - 2",
         "Topic": "Graphs",
         "Difficulty": "Hard",
-        "Platform": "LeetCode",
-        "Link": "https://leetcode.com/problems/word-ladder-ii/",
+        "Platform": "GeeksForGeeks",
+        "Link": "https://www.geeksforgeeks.org/problems/word-ladder-ii/1",
         "Tags": [
             "Hash Table",
             "String",

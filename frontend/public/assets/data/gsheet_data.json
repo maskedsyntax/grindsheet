@@ -5,8 +5,14 @@
     "Difficulty": "Easy",
     "Platform": "GeeksForGeeks",
     "Link": "https://bit.ly/3ppA6YJ",
-    "Tags": ["Sorting", "Array"],
-    "Companies": ["Microsoft", "Medlife"],
+    "Tags": [
+      "Sorting",
+      "Array"
+    ],
+    "Companies": [
+      "Microsoft",
+      "Medlife"
+    ],
     "Solved Status": 0,
     "Needs Revision": false,
     "Notes": ""
@@ -17,7 +23,10 @@
     "Difficulty": "Easy",
     "Platform": "GeeksForGeeks",
     "Link": "https://bit.ly/3w6yQx8",
-    "Tags": ["Sorting", "Array"],
+    "Tags": [
+      "Sorting",
+      "Array"
+    ],
     "Companies": [
       "Microsoft",
       "Wipro",
@@ -38,7 +47,10 @@
     "Difficulty": "Easy",
     "Platform": "GeeksForGeeks",
     "Link": "https://bit.ly/3JVcqot",
-    "Tags": ["Sorting", "Array"],
+    "Tags": [
+      "Sorting",
+      "Array"
+    ],
     "Companies": [
       "Microsoft",
       "MAQ Software",
@@ -59,7 +71,11 @@
     "Difficulty": "Medium",
     "Platform": "GeeksForGeeks",
     "Link": "https://bit.ly/3A30Anw",
-    "Tags": ["Sorting", "Array", "Divide and Conquer"],
+    "Tags": [
+      "Sorting",
+      "Array",
+      "Divide and Conquer"
+    ],
     "Companies": [
       "Paytm",
       "Amazon",
@@ -85,7 +101,11 @@
     "Difficulty": "Medium",
     "Platform": "GeeksForGeeks",
     "Link": "https://bit.ly/3dsEbIK",
-    "Tags": ["Sorting", "Array", "Divide and Conquer"],
+    "Tags": [
+      "Sorting",
+      "Array",
+      "Divide and Conquer"
+    ],
     "Companies": [
       "VMWare",
       "Amazon",
@@ -163,8 +183,15 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/single-number/",
-    "Tags": ["Array", "Bit Manipulation"],
-    "Companies": ["Amazon", "TCS", "Infosys"],
+    "Tags": [
+      "Array",
+      "Bit Manipulation"
+    ],
+    "Companies": [
+      "Amazon",
+      "TCS",
+      "Infosys"
+    ],
     "Solved Status": 0,
     "Needs Revision": false,
     "Notes": ""
@@ -175,7 +202,10 @@
     "Difficulty": "Easy",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/",
-    "Tags": ["Array", "Two Pointers"],
+    "Tags": [
+      "Array",
+      "Two Pointers"
+    ],
     "Companies": [
       "Zoho",
       "Morgan Stanley",
@@ -225,7 +255,11 @@
     "Difficulty": "Easy",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/rotate-array/",
-    "Tags": ["Array", "Two Pointers", "Math"],
+    "Tags": [
+      "Array",
+      "Two Pointers",
+      "Math"
+    ],
     "Companies": [
       "Reddit",
       "Docker",
@@ -269,7 +303,10 @@
     "Difficulty": "Medium",
     "Platform": "GeeksForGeeks",
     "Link": "https://bit.ly/3Ap7Onp",
-    "Tags": ["Array", "Two Pointers"],
+    "Tags": [
+      "Array",
+      "Two Pointers"
+    ],
     "Companies": [
       "Amazon",
       "Riot Games",
@@ -304,7 +341,10 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/two-sum/",
-    "Tags": ["Array", "Hash Table"],
+    "Tags": [
+      "Array",
+      "Hash Table"
+    ],
     "Companies": [
       "Freshworks",
       "JPMorgan Chase",
@@ -349,7 +389,11 @@
     "Difficulty": "Medium",
     "Platform": "Coding Ninjas",
     "Link": "https://www.naukri.com/code360/problems/longest-subarray-with-sum-k_5713505?leftPanelTabValue=PROBLEM",
-    "Tags": ["Array", "Hash Table", "Prefix Sum"],
+    "Tags": [
+      "Array",
+      "Hash Table",
+      "Prefix Sum"
+    ],
     "Companies": [
       "Amazon",
       "OLX Group",
@@ -367,7 +411,11 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/sort-colors/",
-    "Tags": ["Array", "Two Pointers", "Sorting"],
+    "Tags": [
+      "Array",
+      "Two Pointers",
+      "Sorting"
+    ],
     "Companies": [
       "Flipkart",
       "Roblox",
@@ -463,7 +511,11 @@
     "Difficulty": "Easy",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/maximum-subarray/",
-    "Tags": ["Array", "Divide and Conquer", "Dynamic Programming"],
+    "Tags": [
+      "Array",
+      "Divide and Conquer",
+      "Dynamic Programming"
+    ],
     "Companies": [
       "Activision Blizzard",
       "Broadcom",
@@ -508,7 +560,10 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/next-permutation/",
-    "Tags": ["Array", "Two Pointers"],
+    "Tags": [
+      "Array",
+      "Two Pointers"
+    ],
     "Companies": [
       "Infosys",
       "Flipkart",
@@ -531,8 +586,16 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/longest-consecutive-sequence/",
-    "Tags": ["Array", "Hash Table", "Union Find"],
-    "Companies": ["Amazon", "Microsoft", "Walmart"],
+    "Tags": [
+      "Array",
+      "Hash Table",
+      "Union Find"
+    ],
+    "Companies": [
+      "Amazon",
+      "Microsoft",
+      "Walmart"
+    ],
     "Solved Status": 0,
     "Needs Revision": false,
     "Notes": ""
@@ -543,8 +606,16 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/set-matrix-zeroes/",
-    "Tags": ["Array", "Hash Table", "Matrix"],
-    "Companies": ["Amazon", "Goldman Sachs", "RedBus"],
+    "Tags": [
+      "Array",
+      "Hash Table",
+      "Matrix"
+    ],
+    "Companies": [
+      "Amazon",
+      "Goldman Sachs",
+      "RedBus"
+    ],
     "Solved Status": 0,
     "Needs Revision": false,
     "Notes": ""
@@ -555,7 +626,11 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/rotate-image/",
-    "Tags": ["Array", "Math", "Matrix"],
+    "Tags": [
+      "Array",
+      "Math",
+      "Matrix"
+    ],
     "Companies": [
       "Snowflake",
       "Epic Games",
@@ -599,7 +674,11 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/spiral-matrix/",
-    "Tags": ["Array", "Matrix", "Simulation"],
+    "Tags": [
+      "Array",
+      "Matrix",
+      "Simulation"
+    ],
     "Companies": [
       "Visa",
       "Reddit",
@@ -643,7 +722,11 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/subarray-sum-equals-k/",
-    "Tags": ["Array", "Hash Table", "Prefix Sum"],
+    "Tags": [
+      "Array",
+      "Hash Table",
+      "Prefix Sum"
+    ],
     "Companies": [
       "SAP Labs",
       "Cognizant",
@@ -668,7 +751,12 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/majority-element-ii/",
-    "Tags": ["Array", "Hash Table", "Sorting", "Counting"],
+    "Tags": [
+      "Array",
+      "Hash Table",
+      "Sorting",
+      "Counting"
+    ],
     "Companies": [
       "Ernst & Young",
       "Oracle",
@@ -713,7 +801,11 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/3sum/",
-    "Tags": ["Array", "Two Pointers", "Sorting"],
+    "Tags": [
+      "Array",
+      "Two Pointers",
+      "Sorting"
+    ],
     "Companies": [
       "Teladoc Health",
       "Oracle",
@@ -758,7 +850,11 @@
     "Difficulty": "Hard",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/4sum/",
-    "Tags": ["Array", "Two Pointers", "Sorting"],
+    "Tags": [
+      "Array",
+      "Two Pointers",
+      "Sorting"
+    ],
     "Companies": [
       "Etsy",
       "Delloite",
@@ -803,8 +899,17 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/merge-intervals/",
-    "Tags": ["Array", "Sorting"],
-    "Companies": ["Amazon", "Microsoft", "Google", "Nutanix", "Zoho"],
+    "Tags": [
+      "Array",
+      "Sorting"
+    ],
+    "Companies": [
+      "Amazon",
+      "Microsoft",
+      "Google",
+      "Nutanix",
+      "Zoho"
+    ],
     "Solved Status": 0,
     "Needs Revision": false,
     "Notes": ""
@@ -815,7 +920,11 @@
     "Difficulty": "Hard",
     "Platform": "GeeksForGeeks",
     "Link": "https://bit.ly/3PtLWLM",
-    "Tags": ["Arrays", "Divide and Conquer", "Sorting"],
+    "Tags": [
+      "Arrays",
+      "Divide and Conquer",
+      "Sorting"
+    ],
     "Companies": [
       "Bain & Company",
       "Mastercard",
@@ -913,7 +1022,10 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/maximum-product-subarray/",
-    "Tags": ["Array", "Dynamic Programming"],
+    "Tags": [
+      "Array",
+      "Dynamic Programming"
+    ],
     "Companies": [
       "Rakuten",
       "Intel",
@@ -958,7 +1070,10 @@
     "Difficulty": "Easy",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/search-insert-position/#:~:text=Search%20Insert%20Position%20%2D%20LeetCode&text=Given%20a%20sorted%20array%20of,(log%20n)%20runtime%20complexity.",
-    "Tags": ["Binary Search", "Array"],
+    "Tags": [
+      "Binary Search",
+      "Array"
+    ],
     "Companies": [
       "Oracle",
       "Morgan Stanley",
@@ -1002,8 +1117,15 @@
     "Difficulty": "Medium",
     "Platform": "Coding Ninjas",
     "Link": "https://www.codingninjas.com/codestudio/problems/ceiling-in-a-sorted-array_1825401",
-    "Tags": ["Binary Search", "Array"],
-    "Companies": ["Hexaware Technologies", "Royal Bank of Scotland", "TCS"],
+    "Tags": [
+      "Binary Search",
+      "Array"
+    ],
+    "Companies": [
+      "Hexaware Technologies",
+      "Royal Bank of Scotland",
+      "TCS"
+    ],
     "Solved Status": 0,
     "Needs Revision": false,
     "Notes": ""
@@ -1014,8 +1136,15 @@
     "Difficulty": "Easy",
     "Platform": "GeeksForGeeks",
     "Link": "https://bit.ly/3SVcOqW",
-    "Tags": ["Binary Search", "Array"],
-    "Companies": ["Zoho", "Amazon", "MakeMyTrip"],
+    "Tags": [
+      "Binary Search",
+      "Array"
+    ],
+    "Companies": [
+      "Zoho",
+      "Amazon",
+      "MakeMyTrip"
+    ],
     "Solved Status": 0,
     "Needs Revision": false,
     "Notes": ""
@@ -1026,7 +1155,10 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/search-in-rotated-sorted-array/",
-    "Tags": ["Binary Search", "Array"],
+    "Tags": [
+      "Binary Search",
+      "Array"
+    ],
     "Companies": [
       "Deloitte",
       "Square",
@@ -1070,7 +1202,10 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/search-in-rotated-sorted-array-ii/",
-    "Tags": ["Binary Search", "Array"],
+    "Tags": [
+      "Binary Search",
+      "Array"
+    ],
     "Companies": [
       "Robinhood",
       "Twilio",
@@ -1114,7 +1249,10 @@
     "Difficulty": "Easy",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/single-element-in-a-sorted-array/",
-    "Tags": ["Binary Search", "Array"],
+    "Tags": [
+      "Binary Search",
+      "Array"
+    ],
     "Companies": [
       "McKinsey & Company",
       "GE Healthcare",
@@ -1158,8 +1296,17 @@
     "Difficulty": "Hard",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/find-peak-element/#:~:text=Find%20Peak%20Element%20%2D%20LeetCode&text=A%20peak%20element%20is%20an,to%20any%20of%20the%20peaks.",
-    "Tags": ["Binary Search", "Array"],
-    "Companies": ["AccoLite", "Amazon", "Visa", "Adobe", "Google"],
+    "Tags": [
+      "Binary Search",
+      "Array"
+    ],
+    "Companies": [
+      "AccoLite",
+      "Amazon",
+      "Visa",
+      "Adobe",
+      "Google"
+    ],
     "Solved Status": 0,
     "Needs Revision": false,
     "Notes": ""
@@ -1170,7 +1317,10 @@
     "Difficulty": "Hard",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/koko-eating-bananas/",
-    "Tags": ["Binary Search", "Array"],
+    "Tags": [
+      "Binary Search",
+      "Array"
+    ],
     "Companies": [
       "Shopify",
       "Chewy",
@@ -1215,7 +1365,10 @@
     "Difficulty": "Hard",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/",
-    "Tags": ["Binary Search", "Array"],
+    "Tags": [
+      "Binary Search",
+      "Array"
+    ],
     "Companies": [
       "Deloitte",
       "Johnson & Johnson",
@@ -1259,8 +1412,13 @@
     "Difficulty": "Easy",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/kth-missing-positive-number/#:~:text=Given%20an%20array%20arr%20of,13%2C...%5D.",
-    "Tags": ["Binary Search", "Array"],
-    "Companies": ["Athenahealth"],
+    "Tags": [
+      "Binary Search",
+      "Array"
+    ],
+    "Companies": [
+      "Athenahealth"
+    ],
     "Solved Status": 0,
     "Needs Revision": false,
     "Notes": ""
@@ -1271,7 +1429,10 @@
     "Difficulty": "Hard",
     "Platform": "GeeksForGeeks",
     "Link": "https://www.geeksforgeeks.org/problems/aggressive-cows/0",
-    "Tags": ["Binary Search", "Array"],
+    "Tags": [
+      "Binary Search",
+      "Array"
+    ],
     "Companies": [
       "IBM",
       "Square",
@@ -1316,7 +1477,10 @@
     "Difficulty": "Hard",
     "Platform": "Coding Ninjas",
     "Link": "https://bit.ly/3MZQOct",
-    "Tags": ["Binary Search", "Array"],
+    "Tags": [
+      "Binary Search",
+      "Array"
+    ],
     "Companies": [
       "Nutanix",
       "HashiCorp",
@@ -1413,7 +1577,10 @@
     "Difficulty": "Hard",
     "Platform": "Coding Ninjas",
     "Link": "https://www.codingninjas.com/studio/problems/painter-s-partition-problem_1089557",
-    "Tags": ["Binary Search", "Array"],
+    "Tags": [
+      "Binary Search",
+      "Array"
+    ],
     "Companies": [
       "OYO",
       "HSBC",
@@ -1437,7 +1604,11 @@
     "Difficulty": "Hard",
     "Platform": "GeeksForGeeks",
     "Link": "https://www.geeksforgeeks.org/problems/minimize-max-distance-to-gas-station/0",
-    "Tags": ["Binary Search", "Math", "Array"],
+    "Tags": [
+      "Binary Search",
+      "Math",
+      "Array"
+    ],
     "Companies": [
       "Rakuten",
       "Alibaba",
@@ -1482,7 +1653,11 @@
     "Difficulty": "Hard",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/median-of-two-sorted-arrays/",
-    "Tags": ["Binary Search", "Array", "Divide and Conquer"],
+    "Tags": [
+      "Binary Search",
+      "Array",
+      "Divide and Conquer"
+    ],
     "Companies": [
       "Square",
       "Visa",
@@ -1527,7 +1702,11 @@
     "Difficulty": "Medium",
     "Platform": "GeeksForGeeks",
     "Link": "https://bit.ly/3Amcomr",
-    "Tags": ["Binary Search", "Array", "Divide and Conquer"],
+    "Tags": [
+      "Binary Search",
+      "Array",
+      "Divide and Conquer"
+    ],
     "Companies": [
       "Visa",
       "Flipkart",
@@ -1572,7 +1751,11 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/search-a-2d-matrix/",
-    "Tags": ["Binary Search", "Array", "Matrix"],
+    "Tags": [
+      "Binary Search",
+      "Array",
+      "Matrix"
+    ],
     "Companies": [
       "Pinterest",
       "Square",
@@ -1617,7 +1800,10 @@
     "Difficulty": "Easy",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/reverse-words-in-a-string/",
-    "Tags": ["Two Pointers", "String"],
+    "Tags": [
+      "Two Pointers",
+      "String"
+    ],
     "Companies": [
       "Tata Consultancy Services (TCS)",
       "Ola",
@@ -1702,7 +1888,10 @@
     "Difficulty": "Easy",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/isomorphic-strings/",
-    "Tags": ["Hash Table", "String"],
+    "Tags": [
+      "Hash Table",
+      "String"
+    ],
     "Companies": [
       "Barclays",
       "Cognizant",
@@ -1723,7 +1912,10 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/rotate-string/",
-    "Tags": ["String", "String Matching"],
+    "Tags": [
+      "String",
+      "String Matching"
+    ],
     "Companies": [
       "Oracle",
       "Microsoft",
@@ -1781,7 +1973,11 @@
     "Difficulty": "Easy",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/roman-to-integer/",
-    "Tags": ["Hash Table", "Math", "String"],
+    "Tags": [
+      "Hash Table",
+      "Math",
+      "String"
+    ],
     "Companies": [
       "Uber",
       "Facebook",
@@ -1805,7 +2001,12 @@
     "Difficulty": "Medium",
     "Platform": "GeeksForGeeks",
     "Link": "https://bit.ly/3CfQfYi",
-    "Tags": ["Sliding Window", "Two Pointers", "String", "Dynamic Programming"],
+    "Tags": [
+      "Sliding Window",
+      "Two Pointers",
+      "String",
+      "Dynamic Programming"
+    ],
     "Companies": [
       "CIS \u2013 Cyber Infrastructure",
       "Swiggy",
@@ -1828,7 +2029,11 @@
     "Difficulty": "Hard",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/longest-palindromic-substring/",
-    "Tags": ["Two Pointers", "String", "Dynamic Programming"],
+    "Tags": [
+      "Two Pointers",
+      "String",
+      "Dynamic Programming"
+    ],
     "Companies": [
       "Microsoft",
       "CIS \u2013 Cyber Infrastructure",
@@ -1882,7 +2087,11 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/minimum-add-to-make-parentheses-valid/",
-    "Tags": ["String", "Stack", "Greedy"],
+    "Tags": [
+      "String",
+      "Stack",
+      "Greedy"
+    ],
     "Companies": [
       "Red Hat",
       "Target",
@@ -1927,7 +2136,9 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/count-and-say/",
-    "Tags": ["String"],
+    "Tags": [
+      "String"
+    ],
     "Companies": [
       "Qualcomm",
       "Boston Consulting Group",
@@ -1972,7 +2183,10 @@
     "Difficulty": "Hard",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/repeated-string-match/description/",
-    "Tags": ["String", "String Matching"],
+    "Tags": [
+      "String",
+      "String Matching"
+    ],
     "Companies": [
       "Siemens Healthineers",
       "Bain & Company",
@@ -2017,7 +2231,11 @@
     "Difficulty": "Easy",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/implement-strstr/",
-    "Tags": ["Two Pointers", "String", "String Matching"],
+    "Tags": [
+      "Two Pointers",
+      "String",
+      "String Matching"
+    ],
     "Companies": [
       "Johnson & Johnson",
       "IBM",
@@ -2062,7 +2280,11 @@
     "Difficulty": "Easy",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/implement-strstr/",
-    "Tags": ["Two Pointers", "String", "String Matching"],
+    "Tags": [
+      "Two Pointers",
+      "String",
+      "String Matching"
+    ],
     "Companies": [
       "Square",
       "Wayfair",
@@ -2107,7 +2329,12 @@
     "Difficulty": "Hard",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/shortest-palindrome/",
-    "Tags": ["String", "Rolling Hash", "String Matching", "Hash Function"],
+    "Tags": [
+      "String",
+      "Rolling Hash",
+      "String Matching",
+      "Hash Function"
+    ],
     "Companies": [
       "Wayfair",
       "Qualcomm",
@@ -2152,7 +2379,12 @@
     "Difficulty": "Hard",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/longest-happy-prefix/",
-    "Tags": ["String", "Rolling Hash", "String Matching", "Hash Function"],
+    "Tags": [
+      "String",
+      "Rolling Hash",
+      "String Matching",
+      "Hash Function"
+    ],
     "Companies": [
       "Wayfair",
       "Intel",
@@ -2197,8 +2429,15 @@
     "Difficulty": "Medium",
     "Platform": "GeeksForGeeks",
     "Link": "https://practice.geeksforgeeks.org/problems/count-palindromic-subsequences/1#:~:text=Given%20a%20string%20str%20of,formed%20from%20the%20string%20str.&text=Your%20Task%3A,read%20input%20or%20print%20anything.",
-    "Tags": ["Dynamic Programming", "String"],
-    "Companies": ["Myntra", "Rivigo", "BNY Mellon"],
+    "Tags": [
+      "Dynamic Programming",
+      "String"
+    ],
+    "Companies": [
+      "Myntra",
+      "Rivigo",
+      "BNY Mellon"
+    ],
     "Solved Status": 0,
     "Needs Revision": false,
     "Notes": ""
@@ -2209,7 +2448,9 @@
     "Difficulty": "Easy",
     "Platform": "GeeksForGeeks",
     "Link": "https://bit.ly/3w9pEIt",
-    "Tags": ["Linked List"],
+    "Tags": [
+      "Linked List"
+    ],
     "Companies": [
       "Splunk",
       "Instacart",
@@ -2253,7 +2494,9 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/delete-node-in-a-linked-list/",
-    "Tags": ["Linked List"],
+    "Tags": [
+      "Linked List"
+    ],
     "Companies": [
       "Adobe",
       "CIS \u2013 Cyber Infrastructure",
@@ -2296,7 +2539,9 @@
     "Difficulty": "Easy",
     "Platform": "GeeksForGeeks",
     "Link": "https://bit.ly/3Epriup",
-    "Tags": ["Linked List"],
+    "Tags": [
+      "Linked List"
+    ],
     "Companies": [
       "Tata Consultancy Services (TCS)",
       "ONEPERCENT SOFTWARE (OPC) PRIVATE LIMITED"
@@ -2311,7 +2556,9 @@
     "Difficulty": "Easy",
     "Platform": "GeeksForGeeks",
     "Link": "https://bit.ly/3QD4hHs",
-    "Tags": ["Doubly-Linked List"],
+    "Tags": [
+      "Doubly-Linked List"
+    ],
     "Companies": [
       "Splunk",
       "Zoho",
@@ -2355,8 +2602,13 @@
     "Difficulty": "Medium",
     "Platform": "GeeksForGeeks",
     "Link": "https://bit.ly/3QlEoMx",
-    "Tags": ["Doubly-Linked List"],
-    "Companies": ["Amazon", "Walmart"],
+    "Tags": [
+      "Doubly-Linked List"
+    ],
+    "Companies": [
+      "Amazon",
+      "Walmart"
+    ],
     "Solved Status": 0,
     "Needs Revision": false,
     "Notes": ""
@@ -2367,7 +2619,9 @@
     "Difficulty": "Medium",
     "Platform": "GeeksForGeeks",
     "Link": "https://bit.ly/3w6hUaa",
-    "Tags": ["Doubly-Linked List"],
+    "Tags": [
+      "Doubly-Linked List"
+    ],
     "Companies": [
       "Walmart",
       "IBM",
@@ -2391,7 +2645,10 @@
     "Difficulty": "Easy",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/middle-of-the-linked-list/",
-    "Tags": ["Linked List", "Two Pointers"],
+    "Tags": [
+      "Linked List",
+      "Two Pointers"
+    ],
     "Companies": [
       "Razorpay",
       "Grab",
@@ -2469,7 +2726,10 @@
     "Difficulty": "Easy",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/reverse-linked-list/",
-    "Tags": ["Linked List", "Recursion"],
+    "Tags": [
+      "Linked List",
+      "Recursion"
+    ],
     "Companies": [
       "Robinhood",
       "Bungie",
@@ -2514,7 +2774,11 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/linked-list-cycle/",
-    "Tags": ["Hash Table", "Linked List", "Two Pointers"],
+    "Tags": [
+      "Hash Table",
+      "Linked List",
+      "Two Pointers"
+    ],
     "Companies": [
       "Cloudflare",
       "Western Digital",
@@ -2559,7 +2823,11 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/linked-list-cycle-ii/",
-    "Tags": ["Hash Table", "Linked List", "Two Pointers"],
+    "Tags": [
+      "Hash Table",
+      "Linked List",
+      "Two Pointers"
+    ],
     "Companies": [
       "Nutanix",
       "Red Hat",
@@ -2604,7 +2872,9 @@
     "Difficulty": "Easy",
     "Platform": "GeeksForGeeks",
     "Link": "https://bit.ly/3dyXL6m",
-    "Tags": ["Linked List"],
+    "Tags": [
+      "Linked List"
+    ],
     "Companies": [
       "Etsy",
       "Broadcom",
@@ -2649,7 +2919,12 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/palindrome-linked-list/",
-    "Tags": ["Linked List", "Two Pointers", "Stack", "Recursion"],
+    "Tags": [
+      "Linked List",
+      "Two Pointers",
+      "Stack",
+      "Recursion"
+    ],
     "Companies": [
       "Intel",
       "Seagate Technology",
@@ -2694,7 +2969,9 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/odd-even-linked-list/",
-    "Tags": ["Linked List"],
+    "Tags": [
+      "Linked List"
+    ],
     "Companies": [
       "Swiggy",
       "Western Digital",
@@ -2739,7 +3016,10 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/remove-nth-node-from-end-of-list/",
-    "Tags": ["Linked List", "Two Pointers"],
+    "Tags": [
+      "Linked List",
+      "Two Pointers"
+    ],
     "Companies": [
       "Zynga",
       "BYJU'S",
@@ -2835,7 +3115,9 @@
     "Difficulty": "Medium",
     "Platform": "GeeksForGeeks",
     "Link": "https://bit.ly/3Ceotvr",
-    "Tags": ["Linked List"],
+    "Tags": [
+      "Linked List"
+    ],
     "Companies": [
       "Target",
       "Bungie",
@@ -2880,7 +3162,11 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/intersection-of-two-linked-lists/",
-    "Tags": ["Hash Table", "Linked List", "Two Pointers"],
+    "Tags": [
+      "Hash Table",
+      "Linked List",
+      "Two Pointers"
+    ],
     "Companies": [
       "Pinterest",
       "PayPal",
@@ -2925,7 +3211,9 @@
     "Difficulty": "Medium",
     "Platform": "GeeksForGeeks",
     "Link": "https://bit.ly/3piCTD3",
-    "Tags": ["Linked List"],
+    "Tags": [
+      "Linked List"
+    ],
     "Companies": [
       "Nutanix",
       "Teladoc Health",
@@ -2970,7 +3258,11 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/add-two-numbers/",
-    "Tags": ["Linked List", "Math", "Recursion"],
+    "Tags": [
+      "Linked List",
+      "Math",
+      "Recursion"
+    ],
     "Companies": [
       "AMD",
       "Siemens Healthineers",
@@ -3015,7 +3307,9 @@
     "Difficulty": "Medium",
     "Platform": "GeeksForGeeks",
     "Link": "https://bit.ly/3zuBr66",
-    "Tags": ["Doubly-Linked List"],
+    "Tags": [
+      "Doubly-Linked List"
+    ],
     "Companies": [
       "Salesforce",
       "ARM",
@@ -3060,8 +3354,14 @@
     "Difficulty": "Medium",
     "Platform": "GeeksForGeeks",
     "Link": "https://bit.ly/3zWPiBj",
-    "Tags": ["Doubly-Linked List", "Two Pointers"],
-    "Companies": ["Ola", "Centilytics | Intelligent Cloud Management"],
+    "Tags": [
+      "Doubly-Linked List",
+      "Two Pointers"
+    ],
+    "Companies": [
+      "Ola",
+      "Centilytics | Intelligent Cloud Management"
+    ],
     "Solved Status": 0,
     "Needs Revision": false,
     "Notes": ""
@@ -3072,7 +3372,9 @@
     "Difficulty": "Medium",
     "Platform": "GeeksForGeeks",
     "Link": "https://bit.ly/3FtJUtZ",
-    "Tags": ["Doubly-Linked List"],
+    "Tags": [
+      "Doubly-Linked List"
+    ],
     "Companies": [
       "Deloitte",
       "ARM",
@@ -3117,7 +3419,10 @@
     "Difficulty": "Hard",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/reverse-nodes-in-k-group/",
-    "Tags": ["Linked List", "Recursion"],
+    "Tags": [
+      "Linked List",
+      "Recursion"
+    ],
     "Companies": [
       "Ernst & Young",
       "Rakuten",
@@ -3162,7 +3467,10 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/rotate-list/description/",
-    "Tags": ["Linked List", "Two Pointers"],
+    "Tags": [
+      "Linked List",
+      "Two Pointers"
+    ],
     "Companies": [
       "Shopify",
       "HCL Technologies",
@@ -3207,7 +3515,9 @@
     "Difficulty": "Hard",
     "Platform": "GeeksForGeeks",
     "Link": "https://bit.ly/3w9TKf8",
-    "Tags": ["Linked List"],
+    "Tags": [
+      "Linked List"
+    ],
     "Companies": [
       "GE Healthcare",
       "Western Digital",
@@ -3252,7 +3562,10 @@
     "Difficulty": "Hard",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/copy-list-with-random-pointer/",
-    "Tags": ["Hash Table", "Linked List"],
+    "Tags": [
+      "Hash Table",
+      "Linked List"
+    ],
     "Companies": [
       "Teladoc Health",
       "Databricks",
@@ -3297,7 +3610,11 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/generate-parentheses/",
-    "Tags": ["String", "Dynamic Programming", "Backtracking"],
+    "Tags": [
+      "String",
+      "Dynamic Programming",
+      "Backtracking"
+    ],
     "Companies": [
       "Reddit",
       "Texas Instruments",
@@ -3341,7 +3658,11 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/subsets/",
-    "Tags": ["Array", "Backtracking", "Bit Manipulation"],
+    "Tags": [
+      "Array",
+      "Backtracking",
+      "Bit Manipulation"
+    ],
     "Companies": [
       "Wayfair",
       "Dropbox",
@@ -3385,7 +3706,10 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/combination-sum/",
-    "Tags": ["Array", "Backtracking"],
+    "Tags": [
+      "Array",
+      "Backtracking"
+    ],
     "Companies": [
       "JPMorgan Chase",
       "Mastercard",
@@ -3430,7 +3754,10 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/combination-sum-ii/",
-    "Tags": ["Array", "Backtracking"],
+    "Tags": [
+      "Array",
+      "Backtracking"
+    ],
     "Companies": [
       "Cerner",
       "Broadcom",
@@ -3475,7 +3802,9 @@
     "Difficulty": "Medium",
     "Platform": "GeeksForGeeks",
     "Link": "https://bit.ly/3C9GQRS",
-    "Tags": ["Recursion"],
+    "Tags": [
+      "Recursion"
+    ],
     "Companies": [
       "Docker",
       "Bloomberg",
@@ -3520,7 +3849,11 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/subsets-ii/",
-    "Tags": ["Array", "Backtracking", "Bit Manipulation"],
+    "Tags": [
+      "Array",
+      "Backtracking",
+      "Bit Manipulation"
+    ],
     "Companies": [
       "Goldman Sachs",
       "OYO Rooms",
@@ -3565,7 +3898,10 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/combination-sum-iii/",
-    "Tags": ["Array", "Backtracking"],
+    "Tags": [
+      "Array",
+      "Backtracking"
+    ],
     "Companies": [
       "GE Healthcare",
       "Lyft",
@@ -3610,7 +3946,11 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/letter-combinations-of-a-phone-number/",
-    "Tags": ["Hash Table", "String", "Backtracking"],
+    "Tags": [
+      "Hash Table",
+      "String",
+      "Backtracking"
+    ],
     "Companies": [
       "Stripe",
       "HCL Technologies",
@@ -3655,7 +3995,11 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/palindrome-partitioning/",
-    "Tags": ["String", "Dynamic Programming", "Backtracking"],
+    "Tags": [
+      "String",
+      "Dynamic Programming",
+      "Backtracking"
+    ],
     "Companies": [
       "Instacart",
       "PayPal",
@@ -3700,7 +4044,13 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/word-search/",
-    "Tags": ["Array", "String", "Backtracking", "DFS", "Matrix"],
+    "Tags": [
+      "Array",
+      "String",
+      "Backtracking",
+      "DFS",
+      "Matrix"
+    ],
     "Companies": [
       "Oracle",
       "Walmart",
@@ -3745,7 +4095,10 @@
     "Difficulty": "Hard",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/n-queens/",
-    "Tags": ["Array", "Backtracking"],
+    "Tags": [
+      "Array",
+      "Backtracking"
+    ],
     "Companies": [
       "Morgan Stanley",
       "Zoho",
@@ -3790,7 +4143,9 @@
     "Difficulty": "Hard",
     "Platform": "GeeksForGeeks",
     "Link": "https://practice.geeksforgeeks.org/problems/rat-in-a-maze-problem/1",
-    "Tags": ["Backtracking"],
+    "Tags": [
+      "Backtracking"
+    ],
     "Companies": [
       "Boston Consulting Group",
       "Snowflake",
@@ -3884,7 +4239,9 @@
     "Difficulty": "Hard",
     "Platform": "GeeksForGeeks",
     "Link": "https://practice.geeksforgeeks.org/problems/m-coloring-problem-1587115620/1#",
-    "Tags": ["Backtracking"],
+    "Tags": [
+      "Backtracking"
+    ],
     "Companies": [
       "Instacart",
       "Flipkart",
@@ -3929,7 +4286,12 @@
     "Difficulty": "Hard",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/sudoku-solver/",
-    "Tags": ["Array", "Hash Table", "Backtracking", "Matrix"],
+    "Tags": [
+      "Array",
+      "Hash Table",
+      "Backtracking",
+      "Matrix"
+    ],
     "Companies": [
       "Airbnb",
       "Visa",
@@ -3974,8 +4336,12 @@
     "Difficulty": "Easy",
     "Platform": "GeeksForGeeks",
     "Link": "https://practice.geeksforgeeks.org/problems/check-whether-k-th-bit-is-set-or-not-1587115620/1",
-    "Tags": ["Bit Manipulation"],
-    "Companies": ["Microsoft"],
+    "Tags": [
+      "Bit Manipulation"
+    ],
+    "Companies": [
+      "Microsoft"
+    ],
     "Solved Status": 0,
     "Needs Revision": false,
     "Notes": ""
@@ -3986,7 +4352,10 @@
     "Difficulty": "Easy",
     "Platform": "GeeksForGeeks",
     "Link": "https://practice.geeksforgeeks.org/problems/odd-or-even3618/1",
-    "Tags": ["Bit Manipulation", "Math"],
+    "Tags": [
+      "Bit Manipulation",
+      "Math"
+    ],
     "Companies": [],
     "Solved Status": 0,
     "Needs Revision": false,
@@ -3998,7 +4367,11 @@
     "Difficulty": "Easy",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/power-of-two/",
-    "Tags": ["Bit Manipulation", "Math", "Recursion"],
+    "Tags": [
+      "Bit Manipulation",
+      "Math",
+      "Recursion"
+    ],
     "Companies": [],
     "Solved Status": 0,
     "Needs Revision": false,
@@ -4010,7 +4383,9 @@
     "Difficulty": "Easy",
     "Platform": "GeeksForGeeks",
     "Link": "https://practice.geeksforgeeks.org/problems/count-total-set-bits-1587115620/1",
-    "Tags": ["Bit Manipulation"],
+    "Tags": [
+      "Bit Manipulation"
+    ],
     "Companies": [],
     "Solved Status": 0,
     "Needs Revision": false,
@@ -4022,7 +4397,9 @@
     "Difficulty": "Easy",
     "Platform": "GeeksForGeeks",
     "Link": "https://practice.geeksforgeeks.org/problems/set-the-rightmost-unset-bit4436/1",
-    "Tags": ["Bit Manipulation"],
+    "Tags": [
+      "Bit Manipulation"
+    ],
     "Companies": [],
     "Solved Status": 0,
     "Needs Revision": false,
@@ -4034,8 +4411,13 @@
     "Difficulty": "Easy",
     "Platform": "GeeksForGeeks",
     "Link": "https://practice.geeksforgeeks.org/problems/swap-two-numbers3844/1",
-    "Tags": ["Bit Manipulation", "Math"],
-    "Companies": ["Samsung"],
+    "Tags": [
+      "Bit Manipulation",
+      "Math"
+    ],
+    "Companies": [
+      "Samsung"
+    ],
     "Solved Status": 0,
     "Needs Revision": false,
     "Notes": ""
@@ -4046,7 +4428,10 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/divide-two-integers/",
-    "Tags": ["Bit Manipulation", "Math"],
+    "Tags": [
+      "Bit Manipulation",
+      "Math"
+    ],
     "Companies": [
       "Seagate Technology",
       "Qualcomm",
@@ -4091,7 +4476,9 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/minimum-bit-flips-to-convert-number/",
-    "Tags": ["Bit Manipulation"],
+    "Tags": [
+      "Bit Manipulation"
+    ],
     "Companies": [
       "Reddit",
       "Ernst & Young",
@@ -4136,7 +4523,10 @@
     "Difficulty": "Easy",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/single-number/",
-    "Tags": ["Bit Manipulation", "Array"],
+    "Tags": [
+      "Bit Manipulation",
+      "Array"
+    ],
     "Companies": [],
     "Solved Status": 0,
     "Needs Revision": false,
@@ -4148,7 +4538,11 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/subsets/",
-    "Tags": ["Bit Manipulation", "Array", "Backtracking"],
+    "Tags": [
+      "Bit Manipulation",
+      "Array",
+      "Backtracking"
+    ],
     "Companies": [],
     "Solved Status": 0,
     "Needs Revision": false,
@@ -4160,7 +4554,9 @@
     "Difficulty": "Easy",
     "Platform": "GeeksForGeeks",
     "Link": "https://bit.ly/3T8xUCf",
-    "Tags": ["Bit Manipulation"],
+    "Tags": [
+      "Bit Manipulation"
+    ],
     "Companies": [
       "Medtronic",
       "GE Healthcare",
@@ -4205,7 +4601,9 @@
     "Difficulty": "Easy",
     "Platform": "GeeksForGeeks",
     "Link": "https://practice.geeksforgeeks.org/problems/two-numbers-with-odd-occurrences5846/1",
-    "Tags": ["Bit Manipulation"],
+    "Tags": [
+      "Bit Manipulation"
+    ],
     "Companies": [
       "Seagate Technology",
       "Zoho",
@@ -4250,7 +4648,10 @@
     "Difficulty": "Easy",
     "Platform": "GeeksForGeeks",
     "Link": "https://bit.ly/3C165p8",
-    "Tags": ["Number Theory", "Math"],
+    "Tags": [
+      "Number Theory",
+      "Math"
+    ],
     "Companies": [
       "eBay",
       "Splunk",
@@ -4295,7 +4696,12 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/count-primes/",
-    "Tags": ["Array", "Math", "Enumberation", "Number Theory"],
+    "Tags": [
+      "Array",
+      "Math",
+      "Enumberation",
+      "Number Theory"
+    ],
     "Companies": [
       "Reddit",
       "Zomato",
@@ -4340,8 +4746,13 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/powx-n/",
-    "Tags": ["Math", "Recursion"],
-    "Companies": ["EduRev Solutions Pvt. Ltd."],
+    "Tags": [
+      "Math",
+      "Recursion"
+    ],
+    "Companies": [
+      "EduRev Solutions Pvt. Ltd."
+    ],
     "Solved Status": 0,
     "Needs Revision": false,
     "Notes": ""
@@ -4352,7 +4763,11 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/implement-stack-using-queues/",
-    "Tags": ["Stack", "Design", "Queue"],
+    "Tags": [
+      "Stack",
+      "Design",
+      "Queue"
+    ],
     "Companies": [
       "Bungie",
       "Goldman Sachs",
@@ -4402,7 +4817,11 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/implement-queue-using-stacks/",
-    "Tags": ["Stack", "Design", "Queue"],
+    "Tags": [
+      "Stack",
+      "Design",
+      "Queue"
+    ],
     "Companies": [
       "GE Healthcare",
       "Deloitte",
@@ -4453,7 +4872,10 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/valid-parentheses/",
-    "Tags": ["String", "Stack"],
+    "Tags": [
+      "String",
+      "Stack"
+    ],
     "Companies": [
       "Goldman Sachs",
       "Walmart",
@@ -4504,7 +4926,10 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/min-stack/",
-    "Tags": ["Stack", "Design"],
+    "Tags": [
+      "Stack",
+      "Design"
+    ],
     "Companies": [
       "Lyft",
       "HashiCorp",
@@ -4549,7 +4974,12 @@
     "Difficulty": "Easy",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/next-greater-element-i/",
-    "Tags": ["Array", "Hash Table", "Stack", "Monotonic Stack"],
+    "Tags": [
+      "Array",
+      "Hash Table",
+      "Stack",
+      "Monotonic Stack"
+    ],
     "Companies": [
       "Electronic Arts",
       "Wayfair",
@@ -4594,7 +5024,11 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/next-greater-element-ii/",
-    "Tags": ["Array", "Stack", "Monotonic Stack"],
+    "Tags": [
+      "Array",
+      "Stack",
+      "Monotonic Stack"
+    ],
     "Companies": [
       "Micron Technology",
       "Freshworks",
@@ -4639,7 +5073,11 @@
     "Difficulty": "Easy",
     "Platform": "InterviewBit",
     "Link": "https://www.interviewbit.com/problems/nearest-smaller-element/",
-    "Tags": ["Array", "Stack", "Monotonic Stack"],
+    "Tags": [
+      "Array",
+      "Stack",
+      "Monotonic Stack"
+    ],
     "Companies": [
       "Oracle",
       "IBM",
@@ -4663,7 +5101,11 @@
     "Difficulty": "Easy",
     "Platform": "GeeksForGeeks",
     "Link": "https://bit.ly/3Np2R2H",
-    "Tags": ["Array", "Stack", "Monotonic Stack"],
+    "Tags": [
+      "Array",
+      "Stack",
+      "Monotonic Stack"
+    ],
     "Companies": [
       "Zomato",
       "Dunzo",
@@ -4756,7 +5198,12 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/sum-of-subarray-minimums/",
-    "Tags": ["Array", "Dynamic Programming", "Stack", "Monotonic Stack"],
+    "Tags": [
+      "Array",
+      "Dynamic Programming",
+      "Stack",
+      "Monotonic Stack"
+    ],
     "Companies": [
       "Cerner",
       "Micron Technology",
@@ -4797,7 +5244,11 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/asteroid-collision/",
-    "Tags": ["Array", "Stack", "Simulation"],
+    "Tags": [
+      "Array",
+      "Stack",
+      "Simulation"
+    ],
     "Companies": [
       "Dropbox",
       "Epic Systems",
@@ -4840,7 +5291,11 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/sum-of-subarray-ranges/",
-    "Tags": ["Array", "Stack", "Monotonic Stack"],
+    "Tags": [
+      "Array",
+      "Stack",
+      "Monotonic Stack"
+    ],
     "Companies": [
       "Splunk",
       "Twilio",
@@ -4883,7 +5338,12 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/remove-k-digits/",
-    "Tags": ["String", "Stack", "Greedy", "Monotonic Stack"],
+    "Tags": [
+      "String",
+      "Stack",
+      "Greedy",
+      "Monotonic Stack"
+    ],
     "Companies": [
       "Bloomberg",
       "Salesforce",
@@ -4926,7 +5386,11 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/largest-rectangle-in-histogram/",
-    "Tags": ["Array", "Stack", "Monotonic Stack"],
+    "Tags": [
+      "Array",
+      "Stack",
+      "Monotonic Stack"
+    ],
     "Companies": [
       "AMD",
       "OYO Rooms",
@@ -5065,7 +5529,12 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/online-stock-span/",
-    "Tags": ["Stack", "Design", "Monotonic Stack", "Data Stream"],
+    "Tags": [
+      "Stack",
+      "Design",
+      "Monotonic Stack",
+      "Data Stream"
+    ],
     "Companies": [
       "Riot Games",
       "Square",
@@ -5110,7 +5579,10 @@
     "Difficulty": "Medium",
     "Platform": "GeeksForGeeks",
     "Link": "https://www.geeksforgeeks.org/problems/the-celebrity-problem/1",
-    "Tags": ["Array", "Stack"],
+    "Tags": [
+      "Array",
+      "Stack"
+    ],
     "Companies": [
       "Medtronic",
       "Nutanix",
@@ -5155,7 +5627,12 @@
     "Difficulty": "Hard",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/lru-cache/",
-    "Tags": ["Hash Table", "Linked List", "Design", "Doubly-Linked List"],
+    "Tags": [
+      "Hash Table",
+      "Linked List",
+      "Design",
+      "Doubly-Linked List"
+    ],
     "Companies": [
       "Activision Blizzard",
       "Bungie",
@@ -5200,7 +5677,12 @@
     "Difficulty": "Hard",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/lfu-cache/",
-    "Tags": ["Hash Table", "Linked List", "Design", "Doubly-Linked List"],
+    "Tags": [
+      "Hash Table",
+      "Linked List",
+      "Design",
+      "Doubly-Linked List"
+    ],
     "Companies": [
       "Dropbox",
       "Roblox",
@@ -5245,7 +5727,11 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
-    "Tags": ["Hash Table", "String", "Sliding Window"],
+    "Tags": [
+      "Hash Table",
+      "String",
+      "Sliding Window"
+    ],
     "Companies": [
       "Dropbox",
       "Shopify",
@@ -5290,7 +5776,12 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/max-consecutive-ones-iii/",
-    "Tags": ["Array", "Binary Search", "Sliding Window", "Prefix Sum"],
+    "Tags": [
+      "Array",
+      "Binary Search",
+      "Sliding Window",
+      "Prefix Sum"
+    ],
     "Companies": [
       "Roche",
       "American Express",
@@ -5335,7 +5826,10 @@
     "Difficulty": "Medium",
     "Platform": "GeeksForGeeks",
     "Link": "https://bit.ly/3D6d94w",
-    "Tags": ["Two Pointers", "Array"],
+    "Tags": [
+      "Two Pointers",
+      "Array"
+    ],
     "Companies": [
       "Morgan Stanley",
       "Swiggy",
@@ -5380,7 +5874,11 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/longest-repeating-character-replacement/",
-    "Tags": ["Hash Table", "String", "Sliding Window"],
+    "Tags": [
+      "Hash Table",
+      "String",
+      "Sliding Window"
+    ],
     "Companies": [
       "Western Digital",
       "Pinterest",
@@ -5425,7 +5923,12 @@
     "Difficulty": "Easy",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/binary-subarrays-with-sum/",
-    "Tags": ["Array", "Hash Table", "Sliding Window", "Prefix Sum"],
+    "Tags": [
+      "Array",
+      "Hash Table",
+      "Sliding Window",
+      "Prefix Sum"
+    ],
     "Companies": [
       "Stripe",
       "Nutanix",
@@ -5470,7 +5973,13 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/count-number-of-nice-subarrays/",
-    "Tags": ["Array", "Hash Table", "Sliding Window", "Prefix Sum", "Math"],
+    "Tags": [
+      "Array",
+      "Hash Table",
+      "Sliding Window",
+      "Prefix Sum",
+      "Math"
+    ],
     "Companies": [
       "Activision Blizzard",
       "Riot Games",
@@ -5515,7 +6024,11 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/number-of-substrings-containing-all-three-characters/",
-    "Tags": ["Hash Table", "String", "Sliding Window"],
+    "Tags": [
+      "Hash Table",
+      "String",
+      "Sliding Window"
+    ],
     "Companies": [
       "Micron Technology",
       "ARM",
@@ -5560,7 +6073,11 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/",
-    "Tags": ["Array", "Sliding Window", "Prefix Sum"],
+    "Tags": [
+      "Array",
+      "Sliding Window",
+      "Prefix Sum"
+    ],
     "Companies": [
       "Salesforce",
       "BYJU\u2019S",
@@ -5605,7 +6122,11 @@
     "Difficulty": "Medium",
     "Platform": "GeeksForGeeks",
     "Link": "https://www.geeksforgeeks.org/problems/longest-k-unique-characters-substring0853/1",
-    "Tags": ["Two Pointers", "Hash Table", "String"],
+    "Tags": [
+      "Two Pointers",
+      "Hash Table",
+      "String"
+    ],
     "Companies": [
       "Cloudflare",
       "Bungie",
@@ -5650,8 +6171,19 @@
     "Difficulty": "Hard",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/subarrays-with-k-different-integers/",
-    "Tags": ["Array", "Hash Table", "Sliding Window", "Counting"],
-    "Companies": ["Google", "Swiggy", "Goldman Sachs", "DE Shaw", "VMware Inc"],
+    "Tags": [
+      "Array",
+      "Hash Table",
+      "Sliding Window",
+      "Counting"
+    ],
+    "Companies": [
+      "Google",
+      "Swiggy",
+      "Goldman Sachs",
+      "DE Shaw",
+      "VMware Inc"
+    ],
     "Solved Status": 0,
     "Needs Revision": false,
     "Notes": ""
@@ -5662,7 +6194,11 @@
     "Difficulty": "Hard",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/minimum-window-substring/",
-    "Tags": ["Hash Table", "String", "Sliding Window"],
+    "Tags": [
+      "Hash Table",
+      "String",
+      "Sliding Window"
+    ],
     "Companies": [
       "Shopify",
       "Lyft",
@@ -5707,8 +6243,15 @@
     "Difficulty": "Hard",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/minimum-window-subsequence/",
-    "Tags": ["Hash Table", "String", "Sliding Window"],
-    "Companies": ["Amazon", "Nagarro Software"],
+    "Tags": [
+      "Hash Table",
+      "String",
+      "Sliding Window"
+    ],
+    "Companies": [
+      "Amazon",
+      "Nagarro Software"
+    ],
     "Solved Status": 0,
     "Needs Revision": false,
     "Notes": ""
@@ -5719,7 +6262,10 @@
     "Difficulty": "Medium",
     "Platform": "GeeksForGeeks",
     "Link": "https://bit.ly/3weGgP3",
-    "Tags": ["Heap (Priority Queue)", "Design"],
+    "Tags": [
+      "Heap (Priority Queue)",
+      "Design"
+    ],
     "Companies": [],
     "Solved Status": 0,
     "Needs Revision": false,
@@ -5731,7 +6277,11 @@
     "Difficulty": "Medium",
     "Platform": "GeeksForGeeks",
     "Link": "https://bit.ly/3AbFrrI",
-    "Tags": ["Heap (Priority Queue)", "Array", "Binary Search Tree"],
+    "Tags": [
+      "Heap (Priority Queue)",
+      "Array",
+      "Binary Search Tree"
+    ],
     "Companies": [
       "Philips Healthcare",
       "OYO Rooms",
@@ -5776,7 +6326,9 @@
     "Difficulty": "Medium",
     "Platform": "GeeksForGeeks",
     "Link": "https://bit.ly/3flmw7c",
-    "Tags": ["Heap (Priority Queue)"],
+    "Tags": [
+      "Heap (Priority Queue)"
+    ],
     "Companies": [
       "Activision Blizzard",
       "Broadcom",
@@ -5990,7 +6542,11 @@
       "Greedy",
       "Sorting"
     ],
-    "Companies": ["Uber", "Microsoft", "eBay"],
+    "Companies": [
+      "Uber",
+      "Microsoft",
+      "eBay"
+    ],
     "Solved Status": 0,
     "Needs Revision": false,
     "Notes": ""
@@ -6001,7 +6557,12 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/design-twitter/",
-    "Tags": ["Heap (Priority Queue)", "Hash Table", "Linked List", "Design"],
+    "Tags": [
+      "Heap (Priority Queue)",
+      "Hash Table",
+      "Linked List",
+      "Design"
+    ],
     "Companies": [],
     "Solved Status": 0,
     "Needs Revision": false,
@@ -6013,7 +6574,11 @@
     "Difficulty": "Medium",
     "Platform": "GeeksForGeeks",
     "Link": "https://bit.ly/3QVb1jR",
-    "Tags": ["Heap (Priority Queue)", "Array", "Dynamic Programming"],
+    "Tags": [
+      "Heap (Priority Queue)",
+      "Array",
+      "Dynamic Programming"
+    ],
     "Companies": [
       "Microsoft",
       "PayPal",
@@ -6138,7 +6703,12 @@
     "Difficulty": "Easy",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/maximum-matching-of-players-with-trainers/description/",
-    "Tags": ["Array", "Two Pointers", "Greedy", "Sorting"],
+    "Tags": [
+      "Array",
+      "Two Pointers",
+      "Greedy",
+      "Sorting"
+    ],
     "Companies": [
       "McKinsey & Company",
       "Rakuten",
@@ -6183,7 +6753,11 @@
     "Difficulty": "Medium",
     "Platform": "GeeksForGeeks",
     "Link": "https://practice.geeksforgeeks.org/problems/fractional-knapsack-1587115620/1",
-    "Tags": ["Array", "Greedy", "Sorting"],
+    "Tags": [
+      "Array",
+      "Greedy",
+      "Sorting"
+    ],
     "Companies": [
       "Flipkart",
       "Microsoft",
@@ -6207,7 +6781,10 @@
     "Difficulty": "Easy",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/lemonade-change/",
-    "Tags": ["Array", "Greedy"],
+    "Tags": [
+      "Array",
+      "Greedy"
+    ],
     "Companies": [
       "Shopify",
       "Freshworks",
@@ -6252,7 +6829,12 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/valid-parenthesis-string/",
-    "Tags": ["String", "Dynamic Programming", "Stack", "Greedy"],
+    "Tags": [
+      "String",
+      "Dynamic Programming",
+      "Stack",
+      "Greedy"
+    ],
     "Companies": [
       "Square",
       "Electronic Arts",
@@ -6297,7 +6879,10 @@
     "Difficulty": "Medium",
     "Platform": "GeeksForGeeks",
     "Link": "https://practice.geeksforgeeks.org/problems/n-meetings-in-one-room-1587115620/1",
-    "Tags": ["Array", "Greedy"],
+    "Tags": [
+      "Array",
+      "Greedy"
+    ],
     "Companies": [
       "IBM",
       "Seagate Technology",
@@ -6336,7 +6921,11 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/jump-game/",
-    "Tags": ["Array", "Dynamic Programming", "Greedy"],
+    "Tags": [
+      "Array",
+      "Dynamic Programming",
+      "Greedy"
+    ],
     "Companies": [
       "Shopify",
       "Mastercard",
@@ -6381,7 +6970,11 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/jump-game-ii/",
-    "Tags": ["Array", "Dynamic Programming", "Greedy"],
+    "Tags": [
+      "Array",
+      "Dynamic Programming",
+      "Greedy"
+    ],
     "Companies": [
       "Moonfrog Labs",
       "Flipkart",
@@ -6402,7 +6995,12 @@
     "Difficulty": "Medium",
     "Platform": "GeeksForGeeks",
     "Link": "https://practice.geeksforgeeks.org/problems/minimum-platforms-1587115620/1#",
-    "Tags": ["Array", "Greedy", "Sorting", "Binary Search"],
+    "Tags": [
+      "Array",
+      "Greedy",
+      "Sorting",
+      "Binary Search"
+    ],
     "Companies": [
       "Oracle",
       "Medtronic",
@@ -6447,7 +7045,10 @@
     "Difficulty": "Medium",
     "Platform": "GeeksForGeeks",
     "Link": "https://practice.geeksforgeeks.org/problems/job-sequencing-problem-1587115620/1#",
-    "Tags": ["Dynamic Programming", "Greedy"],
+    "Tags": [
+      "Dynamic Programming",
+      "Greedy"
+    ],
     "Companies": [
       "Micron Technology",
       "Roblox",
@@ -6492,7 +7093,10 @@
     "Difficulty": "Hard",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/candy/",
-    "Tags": ["Array", "Greedy"],
+    "Tags": [
+      "Array",
+      "Greedy"
+    ],
     "Companies": [
       "Docker",
       "McKinsey & Company",
@@ -6537,7 +7141,10 @@
     "Difficulty": "Medium",
     "Platform": "GeeksForGeeks",
     "Link": "https://bit.ly/3DYCIFb",
-    "Tags": ["Array", "Greedy"],
+    "Tags": [
+      "Array",
+      "Greedy"
+    ],
     "Companies": [
       "MongoDB",
       "Riot Games",
@@ -6582,8 +7189,16 @@
     "Difficulty": "Medium",
     "Platform": "GeeksForGeeks",
     "Link": "https://bit.ly/3dtFqHG",
-    "Tags": ["Array", "Greedy"],
-    "Companies": ["Adobe", "Expedia Group", "Tata 1mg", "Microsoft"],
+    "Tags": [
+      "Array",
+      "Greedy"
+    ],
+    "Companies": [
+      "Adobe",
+      "Expedia Group",
+      "Tata 1mg",
+      "Microsoft"
+    ],
     "Solved Status": 0,
     "Needs Revision": false,
     "Notes": ""
@@ -6594,7 +7209,10 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/insert-interval/",
-    "Tags": ["Array", "Greedy"],
+    "Tags": [
+      "Array",
+      "Greedy"
+    ],
     "Companies": [
       "Shopify",
       "Alibaba",
@@ -6639,7 +7257,12 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/non-overlapping-intervals/",
-    "Tags": ["Array", "Greedy", "Dynamic Programming", "Sorting"],
+    "Tags": [
+      "Array",
+      "Greedy",
+      "Dynamic Programming",
+      "Sorting"
+    ],
     "Companies": [
       "Rockstar Games",
       "NVIDIA",
@@ -6684,7 +7307,12 @@
     "Difficulty": "Easy",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/binary-tree-preorder-traversal/",
-    "Tags": ["Stack", "Tree", "DFS", "Binary Tree"],
+    "Tags": [
+      "Stack",
+      "Tree",
+      "DFS",
+      "Binary Tree"
+    ],
     "Companies": [
       "Deloitte",
       "Ernst & Young",
@@ -6727,7 +7355,12 @@
     "Difficulty": "Easy",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/binary-tree-inorder-traversal/",
-    "Tags": ["Stack", "Tree", "DFS", "Binary Tree"],
+    "Tags": [
+      "Stack",
+      "Tree",
+      "DFS",
+      "Binary Tree"
+    ],
     "Companies": [
       "Broadcom",
       "ARM",
@@ -6771,7 +7404,12 @@
     "Difficulty": "Easy",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/binary-tree-postorder-traversal/",
-    "Tags": ["Stack", "Tree", "DFS", "Binary Tree"],
+    "Tags": [
+      "Stack",
+      "Tree",
+      "DFS",
+      "Binary Tree"
+    ],
     "Companies": [
       "Twilio",
       "Johnson & Johnson",
@@ -6816,7 +7454,11 @@
     "Difficulty": "Easy",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/binary-tree-level-order-traversal/",
-    "Tags": ["Tree", "DFS", "Binary Tree"],
+    "Tags": [
+      "Tree",
+      "DFS",
+      "Binary Tree"
+    ],
     "Companies": [
       "Walmart",
       "Morgan Stanley",
@@ -6861,7 +7503,11 @@
     "Difficulty": "Medium",
     "Platform": "GeeksForGeeks",
     "Link": "https://bit.ly/3T3oW9M",
-    "Tags": ["Stack", "Tree", "Binary Tree"],
+    "Tags": [
+      "Stack",
+      "Tree",
+      "Binary Tree"
+    ],
     "Companies": [
       "Optum",
       "Philips Healthcare",
@@ -6902,7 +7548,12 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/maximum-depth-of-binary-tree/",
-    "Tags": ["Tree", "DFS", "BFS", "Binary Tree"],
+    "Tags": [
+      "Tree",
+      "DFS",
+      "BFS",
+      "Binary Tree"
+    ],
     "Companies": [
       "Zoho",
       "Mastercard",
@@ -6943,7 +7594,11 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/balanced-binary-tree/",
-    "Tags": ["Tree", "DFS", "Binary Tree"],
+    "Tags": [
+      "Tree",
+      "DFS",
+      "Binary Tree"
+    ],
     "Companies": [
       "Lyft",
       "Epic Games",
@@ -6986,7 +7641,11 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/diameter-of-binary-tree/",
-    "Tags": ["Tree", "DFS", "Binary Tree"],
+    "Tags": [
+      "Tree",
+      "DFS",
+      "Binary Tree"
+    ],
     "Companies": [
       "Intel",
       "Alibaba",
@@ -7025,7 +7684,12 @@
     "Difficulty": "Hard",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/binary-tree-maximum-path-sum/",
-    "Tags": ["Tree", "DFS", "Binary Tree", "Dynamic Programming"],
+    "Tags": [
+      "Tree",
+      "DFS",
+      "Binary Tree",
+      "Dynamic Programming"
+    ],
     "Companies": [
       "Alibaba",
       "Bain & Company",
@@ -7066,7 +7730,12 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/same-tree/",
-    "Tags": ["Tree", "DFS", "BFS", "Binary Tree"],
+    "Tags": [
+      "Tree",
+      "DFS",
+      "BFS",
+      "Binary Tree"
+    ],
     "Companies": [
       "Teledoc Health",
       "Deloitte",
@@ -7112,7 +7781,11 @@
     "Difficulty": "Easy",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/",
-    "Tags": ["Tree", "BFS", "Binary Tree"],
+    "Tags": [
+      "Tree",
+      "BFS",
+      "Binary Tree"
+    ],
     "Companies": [
       "Bain & Company",
       "Zomato",
@@ -7157,7 +7830,12 @@
     "Difficulty": "Medium",
     "Platform": "GeeksForGeeks",
     "Link": "https://www.geeksforgeeks.org/problems/boundary-traversal-of-binary-tree/1",
-    "Tags": ["Tree", "DFS", "BFS", "Binary Tree"],
+    "Tags": [
+      "Tree",
+      "DFS",
+      "BFS",
+      "Binary Tree"
+    ],
     "Companies": [
       "GE Healthcare",
       "Visa",
@@ -7200,7 +7878,14 @@
     "Difficulty": "Easy",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/",
-    "Tags": ["Hash Table", "Tree", "DFS", "BFS", "Sorting", "Binary Tree"],
+    "Tags": [
+      "Hash Table",
+      "Tree",
+      "DFS",
+      "BFS",
+      "Sorting",
+      "Binary Tree"
+    ],
     "Companies": [
       "HashiCorp",
       "Zynga",
@@ -7244,7 +7929,11 @@
     "Difficulty": "Easy",
     "Platform": "GeeksForGeeks",
     "Link": "https://practice.geeksforgeeks.org/problems/top-view-of-binary-tree/1",
-    "Tags": ["Tree", "BFS", "Binary Tree"],
+    "Tags": [
+      "Tree",
+      "BFS",
+      "Binary Tree"
+    ],
     "Companies": [
       "AMD",
       "NVIDIA",
@@ -7289,7 +7978,11 @@
     "Difficulty": "Medium",
     "Platform": "GeeksForGeeks",
     "Link": "https://practice.geeksforgeeks.org/problems/bottom-view-of-binary-tree/1",
-    "Tags": ["Tree", "BFS", "Binary Tree"],
+    "Tags": [
+      "Tree",
+      "BFS",
+      "Binary Tree"
+    ],
     "Companies": [
       "Reddit",
       "Alibaba",
@@ -7333,7 +8026,12 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/binary-tree-right-side-view/",
-    "Tags": ["Tree", "DFS", "BFS", "Binary Tree"],
+    "Tags": [
+      "Tree",
+      "DFS",
+      "BFS",
+      "Binary Tree"
+    ],
     "Companies": [
       "AMD",
       "Micron Technology",
@@ -7378,7 +8076,12 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/symmetric-tree/",
-    "Tags": ["Tree", "DFS", "BFS", "Binary Tree"],
+    "Tags": [
+      "Tree",
+      "DFS",
+      "BFS",
+      "Binary Tree"
+    ],
     "Companies": [
       "Snowflake",
       "Uber",
@@ -7423,7 +8126,11 @@
     "Difficulty": "Medium",
     "Platform": "GeeksForGeeks",
     "Link": "https://bit.ly/3QA600D",
-    "Tags": ["Tree", "DFS", "Binary Tree"],
+    "Tags": [
+      "Tree",
+      "DFS",
+      "Binary Tree"
+    ],
     "Companies": [
       "Cloudflare",
       "Lyft",
@@ -7467,7 +8174,11 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/",
-    "Tags": ["Tree", "DFS", "Binary Tree"],
+    "Tags": [
+      "Tree",
+      "DFS",
+      "Binary Tree"
+    ],
     "Companies": [
       "Rockstar Games",
       "Robinhood",
@@ -7512,7 +8223,12 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/maximum-width-of-binary-tree/",
-    "Tags": ["Tree", "DFS", "BFS", "Binary Tree"],
+    "Tags": [
+      "Tree",
+      "DFS",
+      "BFS",
+      "Binary Tree"
+    ],
     "Companies": [
       "Ubisoft",
       "Salesforce",
@@ -7557,7 +8273,11 @@
     "Difficulty": "Hard",
     "Platform": "GeeksForGeeks",
     "Link": "https://bit.ly/3dEr73g",
-    "Tags": ["Tree", "BFS", "Binary Tree"],
+    "Tags": [
+      "Tree",
+      "BFS",
+      "Binary Tree"
+    ],
     "Companies": [
       "Amazon",
       "Qualcomm",
@@ -7578,7 +8298,13 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/",
-    "Tags": ["Hash Table", "Tree", "DFS", "BFS", "Binary Tree"],
+    "Tags": [
+      "Hash Table",
+      "Tree",
+      "DFS",
+      "BFS",
+      "Binary Tree"
+    ],
     "Companies": [
       "Snowflake",
       "Walmart",
@@ -7623,7 +8349,11 @@
     "Difficulty": "Hard",
     "Platform": "GeeksForGeeks",
     "Link": "https://bit.ly/3wcg7k1",
-    "Tags": ["Tree", "BFS", "Binary Tree"],
+    "Tags": [
+      "Tree",
+      "BFS",
+      "Binary Tree"
+    ],
     "Companies": [
       "eBay",
       "Airbnb",
@@ -7666,7 +8396,12 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/count-complete-tree-nodes/",
-    "Tags": ["Binary Search", "Bit Manipulation", "Tree", "Binary Tree"],
+    "Tags": [
+      "Binary Search",
+      "Bit Manipulation",
+      "Tree",
+      "Binary Tree"
+    ],
     "Companies": [
       "Cerner",
       "Optum",
@@ -7813,7 +8548,14 @@
     "Difficulty": "Hard",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/serialize-and-deserialize-binary-tree/",
-    "Tags": ["String", "DFS", "BFS", "Design", "Tree", "Binary Tree"],
+    "Tags": [
+      "String",
+      "DFS",
+      "BFS",
+      "Design",
+      "Tree",
+      "Binary Tree"
+    ],
     "Companies": [
       "Stripe",
       "Rockstar Games",
@@ -7856,7 +8598,12 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/binary-tree-inorder-traversal/",
-    "Tags": ["Stack", "Tree", "DFS", "Binary Tree"],
+    "Tags": [
+      "Stack",
+      "Tree",
+      "DFS",
+      "Binary Tree"
+    ],
     "Companies": [
       "Epic Systems",
       "Visa",
@@ -7900,7 +8647,12 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/binary-tree-inorder-traversal/",
-    "Tags": ["Stack", "Tree", "DFS", "Binary Tree"],
+    "Tags": [
+      "Stack",
+      "Tree",
+      "DFS",
+      "Binary Tree"
+    ],
     "Companies": [
       "PayPal",
       "McKinsey & Company",
@@ -7944,7 +8696,13 @@
     "Difficulty": "Hard",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/flatten-binary-tree-to-linked-list/",
-    "Tags": ["Linked List", "Stack", "Tree", "DFS", "Binary Tree"],
+    "Tags": [
+      "Linked List",
+      "Stack",
+      "Tree",
+      "DFS",
+      "Binary Tree"
+    ],
     "Companies": [
       "Dunzo",
       "Quikr",
@@ -7971,7 +8729,11 @@
     "Difficulty": "Easy",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/search-in-a-binary-search-tree/",
-    "Tags": ["Tree", "Binary Tree", "Binary Search Tree"],
+    "Tags": [
+      "Tree",
+      "Binary Tree",
+      "Binary Search Tree"
+    ],
     "Companies": [
       "Visa",
       "Bain & Company",
@@ -8007,7 +8769,11 @@
     "Difficulty": "Easy",
     "Platform": "GeeksForGeeks",
     "Link": "https://practice.geeksforgeeks.org/problems/implementing-ceil-in-bst/1",
-    "Tags": ["Tree", "Binary Tree", "Binary Search Tree"],
+    "Tags": [
+      "Tree",
+      "Binary Tree",
+      "Binary Search Tree"
+    ],
     "Companies": [
       "Square",
       "MongoDB",
@@ -8051,7 +8817,11 @@
     "Difficulty": "Easy",
     "Platform": "GeeksForGeeks",
     "Link": "https://bit.ly/3TSbXXE",
-    "Tags": ["Tree", "Binary Tree", "Binary Search Tree"],
+    "Tags": [
+      "Tree",
+      "Binary Tree",
+      "Binary Search Tree"
+    ],
     "Companies": [
       "Square",
       "MongoDB",
@@ -8095,7 +8865,11 @@
     "Difficulty": "Easy",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/insert-into-a-binary-search-tree/",
-    "Tags": ["Tree", "Binary Tree", "Binary Search Tree"],
+    "Tags": [
+      "Tree",
+      "Binary Tree",
+      "Binary Search Tree"
+    ],
     "Companies": [
       "Bain & Company",
       "Philips Healthcare",
@@ -8140,7 +8914,11 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/delete-node-in-a-bst/",
-    "Tags": ["Tree", "Binary Tree", "Binary Search Tree"],
+    "Tags": [
+      "Tree",
+      "Binary Tree",
+      "Binary Search Tree"
+    ],
     "Companies": [
       "Twilio",
       "AMD",
@@ -8185,7 +8963,12 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/kth-smallest-element-in-a-bst/",
-    "Tags": ["Tree", "Binary Tree", "Binary Search Tree", "DFS"],
+    "Tags": [
+      "Tree",
+      "Binary Tree",
+      "Binary Search Tree",
+      "DFS"
+    ],
     "Companies": [
       "GE Healthcare",
       "Zomato",
@@ -8227,7 +9010,12 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/validate-binary-search-tree/",
-    "Tags": ["Tree", "Binary Tree", "Binary Search Tree", "DFS"],
+    "Tags": [
+      "Tree",
+      "Binary Tree",
+      "Binary Search Tree",
+      "DFS"
+    ],
     "Companies": [
       "Snowflake",
       "Medtronic",
@@ -8270,7 +9058,12 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/",
-    "Tags": ["Tree", "Binary Tree", "Binary Search Tree", "DFS"],
+    "Tags": [
+      "Tree",
+      "Binary Tree",
+      "Binary Search Tree",
+      "DFS"
+    ],
     "Companies": [
       "Rakuten",
       "Epic Games",
@@ -8359,7 +9152,12 @@
     "Difficulty": "Medium",
     "Platform": "GeeksForGeeks",
     "Link": "https://www.geeksforgeeks.org/problems/predecessor-and-successor/1",
-    "Tags": ["Tree", "Binary Tree", "Binary Search Tree", "DFS"],
+    "Tags": [
+      "Tree",
+      "Binary Tree",
+      "Binary Search Tree",
+      "DFS"
+    ],
     "Companies": [
       "Visa",
       "Ernst & Young",
@@ -8499,7 +9297,12 @@
     "Difficulty": "Hard",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/recover-binary-search-tree/",
-    "Tags": ["Tree", "Binary Tree", "Binary Search Tree", "DFS"],
+    "Tags": [
+      "Tree",
+      "Binary Tree",
+      "Binary Search Tree",
+      "DFS"
+    ],
     "Companies": [
       "Snowflake",
       "Epic Systems",
@@ -8543,7 +9346,12 @@
     "Difficulty": "Hard",
     "Platform": "GeeksForGeeks",
     "Link": "https://practice.geeksforgeeks.org/problems/largest-bst/1",
-    "Tags": ["Tree", "Binary Tree", "Binary Search Tree", "Sorting"],
+    "Tags": [
+      "Tree",
+      "Binary Tree",
+      "Binary Search Tree",
+      "Sorting"
+    ],
     "Companies": [
       "Wayfair",
       "GE Healthcare",
@@ -8588,7 +9396,10 @@
     "Difficulty": "Easy",
     "Platform": "GeeksForGeeks",
     "Link": "https://practice.geeksforgeeks.org/problems/bfs-traversal-of-graph/1",
-    "Tags": ["Graph", "BFS"],
+    "Tags": [
+      "Graph",
+      "BFS"
+    ],
     "Companies": [
       "Oracle",
       "Intel",
@@ -8632,7 +9443,10 @@
     "Difficulty": "Easy",
     "Platform": "GeeksForGeeks",
     "Link": "https://practice.geeksforgeeks.org/problems/depth-first-traversal-for-a-graph/1",
-    "Tags": ["Graph", "DFS"],
+    "Tags": [
+      "Graph",
+      "DFS"
+    ],
     "Companies": [
       "Oracle",
       "Intel",
@@ -8676,7 +9490,12 @@
     "Difficulty": "Medium",
     "Platform": "GeeksForGeeks",
     "Link": "https://www.geeksforgeeks.org/problems/connected-components-in-an-undirected-graph/1",
-    "Tags": ["Graph", "Union Find", "BFS", "DFS"],
+    "Tags": [
+      "Graph",
+      "Union Find",
+      "BFS",
+      "DFS"
+    ],
     "Companies": [
       "Micron Technology",
       "Chewy",
@@ -8719,7 +9538,12 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/number-of-provinces/description/",
-    "Tags": ["Graph", "BFS", "DFS", "Union Find"],
+    "Tags": [
+      "Graph",
+      "BFS",
+      "DFS",
+      "Union Find"
+    ],
     "Companies": [
       "Rockstar Games",
       "GE Healthcare",
@@ -8764,7 +9588,11 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/rotting-oranges/",
-    "Tags": ["Array", "BFS", "Matrix"],
+    "Tags": [
+      "Array",
+      "BFS",
+      "Matrix"
+    ],
     "Companies": [
       "Walmart",
       "Robinhood",
@@ -8809,7 +9637,12 @@
     "Difficulty": "Hard",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/flood-fill/",
-    "Tags": ["Array", "BFS", "DFS", "Matrix"],
+    "Tags": [
+      "Array",
+      "BFS",
+      "DFS",
+      "Matrix"
+    ],
     "Companies": [
       "Alibaba",
       "NVIDIA",
@@ -8854,7 +9687,11 @@
     "Difficulty": "Hard",
     "Platform": "GeeksForGeeks",
     "Link": "https://practice.geeksforgeeks.org/problems/detect-cycle-in-an-undirected-graph/1",
-    "Tags": ["Graph", "DFS", "Union Find"],
+    "Tags": [
+      "Graph",
+      "DFS",
+      "Union Find"
+    ],
     "Companies": [
       "DoorDash",
       "Databricks",
@@ -8899,7 +9736,11 @@
     "Difficulty": "Hard",
     "Platform": "GeeksForGeeks",
     "Link": "https://practice.geeksforgeeks.org/problems/detect-cycle-in-an-undirected-graph/1",
-    "Tags": ["Graph", "DFS", "Union Find"],
+    "Tags": [
+      "Graph",
+      "DFS",
+      "Union Find"
+    ],
     "Companies": [
       "DoorDash",
       "Databricks",
@@ -8944,7 +9785,12 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/01-matrix/",
-    "Tags": ["Array", "Dynamic Programming", "BFS", "Matrix"],
+    "Tags": [
+      "Array",
+      "Dynamic Programming",
+      "BFS",
+      "Matrix"
+    ],
     "Companies": [
       "Flipkart",
       "Facebook",
@@ -8967,7 +9813,13 @@
     "Difficulty": "Hard",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/surrounded-regions/",
-    "Tags": ["Array", "BFS", "DFS", "Matrix", "Union Find"],
+    "Tags": [
+      "Array",
+      "BFS",
+      "DFS",
+      "Matrix",
+      "Union Find"
+    ],
     "Companies": [
       "Rakuten",
       "Cerner",
@@ -9011,7 +9863,13 @@
     "Difficulty": "Hard",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/number-of-enclaves/",
-    "Tags": ["Array", "BFS", "DFS", "Matrix", "Union Find"],
+    "Tags": [
+      "Array",
+      "BFS",
+      "DFS",
+      "Matrix",
+      "Union Find"
+    ],
     "Companies": [
       "Morgan Stanley",
       "Ubisoft",
@@ -9056,7 +9914,11 @@
     "Difficulty": "Hard",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/word-ladder/",
-    "Tags": ["Hash Table", "String", "BFS"],
+    "Tags": [
+      "Hash Table",
+      "String",
+      "BFS"
+    ],
     "Companies": [
       "Wayfair",
       "Etsy",
@@ -9099,9 +9961,14 @@
     "Problem Name": "Word ladder - 2",
     "Topic": "Graphs",
     "Difficulty": "Hard",
-    "Platform": "LeetCode",
-    "Link": "https://leetcode.com/problems/word-ladder-ii/",
-    "Tags": ["Hash Table", "String", "BFS", "Backtracking"],
+    "Platform": "GeeksForGeeks",
+    "Link": "https://www.geeksforgeeks.org/problems/word-ladder-ii/1",
+    "Tags": [
+      "Hash Table",
+      "String",
+      "BFS",
+      "Backtracking"
+    ],
     "Companies": [
       "MongoDB",
       "eBay",
@@ -9136,7 +10003,10 @@
     "Difficulty": "Hard",
     "Platform": "GeeksForGeeks",
     "Link": "https://www.geeksforgeeks.org/problems/find-the-number-of-islands/1",
-    "Tags": ["Graph", "DFS"],
+    "Tags": [
+      "Graph",
+      "DFS"
+    ],
     "Companies": [
       "PayPal",
       "Cerner",
@@ -9181,7 +10051,12 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/is-graph-bipartite/",
-    "Tags": ["Graph", "DFS", "BFS", "Union Find"],
+    "Tags": [
+      "Graph",
+      "DFS",
+      "BFS",
+      "Union Find"
+    ],
     "Companies": [
       "Siemens Healthineers",
       "Unity Technologies",
@@ -9226,7 +10101,10 @@
     "Difficulty": "Hard",
     "Platform": "GeeksForGeeks",
     "Link": "https://practice.geeksforgeeks.org/problems/topological-sort/1",
-    "Tags": ["Graph", "Topological Sort"],
+    "Tags": [
+      "Graph",
+      "Topological Sort"
+    ],
     "Companies": [
       "Stripe",
       "MongoDB",
@@ -9271,7 +10149,10 @@
     "Difficulty": "Hard",
     "Platform": "GeeksForGeeks",
     "Link": "https://bit.ly/3c690mm",
-    "Tags": ["Graph", "Topological Sort"],
+    "Tags": [
+      "Graph",
+      "Topological Sort"
+    ],
     "Companies": [
       "Stripe",
       "MongoDB",
@@ -9316,7 +10197,10 @@
     "Difficulty": "Hard",
     "Platform": "GeeksForGeeks",
     "Link": "https://practice.geeksforgeeks.org/problems/detect-cycle-in-a-directed-graph/1",
-    "Tags": ["Graph", "Topological Sort"],
+    "Tags": [
+      "Graph",
+      "Topological Sort"
+    ],
     "Companies": [
       "Target",
       "Broadcom",
@@ -9361,7 +10245,12 @@
     "Difficulty": "Hard",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/course-schedule/",
-    "Tags": ["Graph", "BFS", "DFS", "Topological Sort"],
+    "Tags": [
+      "Graph",
+      "BFS",
+      "DFS",
+      "Topological Sort"
+    ],
     "Companies": [
       "Visa",
       "McKinsey & Company",
@@ -9405,7 +10294,12 @@
     "Difficulty": "Hard",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/course-schedule-ii/",
-    "Tags": ["Graph", "BFS", "DFS", "Topological Sort"],
+    "Tags": [
+      "Graph",
+      "BFS",
+      "DFS",
+      "Topological Sort"
+    ],
     "Companies": [
       "Zynga",
       "Epic Games",
@@ -9448,7 +10342,12 @@
     "Difficulty": "Hard",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/find-eventual-safe-states/",
-    "Tags": ["Graph", "BFS", "DFS", "Topological Sort"],
+    "Tags": [
+      "Graph",
+      "BFS",
+      "DFS",
+      "Topological Sort"
+    ],
     "Companies": [
       "Uber",
       "Docker",
@@ -9489,7 +10388,11 @@
     "Difficulty": "Hard",
     "Platform": "GeeksForGeeks",
     "Link": "https://www.geeksforgeeks.org/problems/alien-dictionary/1",
-    "Tags": ["String", "Topological Sort", "Graph"],
+    "Tags": [
+      "String",
+      "Topological Sort",
+      "Graph"
+    ],
     "Companies": [
       "Roblox",
       "KPMG",
@@ -9526,7 +10429,11 @@
     "Difficulty": "Hard",
     "Platform": "GeeksForGeeks",
     "Link": "https://bit.ly/3UVQD4C",
-    "Tags": ["Graph", "BFS", "Shortest Path"],
+    "Tags": [
+      "Graph",
+      "BFS",
+      "Shortest Path"
+    ],
     "Companies": [
       "Boston Consulting Group",
       "Seagate Technology",
@@ -9569,7 +10476,12 @@
     "Difficulty": "Hard",
     "Platform": "GeeksForGeeks",
     "Link": "https://bit.ly/3Eo1mhq",
-    "Tags": ["Graph", "BFS", "DFS", "Shortest Path"],
+    "Tags": [
+      "Graph",
+      "BFS",
+      "DFS",
+      "Shortest Path"
+    ],
     "Companies": [
       "Oracle",
       "Boston Consulting Group",
@@ -9614,7 +10526,13 @@
     "Difficulty": "Hard",
     "Platform": "GeeksForGeeks",
     "Link": "https://practice.geeksforgeeks.org/problems/implementing-dijkstra-set-1-adjacency-matrix/1",
-    "Tags": ["Graph", "DFS", "BFS", "Shortest Path", "Heap (Priority Queue)"],
+    "Tags": [
+      "Graph",
+      "DFS",
+      "BFS",
+      "Shortest Path",
+      "Heap (Priority Queue)"
+    ],
     "Companies": [
       "Texas Instruments",
       "Activision Blizzard",
@@ -9656,7 +10574,10 @@
     "Difficulty": "Medium",
     "Platform": "GeeksForGeeks",
     "Link": "https://bit.ly/3Et6alk",
-    "Tags": ["Graph", "Theory"],
+    "Tags": [
+      "Graph",
+      "Theory"
+    ],
     "Companies": [
       "Texas Instruments",
       "Activision Blizzard",
@@ -9698,7 +10619,11 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/shortest-path-in-binary-matrix/",
-    "Tags": ["Array", "BFS", "Matrix"],
+    "Tags": [
+      "Array",
+      "BFS",
+      "Matrix"
+    ],
     "Companies": [
       "Seagate Technology",
       "Oracle",
@@ -9847,8 +10772,19 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/network-delay-time/",
-    "Tags": ["Graph", "DFS", "BFS", "Heap (Priority Queue)", "Shortest Path"],
-    "Companies": ["ShareChat", "Visa", "DeHeat", "Josh Technology Group"],
+    "Tags": [
+      "Graph",
+      "DFS",
+      "BFS",
+      "Heap (Priority Queue)",
+      "Shortest Path"
+    ],
+    "Companies": [
+      "ShareChat",
+      "Visa",
+      "DeHeat",
+      "Josh Technology Group"
+    ],
     "Solved Status": 0,
     "Needs Revision": false,
     "Notes": ""
@@ -9909,7 +10845,12 @@
     "Difficulty": "Hard",
     "Platform": "GeeksForGeeks",
     "Link": "https://bit.ly/3QAEsrY",
-    "Tags": ["Graph", "Array", "BFS", "Shortest Path"],
+    "Tags": [
+      "Graph",
+      "Array",
+      "BFS",
+      "Shortest Path"
+    ],
     "Companies": [
       "Rakuten",
       "eBay",
@@ -9954,7 +10895,11 @@
     "Difficulty": "Hard",
     "Platform": "GeeksForGeeks",
     "Link": "https://practice.geeksforgeeks.org/problems/distance-from-the-source-bellman-ford-algorithm/1",
-    "Tags": ["Graph", "Dynamic Programming", "Shortest Path"],
+    "Tags": [
+      "Graph",
+      "Dynamic Programming",
+      "Shortest Path"
+    ],
     "Companies": [
       "Roche",
       "Pinterest",
@@ -9999,7 +10944,11 @@
     "Difficulty": "Hard",
     "Platform": "GeeksForGeeks",
     "Link": "https://practice.geeksforgeeks.org/problems/implementing-floyd-warshall2042/1",
-    "Tags": ["Graph", "Dynamic Programming", "Shortest Path"],
+    "Tags": [
+      "Graph",
+      "Dynamic Programming",
+      "Shortest Path"
+    ],
     "Companies": [
       "Boston Consulting Group",
       "Robinhood",
@@ -10037,7 +10986,11 @@
     "Difficulty": "Hard",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/",
-    "Tags": ["Graph", "Dynamic Programming", "Shortest Path"],
+    "Tags": [
+      "Graph",
+      "Dynamic Programming",
+      "Shortest Path"
+    ],
     "Companies": [
       "Roche",
       "Alibaba",
@@ -10078,8 +11031,18 @@
     "Difficulty": "Hard",
     "Platform": "GeeksForGeeks",
     "Link": "https://practice.geeksforgeeks.org/problems/minimum-spanning-tree/1",
-    "Tags": ["Graph", "Greedy", "BFS"],
-    "Companies": ["Flipkart", "Amazon", "Microsoft", "Samsung", "Cisco"],
+    "Tags": [
+      "Graph",
+      "Greedy",
+      "BFS"
+    ],
+    "Companies": [
+      "Flipkart",
+      "Amazon",
+      "Microsoft",
+      "Samsung",
+      "Cisco"
+    ],
     "Solved Status": 0,
     "Needs Revision": false,
     "Notes": ""
@@ -10090,8 +11053,18 @@
     "Difficulty": "Hard",
     "Platform": "GeeksForGeeks",
     "Link": "https://practice.geeksforgeeks.org/problems/minimum-spanning-tree/1",
-    "Tags": ["Graph", "Greedy", "BFS"],
-    "Companies": ["Flipkart", "Amazon", "Microsoft", "Samsung", "Cisco"],
+    "Tags": [
+      "Graph",
+      "Greedy",
+      "BFS"
+    ],
+    "Companies": [
+      "Flipkart",
+      "Amazon",
+      "Microsoft",
+      "Samsung",
+      "Cisco"
+    ],
     "Solved Status": 0,
     "Needs Revision": false,
     "Notes": ""
@@ -10102,7 +11075,10 @@
     "Difficulty": "Hard",
     "Platform": "GeeksForGeeks",
     "Link": "https://bit.ly/3QSGvHz",
-    "Tags": ["Array", "Union Find"],
+    "Tags": [
+      "Array",
+      "Union Find"
+    ],
     "Companies": [
       "Wayfair",
       "Alibaba",
@@ -10147,7 +11123,10 @@
     "Difficulty": "Hard",
     "Platform": "GeeksForGeeks",
     "Link": "https://bit.ly/3QSGvHz",
-    "Tags": ["Array", "Union Find"],
+    "Tags": [
+      "Array",
+      "Union Find"
+    ],
     "Companies": [
       "Wayfair",
       "Alibaba",
@@ -10192,8 +11171,18 @@
     "Difficulty": "Hard",
     "Platform": "GeeksForGeeks",
     "Link": "https://practice.geeksforgeeks.org/problems/minimum-spanning-tree/1",
-    "Tags": ["Union Find", "Greedy", "Graph"],
-    "Companies": ["Flipkart", "Amazon", "Microsoft", "Samsung", "Cisco"],
+    "Tags": [
+      "Union Find",
+      "Greedy",
+      "Graph"
+    ],
+    "Companies": [
+      "Flipkart",
+      "Amazon",
+      "Microsoft",
+      "Samsung",
+      "Cisco"
+    ],
     "Solved Status": 0,
     "Needs Revision": false,
     "Notes": ""
@@ -10204,7 +11193,12 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/number-of-operations-to-make-network-connected/",
-    "Tags": ["Graph", "DFS", "BFS", "Union Find"],
+    "Tags": [
+      "Graph",
+      "DFS",
+      "BFS",
+      "Union Find"
+    ],
     "Companies": [
       "Cerner",
       "Visa",
@@ -10249,7 +11243,12 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/most-stones-removed-with-same-row-or-column/",
-    "Tags": ["Graph", "Hash Table", "DFS", "Union Find"],
+    "Tags": [
+      "Graph",
+      "Hash Table",
+      "DFS",
+      "Union Find"
+    ],
     "Companies": [
       "Shopify",
       "IBM",
@@ -10346,7 +11345,10 @@
     "Difficulty": "Hard",
     "Platform": "GeeksForGeeks",
     "Link": "https://www.geeksforgeeks.org/problems/number-of-islands/1",
-    "Tags": ["Union Find", "Matrix"],
+    "Tags": [
+      "Union Find",
+      "Matrix"
+    ],
     "Companies": [
       "Oracle",
       "Visa",
@@ -10390,7 +11392,13 @@
     "Difficulty": "Hard",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/making-a-large-island/",
-    "Tags": ["Array", "DFS", "BFS", "Union Find", "Matrix"],
+    "Tags": [
+      "Array",
+      "DFS",
+      "BFS",
+      "Union Find",
+      "Matrix"
+    ],
     "Companies": [
       "Square",
       "Freshworks",
@@ -10462,7 +11470,11 @@
     "Difficulty": "Hard",
     "Platform": "Coding Ninjas",
     "Link": "https://www.naukri.com/code360/problems/bridges-in-graph_893026",
-    "Tags": ["DFS", "Graph", "Biconnected Component"],
+    "Tags": [
+      "DFS",
+      "Graph",
+      "Biconnected Component"
+    ],
     "Companies": [
       "Wayfair",
       "Ernst & Young",
@@ -10506,7 +11518,9 @@
     "Difficulty": "Hard",
     "Platform": "GeeksForGeeks",
     "Link": "https://bit.ly/3T2LPKu",
-    "Tags": ["Graph"],
+    "Tags": [
+      "Graph"
+    ],
     "Companies": [
       "Wayfair",
       "MongoDB",
@@ -10549,7 +11563,9 @@
     "Difficulty": "Hard",
     "Platform": "GeeksForGeeks",
     "Link": "https://bit.ly/3TbvByL",
-    "Tags": ["Graph"],
+    "Tags": [
+      "Graph"
+    ],
     "Companies": [
       "Lyft",
       "Goldman Sachs",
@@ -10594,7 +11610,11 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/climbing-stairs/",
-    "Tags": ["Dynamic Programming", "Math", "Memoization"],
+    "Tags": [
+      "Dynamic Programming",
+      "Math",
+      "Memoization"
+    ],
     "Companies": [
       "Nutanix",
       "Electronic Arts",
@@ -10637,7 +11657,10 @@
     "Difficulty": "Medium",
     "Platform": "GeeksForGeeks",
     "Link": "https://bit.ly/3Xn0Kkw",
-    "Tags": ["Dynamic Programming", "Array"],
+    "Tags": [
+      "Dynamic Programming",
+      "Array"
+    ],
     "Companies": [
       "Zoho",
       "MongoDB",
@@ -10682,7 +11705,10 @@
     "Difficulty": "Medium",
     "Platform": "GeeksForGeeks",
     "Link": "https://bit.ly/3GyNRya",
-    "Tags": ["Dynamic Programming", "Array"],
+    "Tags": [
+      "Dynamic Programming",
+      "Array"
+    ],
     "Companies": [
       "Pinterest",
       "Bungie",
@@ -10725,7 +11751,10 @@
     "Difficulty": "Medium",
     "Platform": "Coding Ninjas",
     "Link": "https://www.naukri.com/code360/problems/maximum-sum-of-non-adjacent-elements_843261",
-    "Tags": ["Dynamic Programming", "Array"],
+    "Tags": [
+      "Dynamic Programming",
+      "Array"
+    ],
     "Companies": [
       "Seagate Technology",
       "Zomato",
@@ -10770,7 +11799,10 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/house-robber/",
-    "Tags": ["Dynamic Programming", "Array"],
+    "Tags": [
+      "Dynamic Programming",
+      "Array"
+    ],
     "Companies": [
       "Google",
       "Tech Mahindra",
@@ -10794,7 +11826,10 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/house-robber-ii/",
-    "Tags": ["Dynamic Programming", "Array"],
+    "Tags": [
+      "Dynamic Programming",
+      "Array"
+    ],
     "Companies": [
       "American Express",
       "Docker",
@@ -10837,7 +11872,10 @@
     "Difficulty": "Medium",
     "Platform": "GeeksForGeeks",
     "Link": "https://bit.ly/3glc9kp",
-    "Tags": ["Dynamic Programming", "Array"],
+    "Tags": [
+      "Dynamic Programming",
+      "Array"
+    ],
     "Companies": [
       "Salesforce",
       "Qualcomm",
@@ -10882,7 +11920,11 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/unique-paths/",
-    "Tags": ["Dynamic Programming", "Math", "Combinatorics"],
+    "Tags": [
+      "Dynamic Programming",
+      "Math",
+      "Combinatorics"
+    ],
     "Companies": [
       "Visa",
       "Dropbox",
@@ -10926,7 +11968,11 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/unique-paths-ii/",
-    "Tags": ["Dynamic Programming", "Array", "Matrix"],
+    "Tags": [
+      "Dynamic Programming",
+      "Array",
+      "Matrix"
+    ],
     "Companies": [
       "Square",
       "Siemens Healthineers",
@@ -10971,7 +12017,11 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/minimum-path-sum/",
-    "Tags": ["Dynamic Programming", "Array", "Matrix"],
+    "Tags": [
+      "Dynamic Programming",
+      "Array",
+      "Matrix"
+    ],
     "Companies": [
       "Pinterest",
       "Robinhood",
@@ -11016,7 +12066,10 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/triangle/",
-    "Tags": ["Dynamic Programming", "Array"],
+    "Tags": [
+      "Dynamic Programming",
+      "Array"
+    ],
     "Companies": [
       "Roche",
       "Micron Technology",
@@ -11062,7 +12115,11 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/minimum-falling-path-sum/",
-    "Tags": ["Dynamic Programming", "Array", "Matrix"],
+    "Tags": [
+      "Dynamic Programming",
+      "Array",
+      "Matrix"
+    ],
     "Companies": [
       "Paytm (One97 Communications Limited)",
       "Visa",
@@ -11080,8 +12137,18 @@
     "Difficulty": "Medium",
     "Platform": "GeeksForGeeks",
     "Link": "https://bit.ly/3U9k6XT",
-    "Tags": ["Dynamic Programming", "Array", "Matrix"],
-    "Companies": ["Oracle", "Google", "Apple", "Amazon", "Meta"],
+    "Tags": [
+      "Dynamic Programming",
+      "Array",
+      "Matrix"
+    ],
+    "Companies": [
+      "Oracle",
+      "Google",
+      "Apple",
+      "Amazon",
+      "Meta"
+    ],
     "Solved Status": 0,
     "Needs Revision": false,
     "Notes": ""
@@ -11092,8 +12159,18 @@
     "Difficulty": "Hard",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/cherry-pickup/description/",
-    "Tags": ["Dynamic Programming", "Array", "Matrix"],
-    "Companies": ["Oracle", "Google", "Apple", "Meta", "Amazon"],
+    "Tags": [
+      "Dynamic Programming",
+      "Array",
+      "Matrix"
+    ],
+    "Companies": [
+      "Oracle",
+      "Google",
+      "Apple",
+      "Meta",
+      "Amazon"
+    ],
     "Solved Status": 0,
     "Needs Revision": false,
     "Notes": ""
@@ -11104,7 +12181,10 @@
     "Difficulty": "Medium",
     "Platform": "GeeksForGeeks",
     "Link": "https://practice.geeksforgeeks.org/problems/subset-sum-problem-1611555638/1",
-    "Tags": ["Dynamic Programming", "Array"],
+    "Tags": [
+      "Dynamic Programming",
+      "Array"
+    ],
     "Companies": [
       "Uber",
       "Ernst & Young",
@@ -11145,7 +12225,10 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/partition-equal-subset-sum/",
-    "Tags": ["Dynamic Programming", "Array"],
+    "Tags": [
+      "Dynamic Programming",
+      "Array"
+    ],
     "Companies": [
       "JPMorgan Chase",
       "Intel",
@@ -11241,7 +12324,10 @@
     "Difficulty": "Medium",
     "Platform": "GeeksForGeeks",
     "Link": "https://bit.ly/3AwVr8I",
-    "Tags": ["Dynamic Programming", "Array"],
+    "Tags": [
+      "Dynamic Programming",
+      "Array"
+    ],
     "Companies": [
       "Nutanix",
       "Target",
@@ -11284,7 +12370,10 @@
     "Difficulty": "Medium",
     "Platform": "GeeksForGeeks",
     "Link": "https://bit.ly/3gkAM0s",
-    "Tags": ["Dynamic Programming", "Array"],
+    "Tags": [
+      "Dynamic Programming",
+      "Array"
+    ],
     "Companies": [
       "Zoho",
       "Teladoc Health",
@@ -11327,7 +12416,11 @@
     "Difficulty": "Hard",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/coin-change/",
-    "Tags": ["Dynamic Programming", "Array", "BFS"],
+    "Tags": [
+      "Dynamic Programming",
+      "Array",
+      "BFS"
+    ],
     "Companies": [
       "Ubisoft",
       "Wayfair",
@@ -11368,7 +12461,11 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/target-sum/",
-    "Tags": ["Dynamic Programming", "Array", "Backtracking"],
+    "Tags": [
+      "Dynamic Programming",
+      "Array",
+      "Backtracking"
+    ],
     "Companies": [
       "Bungie",
       "Bloomberg",
@@ -11409,7 +12506,10 @@
     "Difficulty": "Hard",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/coin-change-2/",
-    "Tags": ["Dynamic Programming", "Array"],
+    "Tags": [
+      "Dynamic Programming",
+      "Array"
+    ],
     "Companies": [
       "Electronic Arts",
       "Deloitte",
@@ -11449,7 +12549,10 @@
     "Difficulty": "Hard",
     "Platform": "GeeksForGeeks",
     "Link": "https://bit.ly/3Cbc5fz",
-    "Tags": ["Dynamic Programming", "Array"],
+    "Tags": [
+      "Dynamic Programming",
+      "Array"
+    ],
     "Companies": [
       "IBM",
       "Salesforce",
@@ -11494,7 +12597,10 @@
     "Difficulty": "Hard",
     "Platform": "GeeksForGeeks",
     "Link": "https://practice.geeksforgeeks.org/problems/rod-cutting0840/1",
-    "Tags": ["Dynamic Programming", "Array"],
+    "Tags": [
+      "Dynamic Programming",
+      "Array"
+    ],
     "Companies": [
       "Johnson & Johnson",
       "Zynga",
@@ -11537,7 +12643,10 @@
     "Difficulty": "Hard",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/longest-common-subsequence/",
-    "Tags": ["Dynamic Programming", "String"],
+    "Tags": [
+      "Dynamic Programming",
+      "String"
+    ],
     "Companies": [
       "Goldman Sachs",
       "OYO Rooms",
@@ -11581,7 +12690,11 @@
     "Difficulty": "Hard",
     "Platform": "GeeksForGeeks",
     "Link": "https://bit.ly/3T1Va4U",
-    "Tags": ["Dynamic Programming", "String", "Backtracking"],
+    "Tags": [
+      "Dynamic Programming",
+      "String",
+      "Backtracking"
+    ],
     "Companies": [],
     "Solved Status": 0,
     "Needs Revision": false,
@@ -11593,7 +12706,10 @@
     "Difficulty": "Hard",
     "Platform": "GeeksForGeeks",
     "Link": "https://practice.geeksforgeeks.org/problems/longest-common-substring1452/1",
-    "Tags": ["Dynamic Programming", "String"],
+    "Tags": [
+      "Dynamic Programming",
+      "String"
+    ],
     "Companies": [
       "Flipkart",
       "Databricks",
@@ -11638,7 +12754,10 @@
     "Difficulty": "Hard",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/longest-palindromic-subsequence/",
-    "Tags": ["Dynamic Programming", "String"],
+    "Tags": [
+      "Dynamic Programming",
+      "String"
+    ],
     "Companies": [
       "Bungie",
       "Mastercard",
@@ -11684,7 +12803,10 @@
     "Difficulty": "Hard",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/minimum-insertion-steps-to-make-a-string-palindrome/",
-    "Tags": ["Dynamic Programming", "String"],
+    "Tags": [
+      "Dynamic Programming",
+      "String"
+    ],
     "Companies": [
       "Boston Consulting Group",
       "Deloitte",
@@ -11728,7 +12850,10 @@
     "Difficulty": "Hard",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/delete-operation-for-two-strings/",
-    "Tags": ["Dynamic Programming", "String"],
+    "Tags": [
+      "Dynamic Programming",
+      "String"
+    ],
     "Companies": [
       "Bloomberg",
       "PwC",
@@ -11771,7 +12896,10 @@
     "Difficulty": "Hard",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/shortest-common-supersequence/",
-    "Tags": ["Dynamic Programming", "String"],
+    "Tags": [
+      "Dynamic Programming",
+      "String"
+    ],
     "Companies": [
       "Stripe",
       "Deloitte",
@@ -11813,7 +12941,10 @@
     "Difficulty": "Hard",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/distinct-subsequences/",
-    "Tags": ["Dynamic Programming", "String"],
+    "Tags": [
+      "Dynamic Programming",
+      "String"
+    ],
     "Companies": [
       "Target",
       "Riot Games",
@@ -11854,7 +12985,10 @@
     "Difficulty": "Hard",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/edit-distance/",
-    "Tags": ["Dynamic Programming", "String"],
+    "Tags": [
+      "Dynamic Programming",
+      "String"
+    ],
     "Companies": [
       "Freshworks",
       "Databricks",
@@ -11890,7 +13024,12 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/wildcard-matching/",
-    "Tags": ["Dynamic Programming", "String", "Greedy", "Recursion"],
+    "Tags": [
+      "Dynamic Programming",
+      "String",
+      "Greedy",
+      "Recursion"
+    ],
     "Companies": [
       "Qualcomm",
       "Texas Instruments",
@@ -11934,7 +13073,10 @@
     "Difficulty": "Hard",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/",
-    "Tags": ["Dynamic Programming", "Array"],
+    "Tags": [
+      "Dynamic Programming",
+      "Array"
+    ],
     "Companies": [
       "Walmart",
       "Intel",
@@ -11979,7 +13121,11 @@
     "Difficulty": "Hard",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/",
-    "Tags": ["Dynamic Programming", "Array", "Greedy"],
+    "Tags": [
+      "Dynamic Programming",
+      "Array",
+      "Greedy"
+    ],
     "Companies": [
       "Walmart",
       "Flipkart",
@@ -12023,7 +13169,10 @@
     "Difficulty": "Hard",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/description/",
-    "Tags": ["Dynamic Programming", "Array"],
+    "Tags": [
+      "Dynamic Programming",
+      "Array"
+    ],
     "Companies": [
       "Oracle",
       "Docker",
@@ -12066,7 +13215,10 @@
     "Difficulty": "Hard",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/",
-    "Tags": ["Dynamic Programming", "Array"],
+    "Tags": [
+      "Dynamic Programming",
+      "Array"
+    ],
     "Companies": [
       "eBay",
       "Bloomberg",
@@ -12110,7 +13262,10 @@
     "Difficulty": "Hard",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/",
-    "Tags": ["Dynamic Programming", "Array"],
+    "Tags": [
+      "Dynamic Programming",
+      "Array"
+    ],
     "Companies": [
       "Adobe",
       "Facebook",
@@ -12129,7 +13284,11 @@
     "Difficulty": "Hard",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/",
-    "Tags": ["Dynamic Programming", "Array", "Greedy"],
+    "Tags": [
+      "Dynamic Programming",
+      "Array",
+      "Greedy"
+    ],
     "Companies": [
       "Medtronic",
       "HashiCorp",
@@ -12173,7 +13332,11 @@
     "Difficulty": "Hard",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/longest-increasing-subsequence/",
-    "Tags": ["Dynamic Programming", "Array", "Binary Search"],
+    "Tags": [
+      "Dynamic Programming",
+      "Array",
+      "Binary Search"
+    ],
     "Companies": [
       "Paytm (One97 Communications Limited)",
       "Visa",
@@ -12210,7 +13373,10 @@
     "Difficulty": "Hard",
     "Platform": "GeeksForGeeks",
     "Link": "https://bit.ly/3XiRbmG",
-    "Tags": ["Dynamic Programming", "Array"],
+    "Tags": [
+      "Dynamic Programming",
+      "Array"
+    ],
     "Companies": [
       "Paytm (One97 Communications Limited)",
       "Visa",
@@ -12247,7 +13413,11 @@
     "Difficulty": "Hard",
     "Platform": "GeeksForGeeks",
     "Link": "https://bit.ly/3Pxf84L",
-    "Tags": ["Dynamic Programming", "Array", "Binary Search"],
+    "Tags": [
+      "Dynamic Programming",
+      "Array",
+      "Binary Search"
+    ],
     "Companies": [
       "Paytm (One97 Communications Limited)",
       "Visa",
@@ -12284,7 +13454,12 @@
     "Difficulty": "Hard",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/largest-divisible-subset/",
-    "Tags": ["Dynamic Programming", "Array", "Math", "Sorting"],
+    "Tags": [
+      "Dynamic Programming",
+      "Array",
+      "Math",
+      "Sorting"
+    ],
     "Companies": [
       "Nagarro Software",
       "Soft Suave",
@@ -12329,7 +13504,10 @@
     "Difficulty": "Hard",
     "Platform": "GeeksForGeeks",
     "Link": "https://practice.geeksforgeeks.org/problems/longest-bitonic-subsequence0824/1",
-    "Tags": ["Dynamic Programming", "Array"],
+    "Tags": [
+      "Dynamic Programming",
+      "Array"
+    ],
     "Companies": [
       "Microsoft",
       "Wells Fargo",
@@ -12353,7 +13531,12 @@
       "Binary Indexed Tree",
       "Segmemt Tree"
     ],
-    "Companies": ["Google", "Amazon", "Samsung", "Tata 1mg"],
+    "Companies": [
+      "Google",
+      "Amazon",
+      "Samsung",
+      "Tata 1mg"
+    ],
     "Solved Status": 0,
     "Needs Revision": false,
     "Notes": ""
@@ -12364,7 +13547,10 @@
     "Difficulty": "Hard",
     "Platform": "GeeksForGeeks",
     "Link": "https://bit.ly/3Cgg36D",
-    "Tags": ["Dynamic Programming", "Matrix"],
+    "Tags": [
+      "Dynamic Programming",
+      "Matrix"
+    ],
     "Companies": [
       "Swiggy",
       "Square",
@@ -12403,7 +13589,10 @@
     "Difficulty": "Hard",
     "Platform": "GeeksForGeeks",
     "Link": "https://bit.ly/3Cgg36D",
-    "Tags": ["Dynamic Programming", "Matrix"],
+    "Tags": [
+      "Dynamic Programming",
+      "Matrix"
+    ],
     "Companies": [
       "Swiggy",
       "Square",
@@ -12442,7 +13631,11 @@
     "Difficulty": "Hard",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/minimum-cost-to-cut-a-stick/",
-    "Tags": ["Dynamic Programming", "Array", "Sorting"],
+    "Tags": [
+      "Dynamic Programming",
+      "Array",
+      "Sorting"
+    ],
     "Companies": [
       "Morgan Stanley",
       "McKinsey & Company",
@@ -12484,7 +13677,10 @@
     "Difficulty": "Hard",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/burst-balloons/",
-    "Tags": ["Dynamic Programming", "Array"],
+    "Tags": [
+      "Dynamic Programming",
+      "Array"
+    ],
     "Companies": [
       "Freshworks",
       "HCL Technologies",
@@ -12528,8 +13724,18 @@
     "Difficulty": "Hard",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/parsing-a-boolean-expression/",
-    "Tags": ["Dynamic Programming", "String", "Stack"],
-    "Companies": ["Slice", "Intuit", "Amazon", "Uber", "MAQ Software"],
+    "Tags": [
+      "Dynamic Programming",
+      "String",
+      "Stack"
+    ],
+    "Companies": [
+      "Slice",
+      "Intuit",
+      "Amazon",
+      "Uber",
+      "MAQ Software"
+    ],
     "Solved Status": 0,
     "Needs Revision": false,
     "Notes": ""
@@ -12540,7 +13746,10 @@
     "Difficulty": "Hard",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/palindrome-partitioning-ii/",
-    "Tags": ["Dynamic Programming", "String"],
+    "Tags": [
+      "Dynamic Programming",
+      "String"
+    ],
     "Companies": [
       "Teladoc Health",
       "Philips Healthcare",
@@ -12584,8 +13793,14 @@
     "Difficulty": "Hard",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/partition-array-for-maximum-sum/",
-    "Tags": ["Dynamic Programming", "Array"],
-    "Companies": ["Samsung", "HCL Technologies"],
+    "Tags": [
+      "Dynamic Programming",
+      "Array"
+    ],
+    "Companies": [
+      "Samsung",
+      "HCL Technologies"
+    ],
     "Solved Status": 0,
     "Needs Revision": false,
     "Notes": ""
@@ -12629,8 +13844,15 @@
     "Difficulty": "Hard",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/count-square-submatrices-with-all-ones/",
-    "Tags": ["Dynamic Programming", "Array", "Matrix"],
-    "Companies": ["Google", "Amazon"],
+    "Tags": [
+      "Dynamic Programming",
+      "Array",
+      "Matrix"
+    ],
+    "Companies": [
+      "Google",
+      "Amazon"
+    ],
     "Solved Status": 0,
     "Needs Revision": false,
     "Notes": ""
@@ -12641,7 +13863,12 @@
     "Difficulty": "Hard",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/implement-trie-prefix-tree/",
-    "Tags": ["Trie", "Hash Table", "String", "Design"],
+    "Tags": [
+      "Trie",
+      "Hash Table",
+      "String",
+      "Design"
+    ],
     "Companies": [
       "Databricks",
       "Dropbox",
@@ -12684,7 +13911,13 @@
     "Difficulty": "Hard",
     "Platform": "Coding Ninjas",
     "Link": "https://www.naukri.com/code360/problems/implement-trie_1387095",
-    "Tags": ["Trie", "Hash Table", "String", "Design", "Tree"],
+    "Tags": [
+      "Trie",
+      "Hash Table",
+      "String",
+      "Design",
+      "Tree"
+    ],
     "Companies": [
       "Docker",
       "Byju's",
@@ -12729,7 +13962,9 @@
     "Difficulty": "Medium",
     "Platform": "Coding Ninjas",
     "Link": "https://www.naukri.com/code360/problems/complete-string_2687860",
-    "Tags": ["Trie"],
+    "Tags": [
+      "Trie"
+    ],
     "Companies": [
       "Nutanix",
       "AMD",
@@ -12774,7 +14009,9 @@
     "Difficulty": "Hard",
     "Platform": "Coding Ninjas",
     "Link": "https://www.naukri.com/code360/problems/count-distinct-substrings_985292",
-    "Tags": ["Trie"],
+    "Tags": [
+      "Trie"
+    ],
     "Companies": [
       "Databricks",
       "MongoDB",
@@ -12818,7 +14055,10 @@
     "Difficulty": "Hard",
     "Platform": "GeeksForGeeks",
     "Link": "https://www.geeksforgeeks.org/problems/bits-basic-operations/1",
-    "Tags": ["Trie", "Bit Manipulation"],
+    "Tags": [
+      "Trie",
+      "Bit Manipulation"
+    ],
     "Companies": [],
     "Solved Status": 0,
     "Needs Revision": false,
@@ -12830,7 +14070,12 @@
     "Difficulty": "Medium",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/",
-    "Tags": ["Trie", "Array", "Hash Table", "Bit Manipulation"],
+    "Tags": [
+      "Trie",
+      "Array",
+      "Hash Table",
+      "Bit Manipulation"
+    ],
     "Companies": [
       "Activision Blizzard",
       "Johnson & Johnson",
@@ -12875,7 +14120,11 @@
     "Difficulty": "Hard",
     "Platform": "LeetCode",
     "Link": "https://leetcode.com/problems/maximum-xor-with-an-element-from-array/",
-    "Tags": ["Trie", "Array", "Bit Manipulation"],
+    "Tags": [
+      "Trie",
+      "Array",
+      "Bit Manipulation"
+    ],
     "Companies": [
       "Broadcom",
       "Philips Healthcare",
