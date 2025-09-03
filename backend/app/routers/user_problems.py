@@ -5,6 +5,7 @@ from app.models import User, UserProblem
 from app.schemas import TokenData, UserProblemResponse, UserProblemUpdate
 from app.database import get_db
 from app.utils.security import get_current_user
+from sqlalchemy import func
 
 router = APIRouter(tags=["User Problems"])
 
@@ -58,3 +59,24 @@ async def update_user_problem(
     db.commit()
     db.refresh(user_problem)
     return user_problem
+
+
+@router.get("/users/solved-count")
+async def get_users_solved_count(db: Session = Depends(get_db)):
+    """
+    Return total number of solved problems for each user.
+    """
+    results = (
+        db.query(
+            User.username, func.count(UserProblem.problem_id).label("solved_count")
+        )
+        .join(UserProblem, User.id == UserProblem.user_id)
+        .filter(UserProblem.is_solved == True)
+        .group_by(User.id)
+        .all()
+    )
+
+    return [
+        {"username": username, "solved_count": solved_count}
+        for username, solved_count in results
+    ]
