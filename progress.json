@@ -1,5 +1,7 @@
 {
   "version": 1,
-  "updatedAt": null,
-  "solved": []
+  "updatedAt": "2026-11-20T10:08:44.120Z",
+  "solved": [
+    "contains-duplicate"
+  ]
 }
