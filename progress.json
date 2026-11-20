@@ -1,7 +1,8 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-20T10:08:44.120Z",
+  "updatedAt": "2026-11-20T10:08:45.962Z",
   "solved": [
-    "contains-duplicate"
+    "contains-duplicate",
+    "valid-anagram"
   ]
 }
