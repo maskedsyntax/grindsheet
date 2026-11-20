@@ -1,8 +1,9 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-20T10:53:34.735Z",
+  "updatedAt": "2026-11-20T11:21:09.280Z",
   "solved": [
     "contains-duplicate",
+    "two-sum",
     "valid-anagram"
   ]
 }
