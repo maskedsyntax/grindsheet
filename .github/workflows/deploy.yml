@@ -24,6 +24,8 @@ jobs:
         with:
           node-version: 22
 
+      - uses: oven-sh/setup-bun@v2
+
       - uses: erlef/setup-beam@v1
         with:
           otp-version: "28"
