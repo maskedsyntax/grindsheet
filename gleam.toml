@@ -1,0 +1,25 @@
+name = "grindsheet"
+version = "1.0.0"
+target = "javascript"
+description = "A one-page NeetCode 150 checklist."
+
+[dependencies]
+gleam_stdlib = ">= 0.60.0 and < 2.0.0"
+lustre = ">= 5.0.0 and < 6.0.0"
+gleam_json = ">= 3.0.0 and < 4.0.0"
+simplifile = ">= 2.0.0 and < 3.0.0"
+rsvp = ">= 2.0.0 and < 3.0.0"
+gleam_http = ">= 4.0.0 and < 5.0.0"
+gleam_regexp = ">= 1.1.1 and < 2.0.0"
+
+[dev-dependencies]
+gleeunit = ">= 1.0.0 and < 2.0.0"
+lustre_dev_tools = ">= 2.0.0 and < 3.0.0"
+
+[tools.lustre.bin]
+bun = "system"
+
+[tools.lustre.html]
+title = "Grindsheet"
+stylesheets = [{ href = "/style.css" }]
+meta = [{ name = "description", content = "NeetCode 150 checklist." }]

@@ -1,85 +1,56 @@
-# iOS Job Roadmap
+# Grindsheet
 
-**→ [maskedsyntax.github.io/grindsheet-ios](https://maskedsyntax.github.io/grindsheet-ios/)**
+A one-page checklist for the NeetCode 150. The page is a Gleam [Lustre](https://hexdocs.pm/lustre/) app, published to GitHub Pages at [grindsheet.maskedsyntax.com](https://grindsheet.maskedsyntax.com).
 
-A single-page checklist for getting job-ready as a junior iOS developer. 206 things
-worth doing at least once, in order, each linking to the thing you actually do.
-
-Static Astro site. No account, no backend, no database — progress is saved in your
-browser and can be exported to a file.
+Solved state lives in [`progress.json`](progress.json) in this repo. Any browser reads the same file. Ticking a box sends the change to a Cloudflare Worker, which commits the file. Nothing is stored as the source of truth in the browser. The passphrase is kept in local storage, so each browser asks for it once.
 
 ## Running it
 
 ```sh
-bun install
-bun run dev      # http://localhost:4321
-bun run build    # static output in dist/
-bun run preview
-bun run check    # astro check (TypeScript)
+gleam run -m catalog_build   # problemset/problems.md -> assets/catalog.json
+gleam run -m lustre/dev start
+gleam test
+node --test worker/progress.test.mjs
 ```
 
-## How progress is stored
+`catalog_build` has to run again after you edit the problem list. The dev server does not watch that file.
 
-Ticked items live in `localStorage` under the key `ios-roadmap.v1`:
+## The problem list
 
-```json
-{ "version": 1, "updatedAt": "2026-08-15T…", "done": ["swift-closures", "lc-two-sum"] }
-```
+[`problemset/problems.md`](problemset/problems.md) is the list: a heading per topic, then a markdown link per problem. The checkbox in that file is ignored. A problem's identity is the slug in its LeetCode URL (`two-sum`), so titles can be reworded and rows can move without clearing a tick.
 
-That means progress is per-browser. Clearing site data wipes it, so use **Export**
-to save a JSON backup, and **Import** to restore it or move to another device.
+## Marking a problem solved
 
-Every task carries a hand-written, permanent `id` (`swift-closures`,
-`lc-two-sum`, `ship-testflight-build`). Progress is keyed on that id and never on
-list position, so items can be reordered, reworded, or inserted without disturbing
-anything already ticked off. The build fails if two tasks share an id.
+The site reads progress from the GitHub contents API:
 
-## Editing the roadmap
+`https://api.github.com/repos/maskedsyntax/grindsheet/contents/progress.json?ref=master`
 
-Content is typed data, not markdown:
+Writes go to the Worker. The URL in `src/grindsheet/remote.gleam` is `https://grindsheet.maskedsyntax.workers.dev`, which is what you get when the Worker name is `grindsheet` and the account's `workers.dev` subdomain is `maskedsyntax`. `wrangler deploy` prints the real URL. If it differs, change that constant and rebuild the site. The Worker holds a fine-grained GitHub token that can only read and write this repo, plus a passphrase. Neither secret is in the site.
 
-```
-src/data/phases/foundations.ts   Phases 1–3   Swift, SwiftUI, UIKit
-src/data/phases/craft.ts         Phases 4–5   Modern Swift, Xcode & shipping
-src/data/phases/portfolio.ts     Phases 6–7   The two portfolio apps
-src/data/phases/career.ts        Phases 8, 10, 11
-src/data/leetcode.ts             Phase 9      The 75 problems
-src/data/gate.ts                 Application Gate
-src/data/roadmap.ts              Assembles all of it
-```
-
-Adding a task means adding one object with a fresh `id`, a `label`, and a `url`.
-Never change an `id` that has already shipped — that silently unticks it for anyone
-who had it done.
-
-### The Application Gate
-
-The gate is not its own checklist. It's a view over ids that already exist in the
-phases (see `src/data/gate.ts`), so finishing a phase item advances the gate
-automatically rather than asking you to tick the same work twice. The build fails
-if a gate requirement points at an id that no longer exists.
-
-## Deploying
-
-Pushing to `master` builds and publishes to GitHub Pages via
-[`.github/workflows/deploy.yml`](.github/workflows/deploy.yml). Pages must be set
-to **Source: GitHub Actions** in the repository settings.
-
-Pages serves a project site from a subpath, so the build sets
-`base: "/grindsheet-ios"`. Two consequences worth knowing:
-
-- `public/.nojekyll` is required. Pages runs Jekyll by default, and Jekyll skips
-  directories starting with `_` — without it, Astro's `_astro/` bundle is
-  dropped and the page deploys unstyled.
-- Anything linking to an asset must go through `import.meta.env.BASE_URL`
-  (see `src/layouts/Base.astro`), not a root-absolute path.
-
-To host at a root path instead — Vercel, or a custom domain — override the base:
+From `worker/`, with [Wrangler](https://developers.cloudflare.com/workers/wrangler/) logged into the Cloudflare account that should own the script:
 
 ```sh
-BASE_PATH="" SITE_URL="https://example.com" bun run build
+npx wrangler secret put GITHUB_TOKEN
+npx wrangler secret put PASSPHRASE
+npx wrangler deploy
 ```
+
+The token needs Contents read and write on `maskedsyntax/grindsheet` only. `worker/wrangler.toml` sets the repo, branch, and path.
+
+Type the passphrase once in the page. It is sent with each tick and remembered in that browser until you clear it from the field. A wrong passphrase, or a failed save, puts the checkbox back and says why.
+
+## Deploying the site
+
+Pushing to `master` runs [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml). Pages must use **Source: GitHub Actions**.
+
+The workflow builds the catalog, runs both test suites, then publishes `dist/` with a `CNAME` of `grindsheet.maskedsyntax.com`.
+
+DNS for `maskedsyntax.com`:
+
+- `CNAME` `grindsheet` → `maskedsyntax.github.io`
+
+Then set the custom domain in the repo's Pages settings and turn HTTPS on.
 
 ## Licence
 
-MIT — see [LICENSE](LICENSE).
+MIT. See [LICENSE](LICENSE).

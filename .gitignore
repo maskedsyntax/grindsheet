@@ -1,6 +1,9 @@
 # build output
 dist/
+build/
 .astro/
+.lustre/
+assets/catalog.json
 
 # dependencies
 node_modules/
@@ -18,3 +21,8 @@ node_modules/
 .idea/
 .vscode/
 *.log
+.wrangler/
+
+#Added automatically by Lustre Dev Tools
+/.lustre
+/dist

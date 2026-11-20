@@ -1,0 +1,8 @@
+name = "grindsheet"
+main = "index.js"
+compatibility_date = "2026-11-01"
+
+[vars]
+REPO = "maskedsyntax/grindsheet"
+BRANCH = "master"
+PROGRESS_PATH = "progress.json"

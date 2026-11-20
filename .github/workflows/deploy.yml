@@ -5,30 +5,42 @@ on:
     branches: [master]
   workflow_dispatch:
 
-# Allow the workflow to publish to Pages.
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Let a running deploy finish rather than cancelling it mid-publish.
 concurrency:
   group: pages
   cancel-in-progress: false
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
-      - uses: oven-sh/setup-bun@v2
+      - uses: actions/setup-node@v4
         with:
-          bun-version: latest
+          node-version: 22
 
-      - run: bun install --frozen-lockfile
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: "28"
+          gleam-version: "1.19.2"
+          rebar3-version: "3"
 
-      - run: bun run build
+      - run: gleam deps download
+
+      - run: gleam test
+
+      - run: node --test worker/progress.test.mjs
+
+      - run: gleam run -m catalog_build
+
+      - run: gleam run -m lustre/dev build --minify --outdir=dist
+
+      - run: printf '%s\n' grindsheet.maskedsyntax.com > dist/CNAME && touch dist/.nojekyll
 
       - uses: actions/configure-pages@v5
 
@@ -36,12 +48,4 @@ jobs:
         with:
           path: dist
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
+      - uses: actions/deploy-pages@v4
