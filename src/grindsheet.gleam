@@ -9,6 +9,7 @@ import lustre/attribute
 import lustre/effect.{type Effect}
 import lustre/element.{type Element}
 import lustre/element/html
+import lustre/element/svg
 import lustre/event
 
 import grindsheet/parse
@@ -64,6 +65,7 @@ type Msg {
   PassphraseRestored(String)
   FilterChanged(String)
   HideToggled
+  ThemeToggled
   PassphraseChanged(String)
   Toggled(slug: String, solved: Bool)
   SaveFinished(slug: String, want: Bool, result: Result(List(String), String))
@@ -97,6 +99,10 @@ fn update(model: Model, msg: Msg) -> #(Model, Effect(Msg)) {
       effect.none(),
     )
     FilterChanged(value) -> #(Model(..model, filter: value), effect.none())
+    ThemeToggled -> #(
+      model,
+      effect.from(fn(_dispatch) { platform.toggle_theme() }),
+    )
     HideToggled -> #(
       Model(..model, hide_solved: !model.hide_solved),
       effect.none(),
@@ -193,7 +199,10 @@ fn view(model: Model) -> Element(Msg) {
   html.div([], [
     html.header([attribute.class("wrap head")], [
       html.p([attribute.class("eyebrow")], [html.text("NeetCode 150")]),
-      html.h1([], [html.text("Grindsheet")]),
+      html.div([attribute.class("title-row")], [
+        html.h1([], [logo(), html.text("Grindsheet")]),
+        theme_button(),
+      ]),
       html.p([attribute.class("count")], [
         html.span([attribute.class("count-done")], [
           html.text(int.to_string(done)),
@@ -247,6 +256,76 @@ fn view(model: Model) -> Element(Msg) {
     ]),
     html.main([attribute.class("wrap")], body(model, topics)),
   ])
+}
+
+fn logo() -> Element(Msg) {
+  svg.svg(
+    [
+      attribute.class("logo"),
+      attribute.attribute("viewBox", "0 0 32 32"),
+      attribute.attribute("aria-hidden", "true"),
+    ],
+    [
+      svg.rect([
+        attribute.class("logo-box"),
+        attribute.attribute("x", "3"),
+        attribute.attribute("y", "8"),
+        attribute.attribute("width", "20"),
+        attribute.attribute("height", "20"),
+        attribute.attribute("rx", "2.5"),
+      ]),
+      svg.path([
+        attribute.class("logo-tick"),
+        attribute.attribute("d", "M7.5 17.5l5 5L29 4"),
+      ]),
+    ],
+  )
+}
+
+fn theme_button() -> Element(Msg) {
+  html.button(
+    [
+      attribute.type_("button"),
+      attribute.class("theme-button"),
+      attribute.attribute("aria-label", "Switch light or dark theme"),
+      attribute.attribute("title", "Switch theme"),
+      event.on_click(ThemeToggled),
+    ],
+    [
+      icon("icon-moon", [
+        svg.path([
+          attribute.attribute(
+            "d",
+            "M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z",
+          ),
+        ]),
+      ]),
+      icon("icon-sun", [
+        svg.circle([
+          attribute.attribute("cx", "12"),
+          attribute.attribute("cy", "12"),
+          attribute.attribute("r", "4"),
+        ]),
+        svg.path([
+          attribute.attribute(
+            "d",
+            "M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4",
+          ),
+        ]),
+      ]),
+    ],
+  )
+}
+
+fn icon(class: String, children: List(Element(Msg))) -> Element(Msg) {
+  svg.svg(
+    [
+      attribute.class("icon " <> class),
+      attribute.attribute("viewBox", "0 0 24 24"),
+      attribute.attribute("aria-hidden", "true"),
+    ],
+    children,
+  )
 }
 
 fn notice_text(model: Model) -> String {

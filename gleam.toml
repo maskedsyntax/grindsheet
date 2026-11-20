@@ -22,4 +22,6 @@ bun = "system"
 [tools.lustre.html]
 title = "Grindsheet"
 stylesheets = [{ href = "/style.css" }]
-meta = [{ name = "description", content = "NeetCode 150 checklist." }]
+links = [{ rel = "icon", href = "/favicon.svg", type = "image/svg+xml" }]
+scripts = [{ content = 'try{var t=localStorage.getItem("grindsheet.theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}' }]
+meta = [{ name = "description", content = "NeetCode 150 checklist." }, { name = "darkreader-lock" }]

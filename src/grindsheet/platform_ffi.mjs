@@ -24,3 +24,17 @@ export function decodeBase64(value) {
     return "";
   }
 }
+
+export function toggleTheme() {
+  const root = document.documentElement;
+  const current =
+    root.dataset.theme ||
+    (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  const next = current === "dark" ? "light" : "dark";
+  root.dataset.theme = next;
+  try {
+    localStorage.setItem("grindsheet.theme", next);
+  } catch {
+    // Storage can be blocked. The theme still applies until reload.
+  }
+}
