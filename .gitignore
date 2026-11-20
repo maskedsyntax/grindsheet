@@ -1,28 +1,18 @@
 # build output
-dist/
 build/
-.astro/
+dist/
 .lustre/
 assets/catalog.json
 
-# dependencies
-node_modules/
+# worker
+.wrangler/
 
 # environment
 .env
 .env.*
-!.env.example
-
-# deploy
-.vercel/
 
 # editor / os
 .DS_Store
 .idea/
 .vscode/
 *.log
-.wrangler/
-
-#Added automatically by Lustre Dev Tools
-/.lustre
-/dist
